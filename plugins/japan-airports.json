@@ -1,0 +1,512 @@
+{
+  "schemaVersion": 1,
+  "id": "japan-airports",
+  "version": 1,
+  "title": "日本の拠点空港めぐり",
+  "summary": "国土交通省の拠点空港28空港。写真位置から訪問を自動判定します。",
+  "iconSystemName": "airplane.departure",
+  "items": [
+    {
+      "id": "airport-cts",
+      "title": "新千歳空港（CTS）",
+      "detail": "写真の撮影位置から自動判定・半径1.5km",
+      "groupID": "hokkaido",
+      "latitude": 42.774753,
+      "longitude": 141.690414,
+      "radiusMeters": 1500,
+      "automation": {
+        "type": "photoLocation"
+      }
+    },
+    {
+      "id": "airport-wkj",
+      "title": "稚内空港（WKJ）",
+      "detail": "写真の撮影位置から自動判定・半径1.5km",
+      "groupID": "hokkaido",
+      "latitude": 45.404202,
+      "longitude": 141.800995,
+      "radiusMeters": 1500,
+      "automation": {
+        "type": "photoLocation"
+      }
+    },
+    {
+      "id": "airport-kuh",
+      "title": "釧路空港（KUH）",
+      "detail": "写真の撮影位置から自動判定・半径1.5km",
+      "groupID": "hokkaido",
+      "latitude": 43.041,
+      "longitude": 144.192993,
+      "radiusMeters": 1500,
+      "automation": {
+        "type": "photoLocation"
+      }
+    },
+    {
+      "id": "airport-hkd",
+      "title": "函館空港（HKD）",
+      "detail": "写真の撮影位置から自動判定・半径1.5km",
+      "groupID": "hokkaido",
+      "latitude": 41.77,
+      "longitude": 140.822006,
+      "radiusMeters": 1500,
+      "automation": {
+        "type": "photoLocation"
+      }
+    },
+    {
+      "id": "airport-akj",
+      "title": "旭川空港（AKJ）",
+      "detail": "写真の撮影位置から自動判定・半径1.5km",
+      "groupID": "hokkaido",
+      "latitude": 43.670799,
+      "longitude": 142.447006,
+      "radiusMeters": 1500,
+      "automation": {
+        "type": "photoLocation"
+      }
+    },
+    {
+      "id": "airport-obo",
+      "title": "帯広空港（OBO）",
+      "detail": "写真の撮影位置から自動判定・半径1.5km",
+      "groupID": "hokkaido",
+      "latitude": 42.733299,
+      "longitude": 143.216995,
+      "radiusMeters": 1500,
+      "automation": {
+        "type": "photoLocation"
+      }
+    },
+    {
+      "id": "airport-sdj",
+      "title": "仙台空港（SDJ）",
+      "detail": "写真の撮影位置から自動判定・半径1.5km",
+      "groupID": "tohoku",
+      "latitude": 38.139702,
+      "longitude": 140.917007,
+      "radiusMeters": 1500,
+      "automation": {
+        "type": "photoLocation"
+      }
+    },
+    {
+      "id": "airport-axt",
+      "title": "秋田空港（AXT）",
+      "detail": "写真の撮影位置から自動判定・半径1.5km",
+      "groupID": "tohoku",
+      "latitude": 39.615601,
+      "longitude": 140.218994,
+      "radiusMeters": 1500,
+      "automation": {
+        "type": "photoLocation"
+      }
+    },
+    {
+      "id": "airport-gaj",
+      "title": "山形空港（GAJ）",
+      "detail": "写真の撮影位置から自動判定・半径1.5km",
+      "groupID": "tohoku",
+      "latitude": 38.4119,
+      "longitude": 140.371002,
+      "radiusMeters": 1500,
+      "automation": {
+        "type": "photoLocation"
+      }
+    },
+    {
+      "id": "airport-hnd",
+      "title": "東京国際空港（羽田）（HND）",
+      "detail": "写真の撮影位置から自動判定・半径1.5km",
+      "groupID": "kanto",
+      "latitude": 35.549678,
+      "longitude": 139.786958,
+      "radiusMeters": 1500,
+      "automation": {
+        "type": "photoLocation"
+      }
+    },
+    {
+      "id": "airport-nrt",
+      "title": "成田国際空港（NRT）",
+      "detail": "写真の撮影位置から自動判定・半径1.5km",
+      "groupID": "kanto",
+      "latitude": 35.76858,
+      "longitude": 140.388714,
+      "radiusMeters": 1500,
+      "automation": {
+        "type": "photoLocation"
+      }
+    },
+    {
+      "id": "airport-ngo",
+      "title": "中部国際空港（セントレア）（NGO）",
+      "detail": "写真の撮影位置から自動判定・半径1.5km",
+      "groupID": "chubu",
+      "latitude": 34.858398,
+      "longitude": 136.804993,
+      "radiusMeters": 1500,
+      "automation": {
+        "type": "photoLocation"
+      }
+    },
+    {
+      "id": "airport-kij",
+      "title": "新潟空港（KIJ）",
+      "detail": "写真の撮影位置から自動判定・半径1.5km",
+      "groupID": "chubu",
+      "latitude": 37.954166,
+      "longitude": 139.112189,
+      "radiusMeters": 1500,
+      "automation": {
+        "type": "photoLocation"
+      }
+    },
+    {
+      "id": "airport-kix",
+      "title": "関西国際空港（KIX）",
+      "detail": "写真の撮影位置から自動判定・半径1.5km",
+      "groupID": "kansai",
+      "latitude": 34.427299,
+      "longitude": 135.244003,
+      "radiusMeters": 1500,
+      "automation": {
+        "type": "photoLocation"
+      }
+    },
+    {
+      "id": "airport-itm",
+      "title": "大阪国際空港（伊丹）（ITM）",
+      "detail": "写真の撮影位置から自動判定・半径1.5km",
+      "groupID": "kansai",
+      "latitude": 34.780853,
+      "longitude": 135.440829,
+      "radiusMeters": 1500,
+      "automation": {
+        "type": "photoLocation"
+      }
+    },
+    {
+      "id": "airport-hij",
+      "title": "広島空港（HIJ）",
+      "detail": "写真の撮影位置から自動判定・半径1.5km",
+      "groupID": "chugoku",
+      "latitude": 34.4361,
+      "longitude": 132.919006,
+      "radiusMeters": 1500,
+      "automation": {
+        "type": "photoLocation"
+      }
+    },
+    {
+      "id": "airport-ubj",
+      "title": "山口宇部空港（UBJ）",
+      "detail": "写真の撮影位置から自動判定・半径1.5km",
+      "groupID": "chugoku",
+      "latitude": 33.93,
+      "longitude": 131.279007,
+      "radiusMeters": 1500,
+      "automation": {
+        "type": "photoLocation"
+      }
+    },
+    {
+      "id": "airport-tak",
+      "title": "高松空港（TAK）",
+      "detail": "写真の撮影位置から自動判定・半径1.5km",
+      "groupID": "shikoku",
+      "latitude": 34.214963,
+      "longitude": 134.015454,
+      "radiusMeters": 1500,
+      "automation": {
+        "type": "photoLocation"
+      }
+    },
+    {
+      "id": "airport-myj",
+      "title": "松山空港（MYJ）",
+      "detail": "写真の撮影位置から自動判定・半径1.5km",
+      "groupID": "shikoku",
+      "latitude": 33.826893,
+      "longitude": 132.700114,
+      "radiusMeters": 1500,
+      "automation": {
+        "type": "photoLocation"
+      }
+    },
+    {
+      "id": "airport-kcz",
+      "title": "高知龍馬空港（KCZ）",
+      "detail": "写真の撮影位置から自動判定・半径1.5km",
+      "groupID": "shikoku",
+      "latitude": 33.545217,
+      "longitude": 133.670166,
+      "radiusMeters": 1500,
+      "automation": {
+        "type": "photoLocation"
+      }
+    },
+    {
+      "id": "airport-fuk",
+      "title": "福岡空港（FUK）",
+      "detail": "写真の撮影位置から自動判定・半径1.5km",
+      "groupID": "kyushu",
+      "latitude": 33.585899,
+      "longitude": 130.451004,
+      "radiusMeters": 1500,
+      "automation": {
+        "type": "photoLocation"
+      }
+    },
+    {
+      "id": "airport-kkj",
+      "title": "北九州空港（KKJ）",
+      "detail": "写真の撮影位置から自動判定・半径1.5km",
+      "groupID": "kyushu",
+      "latitude": 33.845901,
+      "longitude": 131.035004,
+      "radiusMeters": 1500,
+      "automation": {
+        "type": "photoLocation"
+      }
+    },
+    {
+      "id": "airport-ngs",
+      "title": "長崎空港（NGS）",
+      "detail": "写真の撮影位置から自動判定・半径1.5km",
+      "groupID": "kyushu",
+      "latitude": 32.916901,
+      "longitude": 129.914001,
+      "radiusMeters": 1500,
+      "automation": {
+        "type": "photoLocation"
+      }
+    },
+    {
+      "id": "airport-kmj",
+      "title": "阿蘇くまもと空港（KMJ）",
+      "detail": "写真の撮影位置から自動判定・半径1.5km",
+      "groupID": "kyushu",
+      "latitude": 32.837299,
+      "longitude": 130.854996,
+      "radiusMeters": 1500,
+      "automation": {
+        "type": "photoLocation"
+      }
+    },
+    {
+      "id": "airport-oit",
+      "title": "大分空港（OIT）",
+      "detail": "写真の撮影位置から自動判定・半径1.5km",
+      "groupID": "kyushu",
+      "latitude": 33.479401,
+      "longitude": 131.737,
+      "radiusMeters": 1500,
+      "automation": {
+        "type": "photoLocation"
+      }
+    },
+    {
+      "id": "airport-kmi",
+      "title": "宮崎空港（KMI）",
+      "detail": "写真の撮影位置から自動判定・半径1.5km",
+      "groupID": "kyushu",
+      "latitude": 31.877199,
+      "longitude": 131.449005,
+      "radiusMeters": 1500,
+      "automation": {
+        "type": "photoLocation"
+      }
+    },
+    {
+      "id": "airport-koj",
+      "title": "鹿児島空港（KOJ）",
+      "detail": "写真の撮影位置から自動判定・半径1.5km",
+      "groupID": "kyushu",
+      "latitude": 31.8034,
+      "longitude": 130.718994,
+      "radiusMeters": 1500,
+      "automation": {
+        "type": "photoLocation"
+      }
+    },
+    {
+      "id": "airport-oka",
+      "title": "那覇空港（OKA）",
+      "detail": "写真の撮影位置から自動判定・半径1.5km",
+      "groupID": "okinawa",
+      "latitude": 26.192437,
+      "longitude": 127.639804,
+      "radiusMeters": 1500,
+      "automation": {
+        "type": "photoLocation"
+      }
+    }
+  ],
+  "groups": [
+    {
+      "id": "hokkaido",
+      "title": "北海道"
+    },
+    {
+      "id": "tohoku",
+      "title": "東北"
+    },
+    {
+      "id": "kanto",
+      "title": "関東"
+    },
+    {
+      "id": "chubu",
+      "title": "中部"
+    },
+    {
+      "id": "kansai",
+      "title": "関西"
+    },
+    {
+      "id": "chugoku",
+      "title": "中国"
+    },
+    {
+      "id": "shikoku",
+      "title": "四国"
+    },
+    {
+      "id": "kyushu",
+      "title": "九州"
+    },
+    {
+      "id": "okinawa",
+      "title": "沖縄"
+    }
+  ],
+  "achievements": [
+    {
+      "id": "domestic-first",
+      "title": "最初の空港",
+      "detail": "1空港を訪れる",
+      "condition": {
+        "type": "itemCount",
+        "minimum": 1
+      }
+    },
+    {
+      "id": "domestic-five",
+      "title": "空港めぐり5空港",
+      "detail": "5空港を訪れる",
+      "condition": {
+        "type": "itemCount",
+        "minimum": 5
+      }
+    },
+    {
+      "id": "domestic-ten",
+      "title": "空港めぐり10空港",
+      "detail": "10空港を訪れる",
+      "condition": {
+        "type": "itemCount",
+        "minimum": 10
+      }
+    },
+    {
+      "id": "domestic-twenty",
+      "title": "全国空港ハンター",
+      "detail": "20空港を訪れる",
+      "condition": {
+        "type": "itemCount",
+        "minimum": 20
+      }
+    },
+    {
+      "id": "domestic-complete",
+      "title": "拠点空港コンプリート",
+      "detail": "28空港をすべて訪れる",
+      "condition": {
+        "type": "completionRate",
+        "minimum": 1
+      }
+    },
+    {
+      "id": "region-hokkaido",
+      "title": "北海道空港制覇",
+      "detail": "北海道の対象空港をすべて訪れる",
+      "condition": {
+        "type": "groupComplete",
+        "groupID": "hokkaido"
+      }
+    },
+    {
+      "id": "region-tohoku",
+      "title": "東北空港制覇",
+      "detail": "東北の対象空港をすべて訪れる",
+      "condition": {
+        "type": "groupComplete",
+        "groupID": "tohoku"
+      }
+    },
+    {
+      "id": "region-kanto",
+      "title": "関東空港制覇",
+      "detail": "関東の対象空港をすべて訪れる",
+      "condition": {
+        "type": "groupComplete",
+        "groupID": "kanto"
+      }
+    },
+    {
+      "id": "region-chubu",
+      "title": "中部空港制覇",
+      "detail": "中部の対象空港をすべて訪れる",
+      "condition": {
+        "type": "groupComplete",
+        "groupID": "chubu"
+      }
+    },
+    {
+      "id": "region-kansai",
+      "title": "関西空港制覇",
+      "detail": "関西の対象空港をすべて訪れる",
+      "condition": {
+        "type": "groupComplete",
+        "groupID": "kansai"
+      }
+    },
+    {
+      "id": "region-chugoku",
+      "title": "中国空港制覇",
+      "detail": "中国の対象空港をすべて訪れる",
+      "condition": {
+        "type": "groupComplete",
+        "groupID": "chugoku"
+      }
+    },
+    {
+      "id": "region-shikoku",
+      "title": "四国空港制覇",
+      "detail": "四国の対象空港をすべて訪れる",
+      "condition": {
+        "type": "groupComplete",
+        "groupID": "shikoku"
+      }
+    },
+    {
+      "id": "region-kyushu",
+      "title": "九州空港制覇",
+      "detail": "九州の対象空港をすべて訪れる",
+      "condition": {
+        "type": "groupComplete",
+        "groupID": "kyushu"
+      }
+    },
+    {
+      "id": "region-okinawa",
+      "title": "沖縄空港制覇",
+      "detail": "沖縄の対象空港をすべて訪れる",
+      "condition": {
+        "type": "groupComplete",
+        "groupID": "okinawa"
+      }
+    }
+  ]
+}

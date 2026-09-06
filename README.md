@@ -8,6 +8,7 @@ Life Questの公式プラグインカタログです。プラグインはSwift�
 .
 ├── catalog.json              # アプリが取得する公開カタログ
 ├── plugins/                  # 個別プラグインの原本
+├── AIRPORT_DATA_SOURCES.md   # 空港プラグインの対象範囲と出典
 ├── scripts/
 │   ├── build_catalog.py      # plugins/*.jsonからcatalog.jsonを生成
 │   └── validate_catalog.py   # PR用の形式検証
