@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "catalog-landmarks",
+  "version": 1,
+  "title": "地点コレクションの例",
+  "summary": "写真位置から自動推定するデータ形式の例です。",
+  "iconSystemName": "mappin.and.ellipse",
+  "items": [
+    {
+      "id": "example-a",
+      "title": "サンプル地点A",
+      "detail": "実データに置き換えてください",
+      "groupID": "example",
+      "latitude": 35.6812,
+      "longitude": 139.7671,
+      "radiusMeters": 150,
+      "automation": {
+        "type": "photoLocation"
+      }
+    }
+  ],
+  "groups": [
+    {
+      "id": "example",
+      "title": "サンプル"
+    }
+  ],
+  "achievements": [
+    {
+      "id": "visit-one",
+      "title": "最初の地点",
+      "detail": "1地点を訪問する",
+      "condition": {
+        "type": "itemCount",
+        "minimum": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "annual-walking",
+  "version": 1,
+  "title": "年間歩数チャレンジ",
+  "summary": "HealthKitの歩数から自動で達成状況を記録します。",
+  "iconSystemName": "figure.walk",
+  "items": [
+    {
+      "id": "annual-steps-100k",
+      "title": "年間10万歩",
+      "detail": "現在年のHealthKit歩数",
+      "automation": {
+        "type": "healthKitAnnualStepCount",
+        "minimum": 100000
+      }
+    },
+    {
+      "id": "annual-steps-1m",
+      "title": "年間100万歩",
+      "detail": "現在年のHealthKit歩数",
+      "automation": {
+        "type": "healthKitAnnualStepCount",
+        "minimum": 1000000
+      }
+    }
+  ],
+  "groups": [],
+  "achievements": [
+    {
+      "id": "walk-both",
+      "title": "歩数マスター",
+      "detail": "2つの歩数目標を達成する",
+      "condition": {
+        "type": "completionRate",
+        "minimum": 1
+      }
+    }
+  ]
+}
