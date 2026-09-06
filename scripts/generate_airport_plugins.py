@@ -128,11 +128,12 @@ def make_plugin(
     groups: list[dict],
     achievements: list[dict],
     visualizations: list[dict],
+    version: int = 1,
 ) -> dict:
     return {
         "schemaVersion": 1,
         "id": plugin_id,
-        "version": 1,
+        "version": version,
         "title": title,
         "summary": summary,
         "iconSystemName": "airplane.departure",
@@ -168,7 +169,7 @@ def build_japan(airports: dict[str, dict[str, str]]) -> dict:
         {"type": "groupProgress"},
         {"type": "itemList", "sort": "group"},
     ]
-    return make_plugin("japan-airports", "日本の拠点空港めぐり", "国土交通省の拠点空港28空港。写真位置から訪問を自動判定します。", items, groups, achievements, visualizations)
+    return make_plugin("japan-airports", "日本の拠点空港めぐり", "国土交通省の拠点空港28空港。写真位置から訪問を自動判定します。", items, groups, achievements, visualizations, version=2)
 
 
 def build_world(airports: dict[str, dict[str, str]]) -> dict:
@@ -198,7 +199,7 @@ def build_world(airports: dict[str, dict[str, str]]) -> dict:
         {"type": "groupProgress"},
         {"type": "itemList", "sort": "group"},
     ]
-    return make_plugin("world-major-airports", "世界の主要空港めぐり", "世界の主要国際空港100空港。写真位置から訪問を自動判定します。", items, groups, achievements, visualizations)
+    return make_plugin("world-major-airports", "世界の主要空港めぐり", "世界の主要国際空港100空港。写真位置から訪問を自動判定します。", items, groups, achievements, visualizations, version=2)
 
 
 def main() -> int:

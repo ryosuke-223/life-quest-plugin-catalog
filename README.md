@@ -48,14 +48,78 @@ Life QuestアプリのReleaseビルドで、Build Settingsの `PLUGIN_CATALOG_UR
 
 ## 可視化の指定
 
-プラグインは任意のSwiftUIコードを配布できませんが、`visualizations` でアプリ内の固定ビューを選択できます。Kibanaのパネル定義に近い形式で、可視化タイプと対象データ・集計方法だけを宣言します。
+プラグインは任意のSwiftUIコードを配布できません。`visualizations` には、アプリに組み込まれた固定可視化のタイプと、対象データ・集計方法だけを指定します。これはKibanaのパネル定義に近い方式です。
 
-- `metricCards`: `metrics` に `visitedCount`、`completionRate`、`remainingCount`、`unlockedAchievements`、`totalAchievements`
-- `lineChart`、`barChart`、`areaChart`: `metric` と `aggregation`（`cumulativeCount`、`annualCount`、`completionRate`）
-- `pieChart`: `breakdown`（`status`、`group`）
-- `heatmap`: `dimension`（`yearByGroup`、`yearByStatus`）
-- 既存の `progressSummary`、`achievementCards`、`groupProgress`、`statusMap`、`statusGrid`、`nextAchievements`、`itemList`
+### 共通ルール
 
-詳細画面の期間セレクターは「すべて」または年です。年別データは各項目の `firstVisitYear` に基づく初訪問データで、累積集計は選択年までの初訪問項目を数えます。実行コードや任意のクエリは受け付けません。データと合わない宣言はカタログ検証で拒否されます。
+- `visualizations` は省略可能です。省略時はアプリの後方互換デフォルトを使います。
+- 同じ `type` は1プラグイン内で1回だけ指定します。
+- 可視化の宣言順が詳細画面での表示順になります。
+- 年次集計の基準は項目の `firstVisitYear` です。1項目を複数年に訪問した履歴は現在保存していません。
+- 期間の「すべて」は現在の全状態、「2025年まで」は2025年末時点の累積状態です。
+- 年次チャートの `annualCount` は、その年に初訪問した項目数です。
+- `cumulativeCount` は、その年までに初訪問した項目数です。
+- `completionRate` は、累積訪問項目数 ÷ 全項目数です。
+
+### 対応タイプとパラメータ
+
+| type | 必須・任意パラメータ | 用途 |
+| --- | --- | --- |
+| `progressSummary` | なし | プラグイン名、説明、全体進捗 |
+| `metricCards` | `metrics` | 複数のサマリーメトリクス |
+| `lineChart` | `metric`、`aggregation` | 年次推移の線グラフ |
+| `barChart` | `metric`、`aggregation` | 年次比較の棒グラフ |
+| `areaChart` | `metric`、`aggregation` | 累積・推移の面グラフ |
+| `pieChart` | `breakdown` | 状態またはグループの割合 |
+| `heatmap` | `dimension` | 年×グループ／年×状態 |
+| `achievementCards` | なし | 実績の解除状況 |
+| `groupProgress` | なし | `groups` ごとの進捗。グループ必須 |
+| `statusMap` | `cluster` | 座標項目の地図。座標項目必須 |
+| `statusGrid` | `columns` | 項目状態のグリッド。2〜6列 |
+| `nextAchievements` | `limit` | 未解除実績。1〜10件 |
+| `itemList` | `sort` | 項目一覧。状態・タイトル・グループ順 |
+
+### 指定できる値
+
+`metricCards.metrics` とチャートの `metric` は次から選びます。
+
+| metric | 意味 |
+| --- | --- |
+| `visitedCount` | 期間内に訪問済みの項目数 |
+| `completionRate` | 期間内の達成率。0〜1を画面でパーセント表示 |
+| `remainingCount` | 全項目数から訪問済み項目数を引いた数 |
+| `unlockedAchievements` | 期間時点で解除済みの実績数 |
+| `totalAchievements` | プラグインに定義された実績数 |
+
+`aggregation` は次の3種類です。
+
+| aggregation | 意味 |
+| --- | --- |
+| `annualCount` | `firstVisitYear` がその年の項目数。初訪問の年次棒グラフ向け |
+| `cumulativeCount` | その年以下の `firstVisitYear` を持つ項目数。累積線・エリアグラフ向け |
+| `completionRate` | 累積訪問項目数を全項目数で割った値 |
+
+`pieChart.breakdown` は `status`（未訪問・推定・確認済み）または `group`（グループ別）です。`heatmap.dimension` は `yearByGroup`（年×グループの初訪問数）または `yearByStatus`（年までの状態別項目数）です。
+
+### JSON例
+
+```json
+"visualizations": [
+  {
+    "type": "metricCards",
+    "metrics": ["visitedCount", "completionRate", "remainingCount"]
+  },
+  {
+    "type": "lineChart",
+    "metric": "visitedCount",
+    "aggregation": "cumulativeCount"
+  },
+  { "type": "pieChart", "breakdown": "status" },
+  { "type": "groupProgress" },
+  { "type": "itemList", "sort": "group" }
+]
+```
+
+不明なタイプ・値、重複タイプ、範囲外の列数や件数は、アプリと `scripts/validate_catalog.py` の両方で拒否されます。実行コード、任意のクエリ、任意のSwiftUIを受け付けません。
 
 プラグインから任意のSwiftコード、JavaScript、外部クエリを実行することはできません。

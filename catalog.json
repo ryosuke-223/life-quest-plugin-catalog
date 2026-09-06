@@ -173,7 +173,7 @@
   {
     "schemaVersion": 1,
     "id": "japan-airports",
-    "version": 1,
+    "version": 2,
     "title": "日本の拠点空港めぐり",
     "summary": "国土交通省の拠点空港28空港。写真位置から訪問を自動判定します。",
     "iconSystemName": "airplane.departure",
@@ -715,7 +715,7 @@
   {
     "schemaVersion": 1,
     "id": "world-major-airports",
-    "version": 1,
+    "version": 2,
     "title": "世界の主要空港めぐり",
     "summary": "世界の主要国際空港100空港。写真位置から訪問を自動判定します。",
     "iconSystemName": "airplane.departure",
