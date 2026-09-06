@@ -35,6 +35,9 @@ Life Questの公式プラグインカタログです。プラグインはSwift�
 https://OWNER.github.io/REPOSITORY/catalog.json
 ```
 
+このリポジトリの公開URLは
+`https://ryosuke-223.github.io/life-quest-plugin-catalog/catalog.json` です。
+
 Life QuestアプリのReleaseビルドで、Build Settingsの `PLUGIN_CATALOG_URL` にこのURLを設定すると、ユーザーはURLを入力せず、アプリ内の一覧からインストールできます。
 
 ## 自動判定の範囲
