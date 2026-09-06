@@ -35,5 +35,13 @@
         "minimum": 1
       }
     }
+  ],
+  "visualizations": [
+    { "type": "progressSummary" },
+    { "type": "groupProgress" },
+    { "type": "achievementCards" },
+    { "type": "nextAchievements", "limit": 3 },
+    { "type": "statusGrid", "columns": 3 },
+    { "type": "itemList", "sort": "title" }
   ]
 }

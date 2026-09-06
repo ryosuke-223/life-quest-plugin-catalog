@@ -21,6 +21,16 @@ MAX_ITEM_DETAIL_BYTES = 500
 MAX_GROUP_TITLE_BYTES = 200
 MAX_ACHIEVEMENT_TITLE_BYTES = 200
 MAX_ACHIEVEMENT_DETAIL_BYTES = 500
+MAX_VISUALIZATIONS = 12
+VISUALIZATION_TYPES = {
+    "progressSummary",
+    "achievementCards",
+    "groupProgress",
+    "statusMap",
+    "statusGrid",
+    "nextAchievements",
+    "itemList",
+}
 
 
 def fail(path: Path, message: str) -> None:
@@ -93,6 +103,41 @@ def validate_automation(path: Path, item: dict) -> None:
             fail(path, f"HealthKit item cannot have coordinates for {item['id']}")
     else:
         fail(path, f"unknown automation type for {item['id']}")
+
+
+def validate_visualizations(path: Path, plugin: dict, items: list[dict], groups: list[dict]) -> None:
+    visualizations = plugin.get("visualizations")
+    if visualizations is None:
+        return
+    if not isinstance(visualizations, list) or len(visualizations) > MAX_VISUALIZATIONS:
+        fail(path, "visualizations count is outside limits")
+
+    seen = set()
+    has_coordinates = any(item.get("latitude") is not None and item.get("longitude") is not None for item in items)
+    for visualization in visualizations:
+        if not isinstance(visualization, dict):
+            fail(path, "visualization must be an object")
+        visualization_type = visualization.get("type")
+        if visualization_type not in VISUALIZATION_TYPES:
+            fail(path, f"unknown visualization type {visualization_type}")
+        if visualization_type in seen:
+            fail(path, f"duplicate visualization type {visualization_type}")
+        seen.add(visualization_type)
+
+        if visualization_type == "groupProgress" and not groups:
+            fail(path, "groupProgress needs groups")
+        if visualization_type == "statusMap" and not has_coordinates:
+            fail(path, "statusMap needs coordinates")
+        if visualization_type == "statusGrid":
+            columns = visualization.get("columns", 3)
+            if not is_integer(columns) or not 2 <= columns <= 6:
+                fail(path, "statusGrid.columns must be between 2 and 6")
+        if visualization_type == "nextAchievements":
+            limit = visualization.get("limit", 3)
+            if not is_integer(limit) or not 1 <= limit <= 10:
+                fail(path, "nextAchievements.limit must be between 1 and 10")
+        if visualization_type == "itemList" and visualization.get("sort", "status") not in {"status", "title", "group"}:
+            fail(path, "itemList.sort is invalid")
 
 
 def validate_plugin(path: Path, plugin: object) -> None:
@@ -195,6 +240,8 @@ def validate_plugin(path: Path, plugin: object) -> None:
                 fail(path, f"invalid completionRate for {achievement_id}")
         else:
             fail(path, f"unknown condition for {achievement_id}")
+
+    validate_visualizations(path, plugin, items, groups)
 
     # Keep this local variable intentional: it makes duplicate plugin IDs easy to
     # diagnose if this function is later reused by a multi-file validator.

@@ -508,5 +508,32 @@
         "groupID": "okinawa"
       }
     }
+  ],
+  "visualizations": [
+    {
+      "type": "progressSummary"
+    },
+    {
+      "type": "statusMap",
+      "cluster": false
+    },
+    {
+      "type": "groupProgress"
+    },
+    {
+      "type": "achievementCards"
+    },
+    {
+      "type": "nextAchievements",
+      "limit": 3
+    },
+    {
+      "type": "statusGrid",
+      "columns": 4
+    },
+    {
+      "type": "itemList",
+      "sort": "group"
+    }
   ]
 }

@@ -9,7 +9,8 @@ Life Questの公式カタログへプラグインを追加する手順です。�
 3. 位置情報を使う項目には、出典が確認できる緯度・経度を指定します。
 4. 写真位置で自動判定する項目には `automation.type` を `photoLocation` にします。
 5. HealthKitの年間歩数で自動判定する項目には `healthKitAnnualStepCount` と `minimum` を指定します。
-6. ローカルで検証します。
+6. 必要に応じて `visualizations` に固定ビューを指定します。プラグインからSwiftUIや実行コードを配布することはできません。
+7. ローカルで検証します。
 
 ```bash
 python3 scripts/validate_catalog.py
@@ -17,7 +18,7 @@ python3 scripts/build_catalog.py
 git diff --check
 ```
 
-7. `catalog.json` の再生成結果を含めてPRを作成します。
+8. `catalog.json` の再生成結果を含めてPRを作成します。
 
 ## PR本文に必ず書くこと
 

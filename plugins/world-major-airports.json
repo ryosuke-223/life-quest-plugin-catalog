@@ -1381,5 +1381,32 @@
         "groupID": "africa"
       }
     }
+  ],
+  "visualizations": [
+    {
+      "type": "progressSummary"
+    },
+    {
+      "type": "statusMap",
+      "cluster": true
+    },
+    {
+      "type": "groupProgress"
+    },
+    {
+      "type": "achievementCards"
+    },
+    {
+      "type": "nextAchievements",
+      "limit": 5
+    },
+    {
+      "type": "statusGrid",
+      "columns": 5
+    },
+    {
+      "type": "itemList",
+      "sort": "group"
+    }
   ]
 }

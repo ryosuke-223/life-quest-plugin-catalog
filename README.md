@@ -46,4 +46,8 @@ Life QuestアプリのReleaseビルドで、Build Settingsの `PLUGIN_CATALOG_UR
 - `photoLocation`: 写真の撮影位置と項目の座標を固定アダプタで照合
 - `healthKitAnnualStepCount`: 現在年のHealthKit歩数を固定アダプタで照合
 
+## 可視化の指定
+
+プラグインは任意のSwiftUIコードを配布できませんが、`visualizations` でアプリ内の固定ビューを選択できます。利用できる型は `progressSummary`、`achievementCards`、`groupProgress`、`statusMap`（`cluster`）、`statusGrid`（`columns` は2〜6）、`nextAchievements`（`limit` は1〜10）、`itemList`（`sort` は `status`・`title`・`group`）です。座標のないプラグインで `statusMap` を指定した場合など、データと合わない宣言はカタログ検証で拒否されます。
+
 プラグインから任意のSwiftコード、JavaScript、外部クエリを実行することはできません。

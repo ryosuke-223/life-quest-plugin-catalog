@@ -37,6 +37,26 @@
           "minimum": 1
         }
       }
+    ],
+    "visualizations": [
+      {
+        "type": "progressSummary"
+      },
+      {
+        "type": "achievementCards"
+      },
+      {
+        "type": "nextAchievements",
+        "limit": 3
+      },
+      {
+        "type": "statusGrid",
+        "columns": 2
+      },
+      {
+        "type": "itemList",
+        "sort": "status"
+      }
     ]
   },
   {
@@ -75,6 +95,29 @@
           "type": "itemCount",
           "minimum": 1
         }
+      }
+    ],
+    "visualizations": [
+      {
+        "type": "progressSummary"
+      },
+      {
+        "type": "groupProgress"
+      },
+      {
+        "type": "achievementCards"
+      },
+      {
+        "type": "nextAchievements",
+        "limit": 3
+      },
+      {
+        "type": "statusGrid",
+        "columns": 3
+      },
+      {
+        "type": "itemList",
+        "sort": "title"
       }
     ]
   },
@@ -587,6 +630,33 @@
           "type": "groupComplete",
           "groupID": "okinawa"
         }
+      }
+    ],
+    "visualizations": [
+      {
+        "type": "progressSummary"
+      },
+      {
+        "type": "statusMap",
+        "cluster": false
+      },
+      {
+        "type": "groupProgress"
+      },
+      {
+        "type": "achievementCards"
+      },
+      {
+        "type": "nextAchievements",
+        "limit": 3
+      },
+      {
+        "type": "statusGrid",
+        "columns": 4
+      },
+      {
+        "type": "itemList",
+        "sort": "group"
       }
     ]
   },
@@ -1972,6 +2042,33 @@
           "type": "groupComplete",
           "groupID": "africa"
         }
+      }
+    ],
+    "visualizations": [
+      {
+        "type": "progressSummary"
+      },
+      {
+        "type": "statusMap",
+        "cluster": true
+      },
+      {
+        "type": "groupProgress"
+      },
+      {
+        "type": "achievementCards"
+      },
+      {
+        "type": "nextAchievements",
+        "limit": 5
+      },
+      {
+        "type": "statusGrid",
+        "columns": 5
+      },
+      {
+        "type": "itemList",
+        "sort": "group"
       }
     ]
   }

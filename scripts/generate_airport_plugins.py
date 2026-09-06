@@ -120,7 +120,15 @@ def achievement(item_id: str, title: str, detail: str, condition: dict) -> dict:
     return {"id": item_id, "title": title, "detail": detail, "condition": condition}
 
 
-def make_plugin(plugin_id: str, title: str, summary: str, items: list[dict], groups: list[dict], achievements: list[dict]) -> dict:
+def make_plugin(
+    plugin_id: str,
+    title: str,
+    summary: str,
+    items: list[dict],
+    groups: list[dict],
+    achievements: list[dict],
+    visualizations: list[dict],
+) -> dict:
     return {
         "schemaVersion": 1,
         "id": plugin_id,
@@ -131,6 +139,7 @@ def make_plugin(plugin_id: str, title: str, summary: str, items: list[dict], gro
         "items": items,
         "groups": groups,
         "achievements": achievements,
+        "visualizations": visualizations,
     }
 
 
@@ -148,7 +157,16 @@ def build_japan(airports: dict[str, dict[str, str]]) -> dict:
         achievement(f"region-{group_id}", f"{title}空港制覇", f"{title}の対象空港をすべて訪れる", {"type": "groupComplete", "groupID": group_id})
         for group_id, title in JAPAN_GROUP_TITLES.items()
     )
-    return make_plugin("japan-airports", "日本の拠点空港めぐり", "国土交通省の拠点空港28空港。写真位置から訪問を自動判定します。", items, groups, achievements)
+    visualizations = [
+        {"type": "progressSummary"},
+        {"type": "statusMap", "cluster": False},
+        {"type": "groupProgress"},
+        {"type": "achievementCards"},
+        {"type": "nextAchievements", "limit": 3},
+        {"type": "statusGrid", "columns": 4},
+        {"type": "itemList", "sort": "group"},
+    ]
+    return make_plugin("japan-airports", "日本の拠点空港めぐり", "国土交通省の拠点空港28空港。写真位置から訪問を自動判定します。", items, groups, achievements, visualizations)
 
 
 def build_world(airports: dict[str, dict[str, str]]) -> dict:
@@ -167,7 +185,16 @@ def build_world(airports: dict[str, dict[str, str]]) -> dict:
         achievement(f"region-{group_id}", f"{title}空港制覇", f"{title}の対象空港をすべて訪れる", {"type": "groupComplete", "groupID": group_id})
         for group_id, title in WORLD_GROUP_TITLES.items()
     )
-    return make_plugin("world-major-airports", "世界の主要空港めぐり", "世界の主要国際空港100空港。写真位置から訪問を自動判定します。", items, groups, achievements)
+    visualizations = [
+        {"type": "progressSummary"},
+        {"type": "statusMap", "cluster": True},
+        {"type": "groupProgress"},
+        {"type": "achievementCards"},
+        {"type": "nextAchievements", "limit": 5},
+        {"type": "statusGrid", "columns": 5},
+        {"type": "itemList", "sort": "group"},
+    ]
+    return make_plugin("world-major-airports", "世界の主要空港めぐり", "世界の主要国際空港100空港。写真位置から訪問を自動判定します。", items, groups, achievements, visualizations)
 
 
 def main() -> int:
