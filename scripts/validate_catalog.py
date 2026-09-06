@@ -30,7 +30,17 @@ VISUALIZATION_TYPES = {
     "statusGrid",
     "nextAchievements",
     "itemList",
+    "metricCards",
+    "lineChart",
+    "barChart",
+    "pieChart",
+    "areaChart",
+    "heatmap",
 }
+CHART_METRICS = {"visitedCount", "completionRate", "remainingCount", "unlockedAchievements", "totalAchievements"}
+CHART_AGGREGATIONS = {"cumulativeCount", "annualCount", "completionRate"}
+BREAKDOWNS = {"status", "group"}
+HEATMAP_DIMENSIONS = {"yearByGroup", "yearByStatus"}
 
 
 def fail(path: Path, message: str) -> None:
@@ -138,6 +148,20 @@ def validate_visualizations(path: Path, plugin: dict, items: list[dict], groups:
                 fail(path, "nextAchievements.limit must be between 1 and 10")
         if visualization_type == "itemList" and visualization.get("sort", "status") not in {"status", "title", "group"}:
             fail(path, "itemList.sort is invalid")
+        if visualization_type == "metricCards":
+            metrics = visualization.get("metrics", ["visitedCount", "completionRate"])
+            if (not isinstance(metrics, list) or not metrics or len(metrics) > 6
+                    or len(set(metrics)) != len(metrics) or not all(metric in CHART_METRICS for metric in metrics)):
+                fail(path, "metricCards.metrics is invalid")
+        if visualization_type in {"lineChart", "barChart", "areaChart"}:
+            if visualization.get("metric", "visitedCount") not in CHART_METRICS:
+                fail(path, f"{visualization_type}.metric is invalid")
+            if visualization.get("aggregation", "cumulativeCount") not in CHART_AGGREGATIONS:
+                fail(path, f"{visualization_type}.aggregation is invalid")
+        if visualization_type == "pieChart" and visualization.get("breakdown", "status") not in BREAKDOWNS:
+            fail(path, "pieChart.breakdown is invalid")
+        if visualization_type == "heatmap" and visualization.get("dimension", "yearByGroup") not in HEATMAP_DIMENSIONS:
+            fail(path, "heatmap.dimension is invalid")
 
 
 def validate_plugin(path: Path, plugin: object) -> None:

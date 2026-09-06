@@ -48,6 +48,14 @@ Life QuestアプリのReleaseビルドで、Build Settingsの `PLUGIN_CATALOG_UR
 
 ## 可視化の指定
 
-プラグインは任意のSwiftUIコードを配布できませんが、`visualizations` でアプリ内の固定ビューを選択できます。利用できる型は `progressSummary`、`achievementCards`、`groupProgress`、`statusMap`（`cluster`）、`statusGrid`（`columns` は2〜6）、`nextAchievements`（`limit` は1〜10）、`itemList`（`sort` は `status`・`title`・`group`）です。座標のないプラグインで `statusMap` を指定した場合など、データと合わない宣言はカタログ検証で拒否されます。
+プラグインは任意のSwiftUIコードを配布できませんが、`visualizations` でアプリ内の固定ビューを選択できます。Kibanaのパネル定義に近い形式で、可視化タイプと対象データ・集計方法だけを宣言します。
+
+- `metricCards`: `metrics` に `visitedCount`、`completionRate`、`remainingCount`、`unlockedAchievements`、`totalAchievements`
+- `lineChart`、`barChart`、`areaChart`: `metric` と `aggregation`（`cumulativeCount`、`annualCount`、`completionRate`）
+- `pieChart`: `breakdown`（`status`、`group`）
+- `heatmap`: `dimension`（`yearByGroup`、`yearByStatus`）
+- 既存の `progressSummary`、`achievementCards`、`groupProgress`、`statusMap`、`statusGrid`、`nextAchievements`、`itemList`
+
+詳細画面の期間セレクターは「すべて」または年です。年別データは各項目の `firstVisitYear` に基づく初訪問データで、累積集計は選択年までの初訪問項目を数えます。実行コードや任意のクエリは受け付けません。データと合わない宣言はカタログ検証で拒否されます。
 
 プラグインから任意のSwiftコード、JavaScript、外部クエリを実行することはできません。

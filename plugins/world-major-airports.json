@@ -1387,22 +1387,25 @@
       "type": "progressSummary"
     },
     {
-      "type": "statusMap",
-      "cluster": true
+      "type": "metricCards",
+      "metrics": [
+        "visitedCount",
+        "completionRate",
+        "remainingCount",
+        "unlockedAchievements"
+      ]
+    },
+    {
+      "type": "lineChart",
+      "metric": "visitedCount",
+      "aggregation": "cumulativeCount"
+    },
+    {
+      "type": "pieChart",
+      "breakdown": "status"
     },
     {
       "type": "groupProgress"
-    },
-    {
-      "type": "achievementCards"
-    },
-    {
-      "type": "nextAchievements",
-      "limit": 5
-    },
-    {
-      "type": "statusGrid",
-      "columns": 5
     },
     {
       "type": "itemList",

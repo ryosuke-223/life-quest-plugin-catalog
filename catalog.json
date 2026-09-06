@@ -56,6 +56,29 @@
       {
         "type": "itemList",
         "sort": "status"
+      },
+      {
+        "type": "metricCards",
+        "metrics": [
+          "visitedCount",
+          "completionRate",
+          "remainingCount",
+          "unlockedAchievements"
+        ]
+      },
+      {
+        "type": "barChart",
+        "metric": "visitedCount",
+        "aggregation": "annualCount"
+      },
+      {
+        "type": "areaChart",
+        "metric": "completionRate",
+        "aggregation": "cumulativeCount"
+      },
+      {
+        "type": "heatmap",
+        "dimension": "yearByStatus"
       }
     ]
   },
@@ -118,6 +141,32 @@
       {
         "type": "itemList",
         "sort": "title"
+      },
+      {
+        "type": "metricCards",
+        "metrics": [
+          "visitedCount",
+          "completionRate",
+          "remainingCount"
+        ]
+      },
+      {
+        "type": "barChart",
+        "metric": "visitedCount",
+        "aggregation": "annualCount"
+      },
+      {
+        "type": "areaChart",
+        "metric": "completionRate",
+        "aggregation": "cumulativeCount"
+      },
+      {
+        "type": "pieChart",
+        "breakdown": "group"
+      },
+      {
+        "type": "heatmap",
+        "dimension": "yearByGroup"
       }
     ]
   },
@@ -637,22 +686,25 @@
         "type": "progressSummary"
       },
       {
-        "type": "statusMap",
-        "cluster": false
+        "type": "metricCards",
+        "metrics": [
+          "visitedCount",
+          "completionRate",
+          "remainingCount",
+          "unlockedAchievements"
+        ]
+      },
+      {
+        "type": "lineChart",
+        "metric": "visitedCount",
+        "aggregation": "cumulativeCount"
+      },
+      {
+        "type": "pieChart",
+        "breakdown": "status"
       },
       {
         "type": "groupProgress"
-      },
-      {
-        "type": "achievementCards"
-      },
-      {
-        "type": "nextAchievements",
-        "limit": 3
-      },
-      {
-        "type": "statusGrid",
-        "columns": 4
       },
       {
         "type": "itemList",
@@ -2049,22 +2101,25 @@
         "type": "progressSummary"
       },
       {
-        "type": "statusMap",
-        "cluster": true
+        "type": "metricCards",
+        "metrics": [
+          "visitedCount",
+          "completionRate",
+          "remainingCount",
+          "unlockedAchievements"
+        ]
+      },
+      {
+        "type": "lineChart",
+        "metric": "visitedCount",
+        "aggregation": "cumulativeCount"
+      },
+      {
+        "type": "pieChart",
+        "breakdown": "status"
       },
       {
         "type": "groupProgress"
-      },
-      {
-        "type": "achievementCards"
-      },
-      {
-        "type": "nextAchievements",
-        "limit": 5
-      },
-      {
-        "type": "statusGrid",
-        "columns": 5
       },
       {
         "type": "itemList",

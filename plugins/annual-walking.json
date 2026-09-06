@@ -42,6 +42,10 @@
     { "type": "achievementCards" },
     { "type": "nextAchievements", "limit": 3 },
     { "type": "statusGrid", "columns": 2 },
-    { "type": "itemList", "sort": "status" }
+    { "type": "itemList", "sort": "status" },
+    { "type": "metricCards", "metrics": ["visitedCount", "completionRate", "remainingCount", "unlockedAchievements"] },
+    { "type": "barChart", "metric": "visitedCount", "aggregation": "annualCount" },
+    { "type": "areaChart", "metric": "completionRate", "aggregation": "cumulativeCount" },
+    { "type": "heatmap", "dimension": "yearByStatus" }
   ]
 }

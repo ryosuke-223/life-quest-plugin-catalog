@@ -42,6 +42,11 @@
     { "type": "achievementCards" },
     { "type": "nextAchievements", "limit": 3 },
     { "type": "statusGrid", "columns": 3 },
-    { "type": "itemList", "sort": "title" }
+    { "type": "itemList", "sort": "title" },
+    { "type": "metricCards", "metrics": ["visitedCount", "completionRate", "remainingCount"] },
+    { "type": "barChart", "metric": "visitedCount", "aggregation": "annualCount" },
+    { "type": "areaChart", "metric": "completionRate", "aggregation": "cumulativeCount" },
+    { "type": "pieChart", "breakdown": "group" },
+    { "type": "heatmap", "dimension": "yearByGroup" }
   ]
 }
