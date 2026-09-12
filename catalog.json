@@ -173,7 +173,7 @@
   {
     "schemaVersion": 1,
     "id": "japan-airports",
-    "version": 2,
+    "version": 3,
     "title": "日本の拠点空港めぐり",
     "summary": "国土交通省の拠点空港28空港。写真位置から訪問を自動判定します。",
     "iconSystemName": "airplane.departure",
@@ -181,7 +181,6 @@
       {
         "id": "airport-cts",
         "title": "新千歳空港（CTS）",
-        "detail": "写真の撮影位置から自動判定・半径1.5km",
         "groupID": "hokkaido",
         "latitude": 42.774753,
         "longitude": 141.690414,
@@ -193,7 +192,6 @@
       {
         "id": "airport-wkj",
         "title": "稚内空港（WKJ）",
-        "detail": "写真の撮影位置から自動判定・半径1.5km",
         "groupID": "hokkaido",
         "latitude": 45.404202,
         "longitude": 141.800995,
@@ -205,7 +203,6 @@
       {
         "id": "airport-kuh",
         "title": "釧路空港（KUH）",
-        "detail": "写真の撮影位置から自動判定・半径1.5km",
         "groupID": "hokkaido",
         "latitude": 43.041,
         "longitude": 144.192993,
@@ -217,7 +214,6 @@
       {
         "id": "airport-hkd",
         "title": "函館空港（HKD）",
-        "detail": "写真の撮影位置から自動判定・半径1.5km",
         "groupID": "hokkaido",
         "latitude": 41.77,
         "longitude": 140.822006,
@@ -229,7 +225,6 @@
       {
         "id": "airport-akj",
         "title": "旭川空港（AKJ）",
-        "detail": "写真の撮影位置から自動判定・半径1.5km",
         "groupID": "hokkaido",
         "latitude": 43.670799,
         "longitude": 142.447006,
@@ -241,7 +236,6 @@
       {
         "id": "airport-obo",
         "title": "帯広空港（OBO）",
-        "detail": "写真の撮影位置から自動判定・半径1.5km",
         "groupID": "hokkaido",
         "latitude": 42.733299,
         "longitude": 143.216995,
@@ -253,7 +247,6 @@
       {
         "id": "airport-sdj",
         "title": "仙台空港（SDJ）",
-        "detail": "写真の撮影位置から自動判定・半径1.5km",
         "groupID": "tohoku",
         "latitude": 38.139702,
         "longitude": 140.917007,
@@ -265,7 +258,6 @@
       {
         "id": "airport-axt",
         "title": "秋田空港（AXT）",
-        "detail": "写真の撮影位置から自動判定・半径1.5km",
         "groupID": "tohoku",
         "latitude": 39.615601,
         "longitude": 140.218994,
@@ -277,7 +269,6 @@
       {
         "id": "airport-gaj",
         "title": "山形空港（GAJ）",
-        "detail": "写真の撮影位置から自動判定・半径1.5km",
         "groupID": "tohoku",
         "latitude": 38.4119,
         "longitude": 140.371002,
@@ -289,7 +280,6 @@
       {
         "id": "airport-hnd",
         "title": "東京国際空港（羽田）（HND）",
-        "detail": "写真の撮影位置から自動判定・半径1.5km",
         "groupID": "kanto",
         "latitude": 35.549678,
         "longitude": 139.786958,
@@ -301,7 +291,6 @@
       {
         "id": "airport-nrt",
         "title": "成田国際空港（NRT）",
-        "detail": "写真の撮影位置から自動判定・半径1.5km",
         "groupID": "kanto",
         "latitude": 35.76858,
         "longitude": 140.388714,
@@ -313,7 +302,6 @@
       {
         "id": "airport-ngo",
         "title": "中部国際空港（セントレア）（NGO）",
-        "detail": "写真の撮影位置から自動判定・半径1.5km",
         "groupID": "chubu",
         "latitude": 34.858398,
         "longitude": 136.804993,
@@ -325,7 +313,6 @@
       {
         "id": "airport-kij",
         "title": "新潟空港（KIJ）",
-        "detail": "写真の撮影位置から自動判定・半径1.5km",
         "groupID": "chubu",
         "latitude": 37.954166,
         "longitude": 139.112189,
@@ -337,7 +324,6 @@
       {
         "id": "airport-kix",
         "title": "関西国際空港（KIX）",
-        "detail": "写真の撮影位置から自動判定・半径1.5km",
         "groupID": "kansai",
         "latitude": 34.427299,
         "longitude": 135.244003,
@@ -349,7 +335,6 @@
       {
         "id": "airport-itm",
         "title": "大阪国際空港（伊丹）（ITM）",
-        "detail": "写真の撮影位置から自動判定・半径1.5km",
         "groupID": "kansai",
         "latitude": 34.780853,
         "longitude": 135.440829,
@@ -361,7 +346,6 @@
       {
         "id": "airport-hij",
         "title": "広島空港（HIJ）",
-        "detail": "写真の撮影位置から自動判定・半径1.5km",
         "groupID": "chugoku",
         "latitude": 34.4361,
         "longitude": 132.919006,
@@ -373,7 +357,6 @@
       {
         "id": "airport-ubj",
         "title": "山口宇部空港（UBJ）",
-        "detail": "写真の撮影位置から自動判定・半径1.5km",
         "groupID": "chugoku",
         "latitude": 33.93,
         "longitude": 131.279007,
@@ -385,7 +368,6 @@
       {
         "id": "airport-tak",
         "title": "高松空港（TAK）",
-        "detail": "写真の撮影位置から自動判定・半径1.5km",
         "groupID": "shikoku",
         "latitude": 34.214963,
         "longitude": 134.015454,
@@ -397,7 +379,6 @@
       {
         "id": "airport-myj",
         "title": "松山空港（MYJ）",
-        "detail": "写真の撮影位置から自動判定・半径1.5km",
         "groupID": "shikoku",
         "latitude": 33.826893,
         "longitude": 132.700114,
@@ -409,7 +390,6 @@
       {
         "id": "airport-kcz",
         "title": "高知龍馬空港（KCZ）",
-        "detail": "写真の撮影位置から自動判定・半径1.5km",
         "groupID": "shikoku",
         "latitude": 33.545217,
         "longitude": 133.670166,
@@ -421,7 +401,6 @@
       {
         "id": "airport-fuk",
         "title": "福岡空港（FUK）",
-        "detail": "写真の撮影位置から自動判定・半径1.5km",
         "groupID": "kyushu",
         "latitude": 33.585899,
         "longitude": 130.451004,
@@ -433,7 +412,6 @@
       {
         "id": "airport-kkj",
         "title": "北九州空港（KKJ）",
-        "detail": "写真の撮影位置から自動判定・半径1.5km",
         "groupID": "kyushu",
         "latitude": 33.845901,
         "longitude": 131.035004,
@@ -445,7 +423,6 @@
       {
         "id": "airport-ngs",
         "title": "長崎空港（NGS）",
-        "detail": "写真の撮影位置から自動判定・半径1.5km",
         "groupID": "kyushu",
         "latitude": 32.916901,
         "longitude": 129.914001,
@@ -457,7 +434,6 @@
       {
         "id": "airport-kmj",
         "title": "阿蘇くまもと空港（KMJ）",
-        "detail": "写真の撮影位置から自動判定・半径1.5km",
         "groupID": "kyushu",
         "latitude": 32.837299,
         "longitude": 130.854996,
@@ -469,7 +445,6 @@
       {
         "id": "airport-oit",
         "title": "大分空港（OIT）",
-        "detail": "写真の撮影位置から自動判定・半径1.5km",
         "groupID": "kyushu",
         "latitude": 33.479401,
         "longitude": 131.737,
@@ -481,7 +456,6 @@
       {
         "id": "airport-kmi",
         "title": "宮崎空港（KMI）",
-        "detail": "写真の撮影位置から自動判定・半径1.5km",
         "groupID": "kyushu",
         "latitude": 31.877199,
         "longitude": 131.449005,
@@ -493,7 +467,6 @@
       {
         "id": "airport-koj",
         "title": "鹿児島空港（KOJ）",
-        "detail": "写真の撮影位置から自動判定・半径1.5km",
         "groupID": "kyushu",
         "latitude": 31.8034,
         "longitude": 130.718994,
@@ -505,7 +478,6 @@
       {
         "id": "airport-oka",
         "title": "那覇空港（OKA）",
-        "detail": "写真の撮影位置から自動判定・半径1.5km",
         "groupID": "okinawa",
         "latitude": 26.192437,
         "longitude": 127.639804,
@@ -700,8 +672,9 @@
         "aggregation": "cumulativeCount"
       },
       {
-        "type": "pieChart",
-        "breakdown": "status"
+        "type": "barChart",
+        "metric": "visitedCount",
+        "aggregation": "annualVisitedItemCount"
       },
       {
         "type": "groupProgress"
@@ -710,12 +683,13 @@
         "type": "itemList",
         "sort": "group"
       }
-    ]
+    ],
+    "showsPeriodSelector": false
   },
   {
     "schemaVersion": 1,
     "id": "world-major-airports",
-    "version": 2,
+    "version": 3,
     "title": "世界の主要空港めぐり",
     "summary": "世界の主要国際空港100空港。写真位置から訪問を自動判定します。",
     "iconSystemName": "airplane.departure",
@@ -723,7 +697,7 @@
       {
         "id": "airport-icn",
         "title": "Incheon International Airport（ICN）",
-        "detail": "Seoul・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Seoul",
         "groupID": "east-asia",
         "latitude": 37.469101,
         "longitude": 126.450996,
@@ -735,7 +709,7 @@
       {
         "id": "airport-pek",
         "title": "Beijing Capital International Airport（PEK）",
-        "detail": "Beijing・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Beijing",
         "groupID": "east-asia",
         "latitude": 40.077349,
         "longitude": 116.596702,
@@ -747,7 +721,7 @@
       {
         "id": "airport-pkx",
         "title": "Beijing Daxing International Airport（PKX）",
-        "detail": "Beijing・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Beijing",
         "groupID": "east-asia",
         "latitude": 39.501289,
         "longitude": 116.413967,
@@ -759,7 +733,7 @@
       {
         "id": "airport-pvg",
         "title": "Shanghai Pudong International Airport（PVG）",
-        "detail": "Shanghai (Pudong)・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Shanghai (Pudong)",
         "groupID": "east-asia",
         "latitude": 31.1434,
         "longitude": 121.805,
@@ -771,7 +745,7 @@
       {
         "id": "airport-can",
         "title": "Guangzhou Baiyun International Airport（CAN）",
-        "detail": "Guangzhou (Huadu)・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Guangzhou (Huadu)",
         "groupID": "east-asia",
         "latitude": 23.392401,
         "longitude": 113.299004,
@@ -783,7 +757,7 @@
       {
         "id": "airport-szx",
         "title": "Shenzhen Bao'an International Airport（SZX）",
-        "detail": "Shenzhen・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Shenzhen",
         "groupID": "east-asia",
         "latitude": 22.639474,
         "longitude": 113.803262,
@@ -795,7 +769,7 @@
       {
         "id": "airport-hkg",
         "title": "Hong Kong International Airport（HKG）",
-        "detail": "Hong Kong・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Hong Kong",
         "groupID": "east-asia",
         "latitude": 22.31184,
         "longitude": 113.914862,
@@ -807,7 +781,7 @@
       {
         "id": "airport-tpe",
         "title": "Taiwan Taoyuan International Airport（TPE）",
-        "detail": "Taoyuan・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Taoyuan",
         "groupID": "east-asia",
         "latitude": 25.0777,
         "longitude": 121.233002,
@@ -819,7 +793,7 @@
       {
         "id": "airport-mfm",
         "title": "Macau International Airport（MFM）",
-        "detail": "Nossa Senhora do Carmo・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Nossa Senhora do Carmo",
         "groupID": "east-asia",
         "latitude": 22.149599,
         "longitude": 113.592003,
@@ -831,7 +805,7 @@
       {
         "id": "airport-ubn",
         "title": "Ulaanbaatar Chinggis Khaan International Airport（UBN）",
-        "detail": "Ulaanbaatar (Sergelen)・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Ulaanbaatar (Sergelen)",
         "groupID": "east-asia",
         "latitude": 47.646916,
         "longitude": 106.819833,
@@ -843,7 +817,7 @@
       {
         "id": "airport-mnl",
         "title": "Ninoy Aquino International Airport（MNL）",
-        "detail": "Manila (Pasay)・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Manila (Pasay)",
         "groupID": "southeast-asia",
         "latitude": 14.5086,
         "longitude": 121.019997,
@@ -855,7 +829,7 @@
       {
         "id": "airport-ceb",
         "title": "Mactan Cebu International Airport（CEB）",
-        "detail": "Cebu City/Lapu-Lapu City・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Cebu City/Lapu-Lapu City",
         "groupID": "southeast-asia",
         "latitude": 10.309261,
         "longitude": 123.97974,
@@ -867,7 +841,7 @@
       {
         "id": "airport-sin",
         "title": "Singapore Changi Airport（SIN）",
-        "detail": "Singapore・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Singapore",
         "groupID": "southeast-asia",
         "latitude": 1.35019,
         "longitude": 103.994003,
@@ -879,7 +853,7 @@
       {
         "id": "airport-bkk",
         "title": "Suvarnabhumi Airport（BKK）",
-        "detail": "Bangkok・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Bangkok",
         "groupID": "southeast-asia",
         "latitude": 13.6811,
         "longitude": 100.747002,
@@ -891,7 +865,7 @@
       {
         "id": "airport-kul",
         "title": "Kuala Lumpur International Airport（KUL）",
-        "detail": "Sepang・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Sepang",
         "groupID": "southeast-asia",
         "latitude": 2.74558,
         "longitude": 101.709999,
@@ -903,7 +877,7 @@
       {
         "id": "airport-cgk",
         "title": "Soekarno-Hatta International Airport（CGK）",
-        "detail": "Jakarta・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Jakarta",
         "groupID": "southeast-asia",
         "latitude": -6.12557,
         "longitude": 106.655998,
@@ -915,7 +889,7 @@
       {
         "id": "airport-dps",
         "title": "Denpasar I Gusti Ngurah Rai International Airport（DPS）",
-        "detail": "Kuta, Badung・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Kuta, Badung",
         "groupID": "southeast-asia",
         "latitude": -8.748409,
         "longitude": 115.167123,
@@ -927,7 +901,7 @@
       {
         "id": "airport-sgn",
         "title": "Tan Son Nhat International Airport（SGN）",
-        "detail": "Ho Chi Minh City・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Ho Chi Minh City",
         "groupID": "southeast-asia",
         "latitude": 10.8188,
         "longitude": 106.652,
@@ -939,7 +913,7 @@
       {
         "id": "airport-han",
         "title": "Noi Bai International Airport（HAN）",
-        "detail": "Hanoi (Soc Son)・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Hanoi (Soc Son)",
         "groupID": "southeast-asia",
         "latitude": 21.221201,
         "longitude": 105.806999,
@@ -951,7 +925,7 @@
       {
         "id": "airport-kti",
         "title": "Techo International Airport（KTI）",
-        "detail": "Phnom Penh (Boeng Khyang)・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Phnom Penh (Boeng Khyang)",
         "groupID": "southeast-asia",
         "latitude": 11.359987,
         "longitude": 104.921272,
@@ -963,7 +937,7 @@
       {
         "id": "airport-rgn",
         "title": "Yangon International Airport（RGN）",
-        "detail": "Yangon・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Yangon",
         "groupID": "southeast-asia",
         "latitude": 16.907301,
         "longitude": 96.133202,
@@ -975,7 +949,7 @@
       {
         "id": "airport-dac",
         "title": "Hazrat Shahjalal International Airport（DAC）",
-        "detail": "Dhaka・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Dhaka",
         "groupID": "south-asia",
         "latitude": 23.843347,
         "longitude": 90.397783,
@@ -987,7 +961,7 @@
       {
         "id": "airport-del",
         "title": "Indira Gandhi International Airport（DEL）",
-        "detail": "New Delhi・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "New Delhi",
         "groupID": "south-asia",
         "latitude": 28.55563,
         "longitude": 77.09519,
@@ -999,7 +973,7 @@
       {
         "id": "airport-bom",
         "title": "Chhatrapati Shivaji Maharaj International Airport（BOM）",
-        "detail": "Mumbai・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Mumbai",
         "groupID": "south-asia",
         "latitude": 19.088699,
         "longitude": 72.867897,
@@ -1011,7 +985,7 @@
       {
         "id": "airport-blr",
         "title": "Kempegowda International Airport Bengaluru（BLR）",
-        "detail": "Bengaluru・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Bengaluru",
         "groupID": "south-asia",
         "latitude": 13.1979,
         "longitude": 77.706299,
@@ -1023,7 +997,7 @@
       {
         "id": "airport-maa",
         "title": "Chennai International Airport（MAA）",
-        "detail": "Chennai・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Chennai",
         "groupID": "south-asia",
         "latitude": 12.990005,
         "longitude": 80.169296,
@@ -1035,7 +1009,7 @@
       {
         "id": "airport-cmb",
         "title": "Bandaranaike International Colombo Airport（CMB）",
-        "detail": "Colombo・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Colombo",
         "groupID": "south-asia",
         "latitude": 7.18076,
         "longitude": 79.884102,
@@ -1047,7 +1021,7 @@
       {
         "id": "airport-ktm",
         "title": "Tribhuvan International Airport（KTM）",
-        "detail": "Kathmandu・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Kathmandu",
         "groupID": "south-asia",
         "latitude": 27.6966,
         "longitude": 85.3591,
@@ -1059,7 +1033,7 @@
       {
         "id": "airport-mle",
         "title": "Velana International Airport（MLE）",
-        "detail": "Malé・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Malé",
         "groupID": "south-asia",
         "latitude": 4.19183,
         "longitude": 73.529099,
@@ -1071,7 +1045,7 @@
       {
         "id": "airport-dxb",
         "title": "Dubai International Airport（DXB）",
-        "detail": "Dubai・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Dubai",
         "groupID": "middle-east",
         "latitude": 25.24979,
         "longitude": 55.370992,
@@ -1083,7 +1057,7 @@
       {
         "id": "airport-auh",
         "title": "Zayed International Airport（AUH）",
-        "detail": "Abu Dhabi・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Abu Dhabi",
         "groupID": "middle-east",
         "latitude": 24.440966,
         "longitude": 54.649237,
@@ -1095,7 +1069,7 @@
       {
         "id": "airport-doh",
         "title": "Hamad International Airport（DOH）",
-        "detail": "Doha・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Doha",
         "groupID": "middle-east",
         "latitude": 25.273056,
         "longitude": 51.608056,
@@ -1107,7 +1081,7 @@
       {
         "id": "airport-jed",
         "title": "King Abdulaziz International Airport（JED）",
-        "detail": "Jeddah・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Jeddah",
         "groupID": "middle-east",
         "latitude": 21.680241,
         "longitude": 39.157436,
@@ -1119,7 +1093,7 @@
       {
         "id": "airport-ruh",
         "title": "King Khalid International Airport（RUH）",
-        "detail": "Riyadh・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Riyadh",
         "groupID": "middle-east",
         "latitude": 24.9576,
         "longitude": 46.698799,
@@ -1131,7 +1105,7 @@
       {
         "id": "airport-ist",
         "title": "İstanbul Airport（IST）",
-        "detail": "Istanbul・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Istanbul",
         "groupID": "middle-east",
         "latitude": 41.274874,
         "longitude": 28.732136,
@@ -1143,7 +1117,7 @@
       {
         "id": "airport-tlv",
         "title": "Ben Gurion International Airport（TLV）",
-        "detail": "Tel Aviv・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Tel Aviv",
         "groupID": "middle-east",
         "latitude": 32.011398,
         "longitude": 34.8867,
@@ -1155,7 +1129,7 @@
       {
         "id": "airport-amm",
         "title": "Queen Alia International Airport（AMM）",
-        "detail": "Amman・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Amman",
         "groupID": "middle-east",
         "latitude": 31.722601,
         "longitude": 35.993198,
@@ -1167,7 +1141,7 @@
       {
         "id": "airport-cai",
         "title": "Cairo International Airport（CAI）",
-        "detail": "Cairo・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Cairo",
         "groupID": "middle-east",
         "latitude": 30.111534,
         "longitude": 31.396694,
@@ -1179,7 +1153,7 @@
       {
         "id": "airport-bah",
         "title": "Bahrain International Airport（BAH）",
-        "detail": "Manama・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Manama",
         "groupID": "middle-east",
         "latitude": 26.267295,
         "longitude": 50.63764,
@@ -1191,7 +1165,7 @@
       {
         "id": "airport-kwi",
         "title": "Kuwait International Airport（KWI）",
-        "detail": "Kuwait City・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Kuwait City",
         "groupID": "middle-east",
         "latitude": 29.224487,
         "longitude": 47.969813,
@@ -1203,7 +1177,7 @@
       {
         "id": "airport-mct",
         "title": "Muscat International Airport（MCT）",
-        "detail": "Muscat/Seeb・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Muscat/Seeb",
         "groupID": "middle-east",
         "latitude": 23.600218,
         "longitude": 58.285268,
@@ -1215,7 +1189,7 @@
       {
         "id": "airport-lhr",
         "title": "London Heathrow Airport（LHR）",
-        "detail": "London・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "London",
         "groupID": "europe",
         "latitude": 51.470748,
         "longitude": -0.459909,
@@ -1227,7 +1201,7 @@
       {
         "id": "airport-cdg",
         "title": "Charles de Gaulle International Airport（CDG）",
-        "detail": "Paris (Roissy-en-France, Val-d'Oise)・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Paris (Roissy-en-France, Val-d'Oise)",
         "groupID": "europe",
         "latitude": 49.00896,
         "longitude": 2.554117,
@@ -1239,7 +1213,7 @@
       {
         "id": "airport-ams",
         "title": "Amsterdam Airport Schiphol（AMS）",
-        "detail": "Amsterdam・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Amsterdam",
         "groupID": "europe",
         "latitude": 52.308601,
         "longitude": 4.76389,
@@ -1251,7 +1225,7 @@
       {
         "id": "airport-fra",
         "title": "Frankfurt Main Airport（FRA）",
-        "detail": "Frankfurt am Main・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Frankfurt am Main",
         "groupID": "europe",
         "latitude": 50.026706,
         "longitude": 8.55835,
@@ -1263,7 +1237,7 @@
       {
         "id": "airport-muc",
         "title": "Munich Airport（MUC）",
-        "detail": "Munich・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Munich",
         "groupID": "europe",
         "latitude": 48.353802,
         "longitude": 11.7861,
@@ -1275,7 +1249,7 @@
       {
         "id": "airport-mad",
         "title": "Adolfo Suárez Madrid–Barajas Airport（MAD）",
-        "detail": "Madrid・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Madrid",
         "groupID": "europe",
         "latitude": 40.493407,
         "longitude": -3.572249,
@@ -1287,7 +1261,7 @@
       {
         "id": "airport-bcn",
         "title": "Josep Tarradellas Barcelona-El Prat Airport（BCN）",
-        "detail": "Barcelona・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Barcelona",
         "groupID": "europe",
         "latitude": 41.2971,
         "longitude": 2.07846,
@@ -1299,7 +1273,7 @@
       {
         "id": "airport-fco",
         "title": "Rome–Fiumicino Leonardo da Vinci International Airport（FCO）",
-        "detail": "Rome・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Rome",
         "groupID": "europe",
         "latitude": 41.804532,
         "longitude": 12.251998,
@@ -1311,7 +1285,7 @@
       {
         "id": "airport-mxp",
         "title": "Milan Malpensa International Airport（MXP）",
-        "detail": "Ferno (VA)・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Ferno (VA)",
         "groupID": "europe",
         "latitude": 45.6306,
         "longitude": 8.72811,
@@ -1323,7 +1297,7 @@
       {
         "id": "airport-zrh",
         "title": "Zürich Airport（ZRH）",
-        "detail": "Zurich・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Zurich",
         "groupID": "europe",
         "latitude": 47.458056,
         "longitude": 8.548056,
@@ -1335,7 +1309,7 @@
       {
         "id": "airport-vie",
         "title": "Vienna International Airport（VIE）",
-        "detail": "Vienna・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Vienna",
         "groupID": "europe",
         "latitude": 48.110298,
         "longitude": 16.5697,
@@ -1347,7 +1321,7 @@
       {
         "id": "airport-bru",
         "title": "Brussels Airport（BRU）",
-        "detail": "Zaventem・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Zaventem",
         "groupID": "europe",
         "latitude": 50.901402,
         "longitude": 4.48444,
@@ -1359,7 +1333,7 @@
       {
         "id": "airport-cph",
         "title": "Copenhagen Kastrup Airport（CPH）",
-        "detail": "Copenhagen・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Copenhagen",
         "groupID": "europe",
         "latitude": 55.617901,
         "longitude": 12.656,
@@ -1371,7 +1345,7 @@
       {
         "id": "airport-arn",
         "title": "Stockholm-Arlanda Airport（ARN）",
-        "detail": "Stockholm・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Stockholm",
         "groupID": "europe",
         "latitude": 59.64849,
         "longitude": 17.928829,
@@ -1383,7 +1357,7 @@
       {
         "id": "airport-osl",
         "title": "Oslo-Gardermoen International Airport（OSL）",
-        "detail": "Oslo (Gardermoen)・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Oslo (Gardermoen)",
         "groupID": "europe",
         "latitude": 60.193901,
         "longitude": 11.1004,
@@ -1395,7 +1369,7 @@
       {
         "id": "airport-hel",
         "title": "Helsinki Vantaa Airport（HEL）",
-        "detail": "Helsinki (Vantaa)・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Helsinki (Vantaa)",
         "groupID": "europe",
         "latitude": 60.318363,
         "longitude": 24.963341,
@@ -1407,7 +1381,7 @@
       {
         "id": "airport-dub",
         "title": "Dublin Airport（DUB）",
-        "detail": "Dublin・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Dublin",
         "groupID": "europe",
         "latitude": 53.428713,
         "longitude": -6.262121,
@@ -1419,7 +1393,7 @@
       {
         "id": "airport-lis",
         "title": "Lisbon Humberto Delgado Airport（LIS）",
-        "detail": "Lisbon・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Lisbon",
         "groupID": "europe",
         "latitude": 38.7813,
         "longitude": -9.13592,
@@ -1431,7 +1405,7 @@
       {
         "id": "airport-ath",
         "title": "Athens Eleftherios Venizelos International Airport（ATH）",
-        "detail": "Spata-Artemida・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Spata-Artemida",
         "groupID": "europe",
         "latitude": 37.936401,
         "longitude": 23.9445,
@@ -1443,7 +1417,7 @@
       {
         "id": "airport-waw",
         "title": "Warsaw Chopin Airport（WAW）",
-        "detail": "Warsaw・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Warsaw",
         "groupID": "europe",
         "latitude": 52.165699,
         "longitude": 20.9671,
@@ -1455,7 +1429,7 @@
       {
         "id": "airport-prg",
         "title": "Václav Havel Airport Prague（PRG）",
-        "detail": "Prague・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Prague",
         "groupID": "europe",
         "latitude": 50.100874,
         "longitude": 14.259911,
@@ -1467,7 +1441,7 @@
       {
         "id": "airport-bud",
         "title": "Budapest Liszt Ferenc International Airport（BUD）",
-        "detail": "Budapest・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Budapest",
         "groupID": "europe",
         "latitude": 47.43018,
         "longitude": 19.262393,
@@ -1479,7 +1453,7 @@
       {
         "id": "airport-man",
         "title": "Manchester Airport（MAN）",
-        "detail": "Manchester, Greater Manchester・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Manchester, Greater Manchester",
         "groupID": "europe",
         "latitude": 53.349375,
         "longitude": -2.279521,
@@ -1491,7 +1465,7 @@
       {
         "id": "airport-atl",
         "title": "Hartsfield Jackson Atlanta International Airport（ATL）",
-        "detail": "Atlanta・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Atlanta",
         "groupID": "north-america",
         "latitude": 33.6367,
         "longitude": -84.428101,
@@ -1503,7 +1477,7 @@
       {
         "id": "airport-lax",
         "title": "Los Angeles International Airport（LAX）",
-        "detail": "Los Angeles・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Los Angeles",
         "groupID": "north-america",
         "latitude": 33.942501,
         "longitude": -118.407997,
@@ -1515,7 +1489,7 @@
       {
         "id": "airport-ord",
         "title": "Chicago O'Hare International Airport（ORD）",
-        "detail": "Chicago・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Chicago",
         "groupID": "north-america",
         "latitude": 41.9786,
         "longitude": -87.9048,
@@ -1527,7 +1501,7 @@
       {
         "id": "airport-dfw",
         "title": "Dallas Fort Worth International Airport（DFW）",
-        "detail": "Dallas-Fort Worth・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Dallas-Fort Worth",
         "groupID": "north-america",
         "latitude": 32.896801,
         "longitude": -97.038002,
@@ -1539,7 +1513,7 @@
       {
         "id": "airport-den",
         "title": "Denver International Airport（DEN）",
-        "detail": "Denver・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Denver",
         "groupID": "north-america",
         "latitude": 39.860027,
         "longitude": -104.673792,
@@ -1551,7 +1525,7 @@
       {
         "id": "airport-jfk",
         "title": "John F. Kennedy International Airport（JFK）",
-        "detail": "New York・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "New York",
         "groupID": "north-america",
         "latitude": 40.639447,
         "longitude": -73.779317,
@@ -1563,7 +1537,7 @@
       {
         "id": "airport-ewr",
         "title": "Newark Liberty International Airport（EWR）",
-        "detail": "Newark・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Newark",
         "groupID": "north-america",
         "latitude": 40.6894,
         "longitude": -74.170545,
@@ -1575,7 +1549,7 @@
       {
         "id": "airport-sfo",
         "title": "San Francisco International Airport（SFO）",
-        "detail": "San Francisco・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "San Francisco",
         "groupID": "north-america",
         "latitude": 37.619806,
         "longitude": -122.374821,
@@ -1587,7 +1561,7 @@
       {
         "id": "airport-sea",
         "title": "Seattle–Tacoma International Airport（SEA）",
-        "detail": "Seattle・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Seattle",
         "groupID": "north-america",
         "latitude": 47.447943,
         "longitude": -122.310276,
@@ -1599,7 +1573,7 @@
       {
         "id": "airport-mia",
         "title": "Miami International Airport（MIA）",
-        "detail": "Miami・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Miami",
         "groupID": "north-america",
         "latitude": 25.796011,
         "longitude": -80.289751,
@@ -1611,7 +1585,7 @@
       {
         "id": "airport-yyz",
         "title": "Toronto Pearson International Airport（YYZ）",
-        "detail": "Toronto・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Toronto",
         "groupID": "north-america",
         "latitude": 43.675935,
         "longitude": -79.629421,
@@ -1623,7 +1597,7 @@
       {
         "id": "airport-yvr",
         "title": "Vancouver International Airport（YVR）",
-        "detail": "Vancouver・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Vancouver",
         "groupID": "north-america",
         "latitude": 49.193901,
         "longitude": -123.183998,
@@ -1635,7 +1609,7 @@
       {
         "id": "airport-iah",
         "title": "George Bush Intercontinental Airport（IAH）",
-        "detail": "Houston・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Houston",
         "groupID": "north-america",
         "latitude": 29.9844,
         "longitude": -95.3414,
@@ -1647,7 +1621,7 @@
       {
         "id": "airport-las",
         "title": "Harry Reid International Airport（LAS）",
-        "detail": "Las Vegas・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Las Vegas",
         "groupID": "north-america",
         "latitude": 36.083361,
         "longitude": -115.151817,
@@ -1659,7 +1633,7 @@
       {
         "id": "airport-mex",
         "title": "Mexico City Benito Juárez International Airport（MEX）",
-        "detail": "Mexico City・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Mexico City",
         "groupID": "north-america",
         "latitude": 19.435822,
         "longitude": -99.07033,
@@ -1671,7 +1645,7 @@
       {
         "id": "airport-gru",
         "title": "São Paulo/Guarulhos–Governor André Franco Montoro International Airport（GRU）",
-        "detail": "São Paulo・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "São Paulo",
         "groupID": "latin-america",
         "latitude": -23.431274,
         "longitude": -46.469954,
@@ -1683,7 +1657,7 @@
       {
         "id": "airport-eze",
         "title": "Ezeiza International Airport - Ministro Pistarini（EZE）",
-        "detail": "Buenos Aires (Ezeiza)・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Buenos Aires (Ezeiza)",
         "groupID": "latin-america",
         "latitude": -34.8222,
         "longitude": -58.5358,
@@ -1695,7 +1669,7 @@
       {
         "id": "airport-scl",
         "title": "Comodoro Arturo Merino Benítez International Airport（SCL）",
-        "detail": "Santiago・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Santiago",
         "groupID": "latin-america",
         "latitude": -33.393002,
         "longitude": -70.785797,
@@ -1707,7 +1681,7 @@
       {
         "id": "airport-lim",
         "title": "Jorge Chávez International Airport（LIM）",
-        "detail": "Lima・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Lima",
         "groupID": "latin-america",
         "latitude": -12.0219,
         "longitude": -77.114305,
@@ -1719,7 +1693,7 @@
       {
         "id": "airport-bog",
         "title": "El Dorado International Airport（BOG）",
-        "detail": "Bogota・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Bogota",
         "groupID": "latin-america",
         "latitude": 4.70159,
         "longitude": -74.1469,
@@ -1731,7 +1705,7 @@
       {
         "id": "airport-pty",
         "title": "Tocumen International Airport（PTY）",
-        "detail": "Tocumen・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Tocumen",
         "groupID": "latin-america",
         "latitude": 9.07136,
         "longitude": -79.383499,
@@ -1743,7 +1717,7 @@
       {
         "id": "airport-uio",
         "title": "Mariscal Sucre International Airport（UIO）",
-        "detail": "Quito・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Quito",
         "groupID": "latin-america",
         "latitude": -0.125399,
         "longitude": -78.354306,
@@ -1755,7 +1729,7 @@
       {
         "id": "airport-syd",
         "title": "Sydney Kingsford Smith International Airport（SYD）",
-        "detail": "Sydney (Mascot)・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Sydney (Mascot)",
         "groupID": "oceania",
         "latitude": -33.946098,
         "longitude": 151.177002,
@@ -1767,7 +1741,7 @@
       {
         "id": "airport-mel",
         "title": "Melbourne Airport（MEL）",
-        "detail": "Melbourne・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Melbourne",
         "groupID": "oceania",
         "latitude": -37.670732,
         "longitude": 144.837898,
@@ -1779,7 +1753,7 @@
       {
         "id": "airport-bne",
         "title": "Brisbane International Airport（BNE）",
-        "detail": "Brisbane・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Brisbane",
         "groupID": "oceania",
         "latitude": -27.384199,
         "longitude": 153.117004,
@@ -1791,7 +1765,7 @@
       {
         "id": "airport-per",
         "title": "Perth International Airport（PER）",
-        "detail": "Perth・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Perth",
         "groupID": "oceania",
         "latitude": -31.9403,
         "longitude": 115.967003,
@@ -1803,7 +1777,7 @@
       {
         "id": "airport-akl",
         "title": "Auckland International Airport（AKL）",
-        "detail": "Auckland・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Auckland",
         "groupID": "oceania",
         "latitude": -37.01199,
         "longitude": 174.786331,
@@ -1815,7 +1789,7 @@
       {
         "id": "airport-chc",
         "title": "Christchurch International Airport（CHC）",
-        "detail": "Christchurch・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Christchurch",
         "groupID": "oceania",
         "latitude": -43.489029,
         "longitude": 172.532065,
@@ -1827,7 +1801,7 @@
       {
         "id": "airport-jnb",
         "title": "O.R. Tambo International Airport（JNB）",
-        "detail": "Johannesburg・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Johannesburg",
         "groupID": "africa",
         "latitude": -26.140081,
         "longitude": 28.246801,
@@ -1839,7 +1813,7 @@
       {
         "id": "airport-cpt",
         "title": "Cape Town International Airport（CPT）",
-        "detail": "Cape Town・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Cape Town",
         "groupID": "africa",
         "latitude": -33.97403,
         "longitude": 18.604333,
@@ -1851,7 +1825,7 @@
       {
         "id": "airport-cmn",
         "title": "Mohammed V International Airport（CMN）",
-        "detail": "Casablanca・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Casablanca",
         "groupID": "africa",
         "latitude": 33.3675,
         "longitude": -7.58997,
@@ -1863,7 +1837,7 @@
       {
         "id": "airport-add",
         "title": "Addis Ababa Bole International Airport（ADD）",
-        "detail": "Addis Ababa・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Addis Ababa",
         "groupID": "africa",
         "latitude": 8.97789,
         "longitude": 38.799301,
@@ -1875,7 +1849,7 @@
       {
         "id": "airport-nbo",
         "title": "Jomo Kenyatta International Airport（NBO）",
-        "detail": "Nairobi・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Nairobi",
         "groupID": "africa",
         "latitude": -1.318886,
         "longitude": 36.928233,
@@ -1887,7 +1861,7 @@
       {
         "id": "airport-los",
         "title": "Murtala Muhammed International Airport（LOS）",
-        "detail": "Lagos・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Lagos",
         "groupID": "africa",
         "latitude": 6.57737,
         "longitude": 3.32116,
@@ -1899,7 +1873,7 @@
       {
         "id": "airport-acc",
         "title": "Kotoka International Airport（ACC）",
-        "detail": "Accra・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Accra",
         "groupID": "africa",
         "latitude": 5.60519,
         "longitude": -0.166786,
@@ -1911,7 +1885,7 @@
       {
         "id": "airport-mru",
         "title": "Sir Seewoosagur Ramgoolam International Airport（MRU）",
-        "detail": "Plaine Magnien・写真の撮影位置から自動判定・半径1.5km",
+        "detail": "Plaine Magnien",
         "groupID": "africa",
         "latitude": -20.430201,
         "longitude": 57.683601,

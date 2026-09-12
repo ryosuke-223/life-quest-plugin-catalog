@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "japan-airports",
-  "version": 2,
+  "version": 3,
   "title": "日本の拠点空港めぐり",
   "summary": "国土交通省の拠点空港28空港。写真位置から訪問を自動判定します。",
   "iconSystemName": "airplane.departure",
@@ -9,7 +9,6 @@
     {
       "id": "airport-cts",
       "title": "新千歳空港（CTS）",
-      "detail": "写真の撮影位置から自動判定・半径1.5km",
       "groupID": "hokkaido",
       "latitude": 42.774753,
       "longitude": 141.690414,
@@ -21,7 +20,6 @@
     {
       "id": "airport-wkj",
       "title": "稚内空港（WKJ）",
-      "detail": "写真の撮影位置から自動判定・半径1.5km",
       "groupID": "hokkaido",
       "latitude": 45.404202,
       "longitude": 141.800995,
@@ -33,7 +31,6 @@
     {
       "id": "airport-kuh",
       "title": "釧路空港（KUH）",
-      "detail": "写真の撮影位置から自動判定・半径1.5km",
       "groupID": "hokkaido",
       "latitude": 43.041,
       "longitude": 144.192993,
@@ -45,7 +42,6 @@
     {
       "id": "airport-hkd",
       "title": "函館空港（HKD）",
-      "detail": "写真の撮影位置から自動判定・半径1.5km",
       "groupID": "hokkaido",
       "latitude": 41.77,
       "longitude": 140.822006,
@@ -57,7 +53,6 @@
     {
       "id": "airport-akj",
       "title": "旭川空港（AKJ）",
-      "detail": "写真の撮影位置から自動判定・半径1.5km",
       "groupID": "hokkaido",
       "latitude": 43.670799,
       "longitude": 142.447006,
@@ -69,7 +64,6 @@
     {
       "id": "airport-obo",
       "title": "帯広空港（OBO）",
-      "detail": "写真の撮影位置から自動判定・半径1.5km",
       "groupID": "hokkaido",
       "latitude": 42.733299,
       "longitude": 143.216995,
@@ -81,7 +75,6 @@
     {
       "id": "airport-sdj",
       "title": "仙台空港（SDJ）",
-      "detail": "写真の撮影位置から自動判定・半径1.5km",
       "groupID": "tohoku",
       "latitude": 38.139702,
       "longitude": 140.917007,
@@ -93,7 +86,6 @@
     {
       "id": "airport-axt",
       "title": "秋田空港（AXT）",
-      "detail": "写真の撮影位置から自動判定・半径1.5km",
       "groupID": "tohoku",
       "latitude": 39.615601,
       "longitude": 140.218994,
@@ -105,7 +97,6 @@
     {
       "id": "airport-gaj",
       "title": "山形空港（GAJ）",
-      "detail": "写真の撮影位置から自動判定・半径1.5km",
       "groupID": "tohoku",
       "latitude": 38.4119,
       "longitude": 140.371002,
@@ -117,7 +108,6 @@
     {
       "id": "airport-hnd",
       "title": "東京国際空港（羽田）（HND）",
-      "detail": "写真の撮影位置から自動判定・半径1.5km",
       "groupID": "kanto",
       "latitude": 35.549678,
       "longitude": 139.786958,
@@ -129,7 +119,6 @@
     {
       "id": "airport-nrt",
       "title": "成田国際空港（NRT）",
-      "detail": "写真の撮影位置から自動判定・半径1.5km",
       "groupID": "kanto",
       "latitude": 35.76858,
       "longitude": 140.388714,
@@ -141,7 +130,6 @@
     {
       "id": "airport-ngo",
       "title": "中部国際空港（セントレア）（NGO）",
-      "detail": "写真の撮影位置から自動判定・半径1.5km",
       "groupID": "chubu",
       "latitude": 34.858398,
       "longitude": 136.804993,
@@ -153,7 +141,6 @@
     {
       "id": "airport-kij",
       "title": "新潟空港（KIJ）",
-      "detail": "写真の撮影位置から自動判定・半径1.5km",
       "groupID": "chubu",
       "latitude": 37.954166,
       "longitude": 139.112189,
@@ -165,7 +152,6 @@
     {
       "id": "airport-kix",
       "title": "関西国際空港（KIX）",
-      "detail": "写真の撮影位置から自動判定・半径1.5km",
       "groupID": "kansai",
       "latitude": 34.427299,
       "longitude": 135.244003,
@@ -177,7 +163,6 @@
     {
       "id": "airport-itm",
       "title": "大阪国際空港（伊丹）（ITM）",
-      "detail": "写真の撮影位置から自動判定・半径1.5km",
       "groupID": "kansai",
       "latitude": 34.780853,
       "longitude": 135.440829,
@@ -189,7 +174,6 @@
     {
       "id": "airport-hij",
       "title": "広島空港（HIJ）",
-      "detail": "写真の撮影位置から自動判定・半径1.5km",
       "groupID": "chugoku",
       "latitude": 34.4361,
       "longitude": 132.919006,
@@ -201,7 +185,6 @@
     {
       "id": "airport-ubj",
       "title": "山口宇部空港（UBJ）",
-      "detail": "写真の撮影位置から自動判定・半径1.5km",
       "groupID": "chugoku",
       "latitude": 33.93,
       "longitude": 131.279007,
@@ -213,7 +196,6 @@
     {
       "id": "airport-tak",
       "title": "高松空港（TAK）",
-      "detail": "写真の撮影位置から自動判定・半径1.5km",
       "groupID": "shikoku",
       "latitude": 34.214963,
       "longitude": 134.015454,
@@ -225,7 +207,6 @@
     {
       "id": "airport-myj",
       "title": "松山空港（MYJ）",
-      "detail": "写真の撮影位置から自動判定・半径1.5km",
       "groupID": "shikoku",
       "latitude": 33.826893,
       "longitude": 132.700114,
@@ -237,7 +218,6 @@
     {
       "id": "airport-kcz",
       "title": "高知龍馬空港（KCZ）",
-      "detail": "写真の撮影位置から自動判定・半径1.5km",
       "groupID": "shikoku",
       "latitude": 33.545217,
       "longitude": 133.670166,
@@ -249,7 +229,6 @@
     {
       "id": "airport-fuk",
       "title": "福岡空港（FUK）",
-      "detail": "写真の撮影位置から自動判定・半径1.5km",
       "groupID": "kyushu",
       "latitude": 33.585899,
       "longitude": 130.451004,
@@ -261,7 +240,6 @@
     {
       "id": "airport-kkj",
       "title": "北九州空港（KKJ）",
-      "detail": "写真の撮影位置から自動判定・半径1.5km",
       "groupID": "kyushu",
       "latitude": 33.845901,
       "longitude": 131.035004,
@@ -273,7 +251,6 @@
     {
       "id": "airport-ngs",
       "title": "長崎空港（NGS）",
-      "detail": "写真の撮影位置から自動判定・半径1.5km",
       "groupID": "kyushu",
       "latitude": 32.916901,
       "longitude": 129.914001,
@@ -285,7 +262,6 @@
     {
       "id": "airport-kmj",
       "title": "阿蘇くまもと空港（KMJ）",
-      "detail": "写真の撮影位置から自動判定・半径1.5km",
       "groupID": "kyushu",
       "latitude": 32.837299,
       "longitude": 130.854996,
@@ -297,7 +273,6 @@
     {
       "id": "airport-oit",
       "title": "大分空港（OIT）",
-      "detail": "写真の撮影位置から自動判定・半径1.5km",
       "groupID": "kyushu",
       "latitude": 33.479401,
       "longitude": 131.737,
@@ -309,7 +284,6 @@
     {
       "id": "airport-kmi",
       "title": "宮崎空港（KMI）",
-      "detail": "写真の撮影位置から自動判定・半径1.5km",
       "groupID": "kyushu",
       "latitude": 31.877199,
       "longitude": 131.449005,
@@ -321,7 +295,6 @@
     {
       "id": "airport-koj",
       "title": "鹿児島空港（KOJ）",
-      "detail": "写真の撮影位置から自動判定・半径1.5km",
       "groupID": "kyushu",
       "latitude": 31.8034,
       "longitude": 130.718994,
@@ -333,7 +306,6 @@
     {
       "id": "airport-oka",
       "title": "那覇空港（OKA）",
-      "detail": "写真の撮影位置から自動判定・半径1.5km",
       "groupID": "okinawa",
       "latitude": 26.192437,
       "longitude": 127.639804,
@@ -528,8 +500,9 @@
       "aggregation": "cumulativeCount"
     },
     {
-      "type": "pieChart",
-      "breakdown": "status"
+      "type": "barChart",
+      "metric": "visitedCount",
+      "aggregation": "annualVisitedItemCount"
     },
     {
       "type": "groupProgress"
@@ -538,5 +511,6 @@
       "type": "itemList",
       "sort": "group"
     }
-  ]
+  ],
+  "showsPeriodSelector": false
 }

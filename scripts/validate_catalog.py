@@ -38,7 +38,7 @@ VISUALIZATION_TYPES = {
     "heatmap",
 }
 CHART_METRICS = {"visitedCount", "completionRate", "remainingCount", "unlockedAchievements", "totalAchievements"}
-CHART_AGGREGATIONS = {"cumulativeCount", "annualCount", "completionRate"}
+CHART_AGGREGATIONS = {"cumulativeCount", "annualCount", "annualVisitedItemCount", "completionRate"}
 BREAKDOWNS = {"status", "group"}
 HEATMAP_DIMENSIONS = {"yearByGroup", "yearByStatus"}
 
@@ -179,6 +179,8 @@ def validate_plugin(path: Path, plugin: object) -> None:
     require_string(path, plugin["title"], "title", MAX_PLUGIN_TITLE_BYTES)
     require_string(path, plugin["summary"], "summary", MAX_SUMMARY_BYTES)
     require_string(path, plugin["iconSystemName"], "iconSystemName", 100)
+    if "showsPeriodSelector" in plugin and not isinstance(plugin["showsPeriodSelector"], bool):
+        fail(path, "showsPeriodSelector must be a boolean")
 
     items = plugin["items"]
     groups = plugin["groups"]

@@ -92,7 +92,6 @@ def location_item(code: str, title: str, group_id: str, row: dict[str, str]) -> 
     return {
         "id": f"airport-{code.lower()}",
         "title": f"{title}（{code}）",
-        "detail": "写真の撮影位置から自動判定・半径1.5km",
         "groupID": group_id,
         "latitude": round(float(row["latitude_deg"]), 6),
         "longitude": round(float(row["longitude_deg"]), 6),
@@ -107,7 +106,7 @@ def world_item(code: str, group_id: str, row: dict[str, str]) -> dict:
     return {
         "id": f"airport-{code.lower()}",
         "title": f"{airport_name}（{code}）",
-        "detail": f"{municipality}・写真の撮影位置から自動判定・半径1.5km",
+        "detail": municipality,
         "groupID": group_id,
         "latitude": round(float(row["latitude_deg"]), 6),
         "longitude": round(float(row["longitude_deg"]), 6),
@@ -165,11 +164,13 @@ def build_japan(airports: dict[str, dict[str, str]]) -> dict:
             "metrics": ["visitedCount", "completionRate", "remainingCount", "unlockedAchievements"],
         },
         {"type": "lineChart", "metric": "visitedCount", "aggregation": "cumulativeCount"},
-        {"type": "pieChart", "breakdown": "status"},
+        {"type": "barChart", "metric": "visitedCount", "aggregation": "annualVisitedItemCount"},
         {"type": "groupProgress"},
         {"type": "itemList", "sort": "group"},
     ]
-    return make_plugin("japan-airports", "日本の拠点空港めぐり", "国土交通省の拠点空港28空港。写真位置から訪問を自動判定します。", items, groups, achievements, visualizations, version=2)
+    plugin = make_plugin("japan-airports", "日本の拠点空港めぐり", "国土交通省の拠点空港28空港。写真位置から訪問を自動判定します。", items, groups, achievements, visualizations, version=3)
+    plugin["showsPeriodSelector"] = False
+    return plugin
 
 
 def build_world(airports: dict[str, dict[str, str]]) -> dict:
@@ -199,7 +200,7 @@ def build_world(airports: dict[str, dict[str, str]]) -> dict:
         {"type": "groupProgress"},
         {"type": "itemList", "sort": "group"},
     ]
-    return make_plugin("world-major-airports", "世界の主要空港めぐり", "世界の主要国際空港100空港。写真位置から訪問を自動判定します。", items, groups, achievements, visualizations, version=2)
+    return make_plugin("world-major-airports", "世界の主要空港めぐり", "世界の主要国際空港100空港。写真位置から訪問を自動判定します。", items, groups, achievements, visualizations, version=3)
 
 
 def main() -> int:
