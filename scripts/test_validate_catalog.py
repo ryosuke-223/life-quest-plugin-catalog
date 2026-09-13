@@ -337,6 +337,7 @@ class WorldHeritageDataTests(unittest.TestCase):
         self.assertIn("判定対象外", munakata["detail"])
         self.assertIn("表示のみ", munakata["detail"])
         checkpoint_titles = {location["title"] for location in munakata["locations"]}
+        self.assertEqual(len(munakata["locations"]), 4)
         self.assertEqual(checkpoint_titles, {
             "宗像大社中津宮",
             "宗像大社辺津宮",
