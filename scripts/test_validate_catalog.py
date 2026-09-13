@@ -311,6 +311,15 @@ class WorldHeritageDataTests(unittest.TestCase):
     def test_remote_summit_radius_exceptions_and_okinoshima_display_rules(self):
         manifest_path = Path(__file__).resolve().parents[1] / "plugins" / "japan-world-heritage.json"
         plugin = json.loads(manifest_path.read_text(encoding="utf-8"))
+        self.assertEqual(len(plugin["items"]), 27)
+        locations = [location for item in plugin["items"] for location in item["locations"]]
+        self.assertEqual(len(locations), 251)
+        self.assertTrue(all(location.get("sourceURL", "").startswith("https://") for location in locations))
+        self.assertNotIn("沖ノ鳥島", json.dumps(plugin, ensure_ascii=False))
+        radii = [location["radiusMeters"] for location in locations]
+        self.assertEqual(radii.count(200), 242)
+        self.assertEqual(radii.count(300), 9)
+
         wider_checkpoints = {
             "yakushima": {"asset-002", "asset-003", "asset-004"},
             "ogasawara-islands": {"asset-001", "asset-002"},
@@ -328,8 +337,13 @@ class WorldHeritageDataTests(unittest.TestCase):
         self.assertIn("判定対象外", munakata["detail"])
         self.assertIn("表示のみ", munakata["detail"])
         checkpoint_titles = {location["title"] for location in munakata["locations"]}
+        self.assertEqual(checkpoint_titles, {
+            "宗像大社中津宮",
+            "宗像大社辺津宮",
+            "新原・奴山古墳群",
+            "宗像大社沖津宮遙拝所",
+        })
         self.assertNotIn("沖ノ島本島", checkpoint_titles)
-        self.assertIn("宗像大社沖津宮遙拝所", checkpoint_titles)
 
 
 if __name__ == "__main__":
