@@ -347,5 +347,49 @@ class WorldHeritageDataTests(unittest.TestCase):
         self.assertNotIn("沖ノ島本島", checkpoint_titles)
 
 
+class CastlePluginDataTests(unittest.TestCase):
+    @staticmethod
+    def polygon_contains(longitude, latitude, geometry):
+        def ring_contains(ring):
+            inside = False
+            for start, end in zip(ring, ring[1:]):
+                x1, y1 = start
+                x2, y2 = end
+                if (y1 > latitude) != (y2 > latitude):
+                    crossing = x1 + (x2 - x1) * (latitude - y1) / (y2 - y1)
+                    if crossing >= longitude:
+                        inside = not inside
+            return inside
+
+        polygons = geometry["coordinates"] if geometry["type"] == "MultiPolygon" else [geometry["coordinates"]]
+        return any(ring_contains(polygon[0]) and not any(ring_contains(hole) for hole in polygon[1:])
+                   for polygon in polygons)
+
+    def test_uses_traced_polygons_with_documented_circle_fallbacks_and_no_source_urls(self):
+        manifest_path = Path(__file__).resolve().parents[1] / "plugins" / "japan-castle-collection.json"
+        plugin = json.loads(manifest_path.read_text(encoding="utf-8"))
+        self.assertEqual(len(plugin["items"]), 27)
+        self.assertEqual(plugin["mapAttribution"], "© OpenStreetMap contributors · ODbL 1.0")
+
+        polygons = []
+        circle_fallbacks = []
+        for item in plugin["items"]:
+            location = item["locations"][0]
+            self.assertNotIn("sourceURL", location)
+            if "geometry" in location:
+                polygons.append(item["id"])
+                self.assertIn("latitude", location)
+                self.assertIn("longitude", location)
+                self.assertIn(location["geometry"]["type"], {"Polygon", "MultiPolygon"})
+                self.assertTrue(self.polygon_contains(location["longitude"], location["latitude"], location["geometry"]),
+                                item["id"])
+            else:
+                circle_fallbacks.append(item["id"])
+                self.assertEqual(location["radiusMeters"], 250)
+
+        self.assertEqual(len(polygons), 19)
+        self.assertEqual(len(circle_fallbacks), 8)
+
+
 if __name__ == "__main__":
     unittest.main()

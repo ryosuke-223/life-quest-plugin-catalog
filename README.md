@@ -9,6 +9,7 @@ Life Questの公式プラグインカタログです。プラグインはSwift�
 ├── catalog.json              # アプリが取得する公開カタログ
 ├── plugins/                  # 個別プラグインの原本
 ├── AIRPORT_DATA_SOURCES.md   # 空港プラグインの対象範囲と出典
+├── CASTLE_PLUGIN_DATA_SOURCES.md # 城郭プラグインの出典と判定範囲
 ├── WORLD_HERITAGE_DATA_SOURCES.md # 世界遺産プラグインのデータ出典・利用条件
 ├── WORLD_HERITAGE_COORDINATE_RESEARCH.md # 世界遺産の座標選定・判定条件
 ├── scripts/
@@ -85,6 +86,10 @@ Life QuestアプリのDebug／Releaseビルドで、Build Settingsの `PLUGIN_CA
 ### 日本の世界遺産めぐり
 
 [世界遺産プラグイン](plugins/japan-world-heritage.json)には、日本の世界遺産27件を親項目として登録し、文化・自然遺産あわせて251地点を設定しています。写真の位置が同じ遺産に設定した地点のどれか1つから200m以内なら、その親項目を1件達成します。自然遺産の島全体を覆う大きな円は使わず、登録区域内の登山・散策などの代表地点で判定します。参詣道などの線状資産も公式案内上の代表地点による判定で、登録区域全体を境界判定するものではありません。宗像の沖ノ島本島は立入不可のため項目説明に表示し、GPS判定と達成カウントの対象外とします。座標の根拠、除外理由、通行・立入上の注意は[座標判定の調査メモ](WORLD_HERITAGE_COORDINATE_RESEARCH.md)と[データ出典](WORLD_HERITAGE_DATA_SOURCES.md)を参照してください。
+
+### 名城・城跡コレクション
+
+[城郭プラグイン](plugins/japan-castle-collection.json)には27城を登録しています。撮影位置が範囲に入ると写真位置から訪問候補を記録します。19城にはOpenStreetMapの城郭・城址公園形状を使い、適切な敷地形状を確認できなかった8城は代表地点から半径250mの円を使います。公園形状は公式な堀・文化財境界とは限らない近似範囲です。個別座標の出典と判定上の制限は[城郭データ出典](CASTLE_PLUGIN_DATA_SOURCES.md)に記載しています。画面案は[モックアップ](mockups/meijo-plugin-mockup.svg)を参照してください。
 
 ## 可視化の指定
 
