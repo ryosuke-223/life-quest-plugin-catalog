@@ -1,0 +1,2395 @@
+{
+  "schemaVersion": 1,
+  "id": "japan-world-heritage",
+  "version": 4,
+  "title": "日本の世界遺産めぐり",
+  "summary": "写真の撮影位置が判定地点の半径内に入ると、世界遺産1件を自動達成します（標準200m、自然遺産の山頂9地点は300m）。地点数は達成数に加算しません。",
+  "iconSystemName": "globe",
+  "items": [
+    {
+      "id": "horyuji",
+      "title": "法隆寺地域の仏教建造物",
+      "detail": "1993年登録",
+      "groupID": "cultural",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "asset-001",
+          "title": "法隆寺",
+          "latitude": 34.61473889,
+          "longitude": 135.73417222,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q261932"
+        },
+        {
+          "id": "asset-002",
+          "title": "法起寺",
+          "latitude": 34.62297222,
+          "longitude": 135.74622222,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q1351209"
+        }
+      ]
+    },
+    {
+      "id": "himeji-castle",
+      "title": "姫路城",
+      "detail": "1993年登録",
+      "groupID": "cultural",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "asset-001",
+          "title": "姫路城",
+          "latitude": 34.83937778,
+          "longitude": 134.69409722,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q188754"
+        }
+      ]
+    },
+    {
+      "id": "yakushima",
+      "title": "屋久島",
+      "detail": "1993年登録。登山ルート・交通規制を事前に確認",
+      "groupID": "natural",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "asset-001",
+          "title": "縄文杉（荒川口〜縄文杉ルート）",
+          "latitude": 30.360869,
+          "longitude": 130.531929,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.env.go.jp/park/yakushima/ywhcc/route/3-1.html"
+        },
+        {
+          "id": "asset-002",
+          "title": "黒味岳（花之江河ルート）",
+          "latitude": 30.317408,
+          "longitude": 130.508474,
+          "radiusMeters": 300,
+          "sourceURL": "https://www.env.go.jp/park/yakushima/ywhcc/route/3-2.html"
+        },
+        {
+          "id": "asset-003",
+          "title": "宮之浦岳（縦走ルート）",
+          "latitude": 30.336061,
+          "longitude": 130.504179,
+          "radiusMeters": 300,
+          "sourceURL": "https://www.env.go.jp/park/yakushima/ywhcc/route/4-2.html"
+        },
+        {
+          "id": "asset-004",
+          "title": "本富岳（モッチョム岳）",
+          "latitude": 30.256646,
+          "longitude": 130.564189,
+          "radiusMeters": 300,
+          "sourceURL": "https://www.env.go.jp/park/yakushima/ywhcc/route/3-3.html"
+        }
+      ]
+    },
+    {
+      "id": "shirakami-sanchi",
+      "title": "白神山地",
+      "detail": "1993年登録。歩道・入山規制の最新情報を確認",
+      "groupID": "natural",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "asset-001",
+          "title": "世界遺産の径・ブナ林散策道（公式マップ地点）",
+          "latitude": 40.52161272,
+          "longitude": 140.1535535,
+          "radiusMeters": 200,
+          "sourceURL": "https://aomori-tourism.com/spot/detail_249.html"
+        }
+      ]
+    },
+    {
+      "id": "historic-kyoto",
+      "title": "古都京都の文化財（京都市、宇治市、大津市）",
+      "detail": "1994年登録",
+      "groupID": "cultural",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "asset-001",
+          "title": "賀茂別雷神社（上賀茂神社）",
+          "latitude": 35.060507,
+          "longitude": 135.752752,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q700448"
+        },
+        {
+          "id": "asset-002",
+          "title": "賀茂御祖神社（下鴨神社）",
+          "latitude": 35.039069,
+          "longitude": 135.773012,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q701620"
+        },
+        {
+          "id": "asset-003",
+          "title": "教王護国寺",
+          "latitude": 34.98036111,
+          "longitude": 135.74769444,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q1046403"
+        },
+        {
+          "id": "asset-004",
+          "title": "清水寺",
+          "latitude": 34.99483056,
+          "longitude": 135.78500278,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q221716"
+        },
+        {
+          "id": "asset-005",
+          "title": "延暦寺",
+          "latitude": 35.07045,
+          "longitude": 135.840925,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q917195"
+        },
+        {
+          "id": "asset-006",
+          "title": "醍醐寺",
+          "latitude": 34.9515,
+          "longitude": 135.82177778,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q1157535"
+        },
+        {
+          "id": "asset-007",
+          "title": "仁和寺",
+          "latitude": 35.03105556,
+          "longitude": 135.71380556,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q1202871"
+        },
+        {
+          "id": "asset-008",
+          "title": "平等院",
+          "latitude": 34.88929167,
+          "longitude": 135.80769167,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q61094"
+        },
+        {
+          "id": "asset-009",
+          "title": "宇治上神社",
+          "latitude": 34.89211111,
+          "longitude": 135.8115,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q583589"
+        },
+        {
+          "id": "asset-010",
+          "title": "高山寺",
+          "latitude": 35.06010833,
+          "longitude": 135.67856944,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q986750"
+        },
+        {
+          "id": "asset-011",
+          "title": "西芳寺",
+          "latitude": 34.99196111,
+          "longitude": 135.68331389,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q1516753"
+        },
+        {
+          "id": "asset-012",
+          "title": "天龍寺",
+          "latitude": 35.01596389,
+          "longitude": 135.67377222,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q1759226"
+        },
+        {
+          "id": "asset-013",
+          "title": "鹿苑寺",
+          "latitude": 35.03940278,
+          "longitude": 135.72936389,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q270983"
+        },
+        {
+          "id": "asset-014",
+          "title": "慈照寺",
+          "latitude": 35.026875,
+          "longitude": 135.79825,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q257473"
+        },
+        {
+          "id": "asset-015",
+          "title": "龍安寺",
+          "latitude": 35.03449444,
+          "longitude": 135.71825278,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q587371"
+        },
+        {
+          "id": "asset-016",
+          "title": "本願寺",
+          "latitude": 34.99111111,
+          "longitude": 135.75111111,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q1627016"
+        },
+        {
+          "id": "asset-017",
+          "title": "二条城",
+          "latitude": 35.01416667,
+          "longitude": 135.7475,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q1013399"
+        }
+      ]
+    },
+    {
+      "id": "shirakawa-go-gokayama",
+      "title": "白川郷・五箇山の合掌造り集落",
+      "detail": "1995年登録",
+      "groupID": "cultural",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "asset-001",
+          "title": "白川村荻町地区",
+          "latitude": 36.2583,
+          "longitude": 136.9083,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q66087931"
+        },
+        {
+          "id": "asset-002",
+          "title": "平村相倉地区",
+          "latitude": 36.425,
+          "longitude": 136.9333,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q66087933"
+        },
+        {
+          "id": "asset-003",
+          "title": "上平村菅沼地区",
+          "latitude": 36.4056,
+          "longitude": 136.8861,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q66087934"
+        }
+      ]
+    },
+    {
+      "id": "hiroshima-peace-memorial",
+      "title": "原爆ドーム",
+      "detail": "1996年登録",
+      "groupID": "cultural",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "asset-001",
+          "title": "原爆ドーム",
+          "latitude": 34.39555556,
+          "longitude": 132.45361111,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q231140"
+        }
+      ]
+    },
+    {
+      "id": "itsukushima-shrine",
+      "title": "厳島神社",
+      "detail": "1996年登録",
+      "groupID": "cultural",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "asset-001",
+          "title": "厳島神社",
+          "latitude": 34.29602222,
+          "longitude": 132.31989444,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q191763"
+        },
+        {
+          "id": "asset-002",
+          "title": "厳島",
+          "latitude": 34.26666667,
+          "longitude": 132.3,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q875301"
+        }
+      ]
+    },
+    {
+      "id": "historic-nara",
+      "title": "古都奈良の文化財",
+      "detail": "1998年登録",
+      "groupID": "cultural",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "asset-001",
+          "title": "東大寺",
+          "latitude": 34.68897222,
+          "longitude": 135.83983333,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q460367"
+        },
+        {
+          "id": "asset-002",
+          "title": "興福寺",
+          "latitude": 34.68325,
+          "longitude": 135.83116667,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q1070863"
+        },
+        {
+          "id": "asset-003",
+          "title": "春日大社",
+          "latitude": 34.68138889,
+          "longitude": 135.84833333,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q714559"
+        },
+        {
+          "id": "asset-004",
+          "title": "春日山原始林",
+          "latitude": 34.68430556,
+          "longitude": 135.86452778,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q5367406"
+        },
+        {
+          "id": "asset-005",
+          "title": "元興寺",
+          "latitude": 34.67780278,
+          "longitude": 135.83135556,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q1203099"
+        },
+        {
+          "id": "asset-006",
+          "title": "薬師寺",
+          "latitude": 34.66835556,
+          "longitude": 135.78431111,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q945913"
+        },
+        {
+          "id": "asset-007",
+          "title": "唐招提寺",
+          "latitude": 34.67558333,
+          "longitude": 135.78483333,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q973175"
+        },
+        {
+          "id": "asset-008",
+          "title": "平城宮跡",
+          "latitude": 34.6911,
+          "longitude": 135.7956,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q211585"
+        }
+      ]
+    },
+    {
+      "id": "nikko-shrines-temples",
+      "title": "日光の社寺",
+      "detail": "1999年登録",
+      "groupID": "cultural",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "asset-001",
+          "title": "二荒山神社",
+          "latitude": 36.758949,
+          "longitude": 139.596425,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q701927"
+        },
+        {
+          "id": "asset-002",
+          "title": "東照宮",
+          "latitude": 36.75916667,
+          "longitude": 139.59861111,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q696641"
+        },
+        {
+          "id": "asset-003",
+          "title": "輪王寺",
+          "latitude": 36.75438889,
+          "longitude": 139.60113889,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q1348249"
+        },
+        {
+          "id": "asset-004",
+          "title": "日光山内",
+          "latitude": 36.7565,
+          "longitude": 139.5994,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q1063133"
+        }
+      ]
+    },
+    {
+      "id": "gusuku-sites",
+      "title": "琉球王国のグスク及び関連遺産群",
+      "detail": "2000年登録",
+      "groupID": "cultural",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "asset-001",
+          "title": "今帰仁城跡",
+          "latitude": 26.69077778,
+          "longitude": 127.92977778,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q508866"
+        },
+        {
+          "id": "asset-002",
+          "title": "座喜味城跡",
+          "latitude": 26.40813889,
+          "longitude": 127.74219444,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q2338956"
+        },
+        {
+          "id": "asset-003",
+          "title": "勝連城跡",
+          "latitude": 26.33019444,
+          "longitude": 127.87891667,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q2471589"
+        },
+        {
+          "id": "asset-004",
+          "title": "中城城跡",
+          "latitude": 26.28419444,
+          "longitude": 127.80136111,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q1013209"
+        },
+        {
+          "id": "asset-005",
+          "title": "首里城跡",
+          "latitude": 26.21703056,
+          "longitude": 127.719475,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q907052"
+        },
+        {
+          "id": "asset-006",
+          "title": "園比屋武御嶽石門",
+          "latitude": 26.21808333,
+          "longitude": 127.71736111,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q1053962"
+        },
+        {
+          "id": "asset-007",
+          "title": "玉陵",
+          "latitude": 26.21830556,
+          "longitude": 127.71475,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q1186324"
+        },
+        {
+          "id": "asset-008",
+          "title": "識名園",
+          "latitude": 26.20386111,
+          "longitude": 127.71530556,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q3133545"
+        },
+        {
+          "id": "asset-009",
+          "title": "斎場御嶽",
+          "latitude": 26.17333333,
+          "longitude": 127.82666667,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q3087076"
+        }
+      ]
+    },
+    {
+      "id": "kii-sacred-sites",
+      "title": "紀伊山地の霊場と参詣道",
+      "detail": "2004年登録",
+      "groupID": "cultural",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "asset-001",
+          "title": "吉野山",
+          "latitude": 34.3564,
+          "longitude": 135.8706,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q1036938"
+        },
+        {
+          "id": "asset-002",
+          "title": "吉野水分神社",
+          "latitude": 34.35391667,
+          "longitude": 135.87313889,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q3529714"
+        },
+        {
+          "id": "asset-003",
+          "title": "金峯神社",
+          "latitude": 34.342603,
+          "longitude": 135.881801,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q3197197"
+        },
+        {
+          "id": "asset-004",
+          "title": "金峯山寺",
+          "latitude": 34.36825,
+          "longitude": 135.85816667,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q1741668"
+        },
+        {
+          "id": "asset-005",
+          "title": "吉水神社",
+          "latitude": 34.36736111,
+          "longitude": 135.86188889,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q3572667"
+        },
+        {
+          "id": "asset-006",
+          "title": "大峰山寺",
+          "latitude": 34.25294444,
+          "longitude": 135.94127778,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q3077344"
+        },
+        {
+          "id": "asset-007",
+          "title": "熊野本宮大社",
+          "latitude": 33.8404,
+          "longitude": 135.7736,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q705035"
+        },
+        {
+          "id": "asset-008",
+          "title": "熊野速玉大社",
+          "latitude": 33.7321,
+          "longitude": 135.9836,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q335618"
+        },
+        {
+          "id": "asset-009",
+          "title": "熊野那智大社",
+          "latitude": 33.668568,
+          "longitude": 135.890493,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q710359"
+        },
+        {
+          "id": "asset-010",
+          "title": "青岸渡寺",
+          "latitude": 33.66916667,
+          "longitude": 135.89,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q1476235"
+        },
+        {
+          "id": "asset-011",
+          "title": "那智大滝",
+          "latitude": 33.67527778,
+          "longitude": 135.8875,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q1365882"
+        },
+        {
+          "id": "asset-012",
+          "title": "那智原始林",
+          "latitude": 33.67611111,
+          "longitude": 135.89361111,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11642740"
+        },
+        {
+          "id": "asset-013",
+          "title": "補陀洛山寺",
+          "latitude": 33.644725,
+          "longitude": 135.93443611,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q2585020"
+        },
+        {
+          "id": "asset-014",
+          "title": "丹生都比売神社",
+          "latitude": 34.26272222,
+          "longitude": 135.522,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q705154"
+        },
+        {
+          "id": "asset-015",
+          "title": "金剛峯寺",
+          "latitude": 34.21408333,
+          "longitude": 135.58416667,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q1203429"
+        },
+        {
+          "id": "asset-016",
+          "title": "慈尊院・町石道起点（高野参詣道）",
+          "latitude": 34.29519660015608,
+          "longitude": 135.54996013641357,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wakayama-kanko.or.jp/courses/detail_54.html"
+        },
+        {
+          "id": "asset-017",
+          "title": "丹生官省符神社",
+          "latitude": 34.29422222,
+          "longitude": 135.54944444,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q3342246"
+        },
+        {
+          "id": "asset-018",
+          "title": "玉置神社（大峯奥駈道）",
+          "latitude": 34.106884,
+          "longitude": 135.902176,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.pref.nara.lg.jp/ikasu-nara/bunkashigen/main00270.html"
+        },
+        {
+          "id": "asset-019",
+          "title": "熊野古道 中辺路・滝尻王子〜継桜王子（代表地点）",
+          "latitude": 33.828323058806845,
+          "longitude": 135.63416004180908,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wakayama-kanko.or.jp/courses/detail_56.html"
+        },
+        {
+          "id": "asset-020",
+          "title": "果無峠・果無集落（小辺路）",
+          "latitude": 33.912387,
+          "longitude": 135.752441,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.pref.nara.lg.jp/ikasu-nara/bunkashigen/main00110.html"
+        },
+        {
+          "id": "asset-021",
+          "title": "長井坂（大辺路・公式コース代表地点）",
+          "latitude": 33.52569048705618,
+          "longitude": 135.5614185333252,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wakayama-kanko.or.jp/courses/detail_57.html"
+        },
+        {
+          "id": "asset-022",
+          "title": "松本峠の地蔵（伊勢路）",
+          "latitude": 33.895907,
+          "longitude": 136.112494,
+          "radiusMeters": 200,
+          "sourceURL": "https://maps.gsi.go.jp/#16/33.895907/136.112494/"
+        }
+      ]
+    },
+    {
+      "id": "shiretoko",
+      "title": "知床",
+      "detail": "2005年登録。五湖遊歩道は時期により利用条件あり",
+      "groupID": "natural",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "asset-001",
+          "title": "知床五湖フィールドハウス",
+          "latitude": 44.1216323,
+          "longitude": 145.0807387,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.goko.go.jp/access.html"
+        }
+      ]
+    },
+    {
+      "id": "iwami-ginzan",
+      "title": "石見銀山遺跡とその文化的景観",
+      "detail": "2007年登録",
+      "groupID": "cultural",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "asset-001",
+          "title": "銀山柵内",
+          "latitude": 35.107222,
+          "longitude": 132.4375,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q174139"
+        },
+        {
+          "id": "asset-002",
+          "title": "代官所跡",
+          "latitude": 35.12205556,
+          "longitude": 132.44783333,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q55530176"
+        },
+        {
+          "id": "asset-003",
+          "title": "大森・銀山",
+          "latitude": 35.107222,
+          "longitude": 132.4375,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q174139"
+        },
+        {
+          "id": "asset-004",
+          "title": "鞆ケ浦",
+          "latitude": 35.12606111,
+          "longitude": 132.37772222,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q21653806"
+        },
+        {
+          "id": "asset-005",
+          "title": "沖泊",
+          "latitude": 35.1005,
+          "longitude": 132.34288611,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q21652666"
+        },
+        {
+          "id": "asset-006",
+          "title": "温泉津",
+          "latitude": 35.09666667,
+          "longitude": 132.34988889,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11562956"
+        },
+        {
+          "id": "asset-007",
+          "title": "矢滝城跡（県観光ナビの公式案内地点）",
+          "latitude": 35.08480534,
+          "longitude": 132.4167478,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.kankou-shimane.com/destination/21453"
+        },
+        {
+          "id": "asset-008",
+          "title": "熊谷家住宅",
+          "latitude": 35.1208856,
+          "longitude": 132.4474517,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.kankou-shimane.com/destination/20372"
+        },
+        {
+          "id": "asset-009",
+          "title": "羅漢寺五百羅漢",
+          "latitude": 35.11336043,
+          "longitude": 132.4465636,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.kankou-shimane.com/en/destinations/9381"
+        }
+      ]
+    },
+    {
+      "id": "ogasawara-islands",
+      "title": "小笠原諸島",
+      "detail": "2011年登録。島間航路・歩道の通行状況を事前に確認",
+      "groupID": "natural",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "asset-001",
+          "title": "中央山山頂（父島）",
+          "latitude": 27.0733333333333,
+          "longitude": 142.218611111111,
+          "radiusMeters": 300,
+          "sourceURL": "https://cyberjapandata.gsi.go.jp/3d/mountain/mountain.html"
+        },
+        {
+          "id": "asset-002",
+          "title": "乳房山山頂（母島）",
+          "latitude": 26.6594444444444,
+          "longitude": 142.161388888889,
+          "radiusMeters": 300,
+          "sourceURL": "https://cyberjapandata.gsi.go.jp/3d/mountain/mountain.html"
+        }
+      ]
+    },
+    {
+      "id": "hiraizumi",
+      "title": "平泉‐仏国土（浄土）を表す建築・庭園及び考古学的遺跡群‐",
+      "detail": "2011年登録",
+      "groupID": "cultural",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "asset-001",
+          "title": "中尊寺",
+          "latitude": 39.00152778,
+          "longitude": 141.10272222,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q2660144"
+        },
+        {
+          "id": "asset-002",
+          "title": "毛越寺",
+          "latitude": 38.98722222,
+          "longitude": 141.1075,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q975227"
+        },
+        {
+          "id": "asset-003",
+          "title": "観自在王院跡",
+          "latitude": 38.98805556,
+          "longitude": 141.11027778,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q3080218"
+        },
+        {
+          "id": "asset-004",
+          "title": "無量光院跡",
+          "latitude": 38.99277778,
+          "longitude": 141.11569444,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11567538"
+        },
+        {
+          "id": "asset-005",
+          "title": "金鶏山",
+          "latitude": 38.99,
+          "longitude": 141.11,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11648027"
+        }
+      ]
+    },
+    {
+      "id": "mount-fuji",
+      "title": "富士山‐信仰の対象と芸術の源泉‐",
+      "detail": "2013年登録",
+      "groupID": "cultural",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "fuji-north-sengen",
+          "title": "北口本宮冨士浅間神社",
+          "latitude": 35.47075,
+          "longitude": 138.79241667,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11401286"
+        },
+        {
+          "id": "fuji-saiko",
+          "title": "西湖",
+          "latitude": 35.49833333,
+          "longitude": 138.68527778,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q1152394"
+        },
+        {
+          "id": "fuji-shoji",
+          "title": "精進湖",
+          "latitude": 35.48888889,
+          "longitude": 138.60972222,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11190939"
+        },
+        {
+          "id": "fuji-motosu",
+          "title": "本栖湖",
+          "latitude": 35.46388889,
+          "longitude": 138.58555556,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q1262329"
+        },
+        {
+          "id": "asset-005",
+          "title": "富士山本宮浅間大社",
+          "latitude": 35.22740556,
+          "longitude": 138.61000278,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q653180"
+        },
+        {
+          "id": "asset-006",
+          "title": "山宮浅間神社",
+          "latitude": 35.27122222,
+          "longitude": 138.63705556,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11467749"
+        },
+        {
+          "id": "asset-007",
+          "title": "村山浅間神社",
+          "latitude": 35.26144444,
+          "longitude": 138.66613889,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11523143"
+        },
+        {
+          "id": "asset-008",
+          "title": "須山浅間神社",
+          "latitude": 35.25458333,
+          "longitude": 138.84894444,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11664537"
+        },
+        {
+          "id": "asset-009",
+          "title": "冨士浅間神社(須走浅間神社)",
+          "latitude": 35.362647,
+          "longitude": 138.863397,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11526304"
+        },
+        {
+          "id": "asset-010",
+          "title": "河口浅間神社",
+          "latitude": 35.53105556,
+          "longitude": 138.77494444,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11553669"
+        },
+        {
+          "id": "asset-011",
+          "title": "冨士御室浅間神社",
+          "latitude": 35.40000833,
+          "longitude": 138.75516667,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11395081"
+        },
+        {
+          "id": "asset-012",
+          "title": "御師住宅(旧外川家住宅)",
+          "latitude": 35.48,
+          "longitude": 138.7958,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q66089879"
+        },
+        {
+          "id": "asset-013",
+          "title": "御師住宅(小佐野家住宅)",
+          "latitude": 35.4761,
+          "longitude": 138.7939,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q66089882"
+        },
+        {
+          "id": "asset-014",
+          "title": "山中湖",
+          "latitude": 35.4167,
+          "longitude": 138.875,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q1203756"
+        },
+        {
+          "id": "asset-015",
+          "title": "河口湖",
+          "latitude": 35.51777778,
+          "longitude": 138.75611111,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q577372"
+        },
+        {
+          "id": "asset-016",
+          "title": "忍野八海(出口池)",
+          "latitude": 35.4536,
+          "longitude": 138.8367,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q66089896"
+        },
+        {
+          "id": "asset-017",
+          "title": "忍野八海(お釜池)",
+          "latitude": 35.4594,
+          "longitude": 138.8314,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q66089898"
+        },
+        {
+          "id": "asset-018",
+          "title": "忍野八海(底抜池)",
+          "latitude": 35.46,
+          "longitude": 138.8317,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q66089900"
+        },
+        {
+          "id": "asset-019",
+          "title": "忍野八海(銚子池)",
+          "latitude": 35.4597,
+          "longitude": 138.8322,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q66089902"
+        },
+        {
+          "id": "asset-020",
+          "title": "忍野八海(湧池)",
+          "latitude": 35.46,
+          "longitude": 138.8328,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q66089904"
+        },
+        {
+          "id": "asset-021",
+          "title": "忍野八海(濁池)",
+          "latitude": 35.46,
+          "longitude": 138.8322,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q66089906"
+        },
+        {
+          "id": "asset-022",
+          "title": "忍野八海(鏡池)",
+          "latitude": 35.4608,
+          "longitude": 138.8331,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q66089908"
+        },
+        {
+          "id": "asset-023",
+          "title": "忍野八海(菖蒲池)",
+          "latitude": 35.4614,
+          "longitude": 138.8342,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q66089910"
+        },
+        {
+          "id": "asset-024",
+          "title": "船津胎内樹型",
+          "latitude": 35.453,
+          "longitude": 138.75555556,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q66089912"
+        },
+        {
+          "id": "asset-025",
+          "title": "吉田胎内樹型",
+          "latitude": 35.44847222,
+          "longitude": 138.76036111,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q66089914"
+        },
+        {
+          "id": "asset-026",
+          "title": "人穴富士講遺跡",
+          "latitude": 35.36163889,
+          "longitude": 138.59105556,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11376150"
+        },
+        {
+          "id": "asset-027",
+          "title": "白糸ノ滝",
+          "latitude": 35.3125,
+          "longitude": 138.58888889,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q38411"
+        },
+        {
+          "id": "asset-028",
+          "title": "三保松原",
+          "latitude": 34.99361111,
+          "longitude": 138.52277778,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q869275"
+        }
+      ]
+    },
+    {
+      "id": "tomioka-silk-mill",
+      "title": "富岡製糸場と絹産業遺産群",
+      "detail": "2014年登録",
+      "groupID": "cultural",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "asset-001",
+          "title": "富岡製糸場",
+          "latitude": 36.25527778,
+          "longitude": 138.88777778,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q7818931"
+        },
+        {
+          "id": "asset-002",
+          "title": "田島弥平旧宅",
+          "latitude": 36.24638889,
+          "longitude": 139.23888889,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q17210757"
+        },
+        {
+          "id": "asset-003",
+          "title": "高山社跡",
+          "latitude": 36.20333333,
+          "longitude": 139.03166667,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q17209498"
+        },
+        {
+          "id": "asset-004",
+          "title": "荒船風穴",
+          "latitude": 36.2467,
+          "longitude": 138.6353,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q66092099"
+        }
+      ]
+    },
+    {
+      "id": "meiji-industrial-heritage",
+      "title": "明治日本の産業革命遺産　製鉄・製鋼、造船、石炭産業",
+      "detail": "2015年登録",
+      "groupID": "cultural",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "asset-001",
+          "title": "萩反射炉",
+          "latitude": 34.42815278,
+          "longitude": 131.41829722,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q20637540"
+        },
+        {
+          "id": "asset-002",
+          "title": "恵美須ヶ鼻造船所跡",
+          "latitude": 34.43002778,
+          "longitude": 131.41211111,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q20043361"
+        },
+        {
+          "id": "asset-003",
+          "title": "大板山たたら製鉄遺跡",
+          "latitude": 34.506,
+          "longitude": 131.53825,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q18991024"
+        },
+        {
+          "id": "asset-004",
+          "title": "萩城下町",
+          "latitude": 34.413132,
+          "longitude": 131.388156,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q24563718"
+        },
+        {
+          "id": "asset-005",
+          "title": "松下村塾",
+          "latitude": 34.41216944,
+          "longitude": 131.41734444,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q2326743"
+        },
+        {
+          "id": "asset-006",
+          "title": "旧集成館",
+          "latitude": 31.6178,
+          "longitude": 130.5781,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11659317"
+        },
+        {
+          "id": "asset-007",
+          "title": "寺山炭窯跡",
+          "latitude": 31.66427806,
+          "longitude": 130.60110194,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q21653676"
+        },
+        {
+          "id": "asset-008",
+          "title": "関吉の疎水溝",
+          "latitude": 31.64708333,
+          "longitude": 130.55219444,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q20045209"
+        },
+        {
+          "id": "asset-009",
+          "title": "韮山反射炉",
+          "latitude": 35.03936111,
+          "longitude": 138.96202778,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q20042067"
+        },
+        {
+          "id": "asset-010",
+          "title": "橋野鉄鉱山",
+          "latitude": 39.343861,
+          "longitude": 141.682417,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11544148"
+        },
+        {
+          "id": "asset-011",
+          "title": "三重津海軍所跡",
+          "latitude": 33.207222,
+          "longitude": 130.339722,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11357710"
+        },
+        {
+          "id": "asset-012",
+          "title": "小菅修船場跡",
+          "latitude": 32.72683333,
+          "longitude": 129.86247222,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q734915"
+        },
+        {
+          "id": "asset-013",
+          "title": "三菱長崎造船所第三船渠",
+          "latitude": 32.7375,
+          "longitude": 129.8564,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q66092176"
+        },
+        {
+          "id": "asset-014",
+          "title": "三菱長崎造船所ジャイアント・カンチレバークレーン",
+          "latitude": 32.7422,
+          "longitude": 129.8592,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q66092178"
+        },
+        {
+          "id": "asset-015",
+          "title": "三菱長崎造船所占勝閣",
+          "latitude": 32.7383,
+          "longitude": 129.8569,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q66092177"
+        },
+        {
+          "id": "asset-016",
+          "title": "高島炭坑",
+          "latitude": 32.6595,
+          "longitude": 129.751,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11669662"
+        },
+        {
+          "id": "asset-017",
+          "title": "端島炭坑",
+          "latitude": 32.62777778,
+          "longitude": 129.73833333,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q285468"
+        },
+        {
+          "id": "asset-018",
+          "title": "旧グラバー住宅",
+          "latitude": 32.73435833,
+          "longitude": 129.86914722,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q63465"
+        },
+        {
+          "id": "miike-port",
+          "title": "三池港",
+          "latitude": 33.014134,
+          "longitude": 130.421484,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11356133"
+        },
+        {
+          "id": "miike-coal-mine",
+          "title": "三池炭鉱",
+          "latitude": 33.014,
+          "longitude": 130.456,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q6845423"
+        },
+        {
+          "id": "asset-021",
+          "title": "三角西港",
+          "latitude": 32.6222,
+          "longitude": 130.4556,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11357227"
+        },
+        {
+          "id": "asset-022",
+          "title": "官営八幡製鐵所",
+          "latitude": 33.90277778,
+          "longitude": 130.83,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q2943310"
+        },
+        {
+          "id": "asset-023",
+          "title": "遠賀川水源地ポンプ室",
+          "latitude": 33.81111111,
+          "longitude": 130.70686111,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q58889640"
+        },
+        {
+          "id": "asset-024",
+          "title": "三菱長崎造船所旧木型場",
+          "latitude": 32.74289469797373,
+          "longitude": 129.85545383251036,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.nagasaki-tabinet.com/guide/151"
+        }
+      ]
+    },
+    {
+      "id": "le-corbusier-works",
+      "title": "ル・コルビュジエの建築作品‐近代建築運動への顕著な貢献‐",
+      "detail": "2016年登録",
+      "groupID": "cultural",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "national-museum-western-art",
+          "title": "国立西洋美術館",
+          "latitude": 35.7153567,
+          "longitude": 139.7758498,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q1362629"
+        }
+      ]
+    },
+    {
+      "id": "okinotsushima-munakata",
+      "title": "「神宿る島」宗像・沖ノ島と関連遺産群",
+      "detail": "2017年登録。沖ノ島本島は一般立入不可のため表示のみ・GPS判定対象外。公開されている構成資産の地点で遺産全体を達成できます。",
+      "groupID": "cultural",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "asset-001",
+          "title": "宗像大社中津宮",
+          "latitude": 33.897431,
+          "longitude": 130.431968,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q66111213"
+        },
+        {
+          "id": "asset-002",
+          "title": "宗像大社辺津宮",
+          "latitude": 33.8297,
+          "longitude": 130.5142,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q66111215"
+        },
+        {
+          "id": "asset-003",
+          "title": "新原・奴山古墳群",
+          "latitude": 33.8175,
+          "longitude": 130.48583333,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q22119078"
+        },
+        {
+          "id": "okitsu-yohai-sho",
+          "title": "宗像大社沖津宮遙拝所",
+          "latitude": 33.90907832,
+          "longitude": 130.42801264,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.city.munakata.lg.jp/kanko/kiji0032577/index.html"
+        }
+      ]
+    },
+    {
+      "id": "hidden-christian-sites",
+      "title": "長崎と天草地方の潜伏キリシタン関連遺産",
+      "detail": "2018年登録",
+      "groupID": "cultural",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "asset-001",
+          "title": "原城跡",
+          "latitude": 32.63330556,
+          "longitude": 130.25647222,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q2498312"
+        },
+        {
+          "id": "asset-002",
+          "title": "平戸の聖地と集落（代表地点・中江ノ島）",
+          "latitude": 33.37326667,
+          "longitude": 129.46512222,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q21653863"
+        },
+        {
+          "id": "asset-003",
+          "title": "天草の﨑津集落",
+          "latitude": 32.31243333,
+          "longitude": 130.025725,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q21653164"
+        },
+        {
+          "id": "asset-004",
+          "title": "外海の出津集落",
+          "latitude": 32.843925,
+          "longitude": 129.70091944,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q21653043"
+        },
+        {
+          "id": "asset-005",
+          "title": "外海の大野集落",
+          "latitude": 32.8604231,
+          "longitude": 129.6892228,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q28682698"
+        },
+        {
+          "id": "asset-006",
+          "title": "黒島の集落",
+          "latitude": 33.139139,
+          "longitude": 129.537,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11678150"
+        },
+        {
+          "id": "asset-007",
+          "title": "旧野首教会",
+          "latitude": 33.187306,
+          "longitude": 129.129667,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11646223"
+        },
+        {
+          "id": "asset-008",
+          "title": "頭ヶ島の集落",
+          "latitude": 33.012403,
+          "longitude": 129.182856,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11664924"
+        },
+        {
+          "id": "asset-009",
+          "title": "旧五輪教会",
+          "latitude": 32.802194,
+          "longitude": 128.90375,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11372679"
+        },
+        {
+          "id": "asset-010",
+          "title": "奈留島の江上集落（江上天主堂とその周辺）",
+          "latitude": 32.855167,
+          "longitude": 128.904083,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11550607"
+        },
+        {
+          "id": "asset-011",
+          "title": "大浦天主堂",
+          "latitude": 32.73416667,
+          "longitude": 129.87013889,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q430626"
+        }
+      ]
+    },
+    {
+      "id": "moz-furuichi-kofun",
+      "title": "百舌鳥・古市古墳群‐古代日本の墳墓群‐",
+      "detail": "2019年登録",
+      "groupID": "cultural",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "asset-001",
+          "title": "反正天皇陵古墳",
+          "latitude": 34.5761,
+          "longitude": 135.4883,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11576219"
+        },
+        {
+          "id": "asset-002",
+          "title": "永山古墳",
+          "latitude": 34.56833333,
+          "longitude": 135.48694444,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11549996"
+        },
+        {
+          "id": "asset-003",
+          "title": "源右衛門山古墳",
+          "latitude": 34.5652,
+          "longitude": 135.4915,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q66124353"
+        },
+        {
+          "id": "asset-004",
+          "title": "塚廻古墳",
+          "latitude": 34.56277778,
+          "longitude": 135.49066667,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11428445"
+        },
+        {
+          "id": "asset-005",
+          "title": "収塚古墳",
+          "latitude": 34.55877778,
+          "longitude": 135.48805556,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11410610"
+        },
+        {
+          "id": "asset-006",
+          "title": "孫太夫山古墳",
+          "latitude": 34.56019444,
+          "longitude": 135.48508333,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q30925787"
+        },
+        {
+          "id": "asset-007",
+          "title": "竜佐山古墳",
+          "latitude": 34.56122222,
+          "longitude": 135.48341667,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q66124356"
+        },
+        {
+          "id": "asset-008",
+          "title": "銅亀山古墳",
+          "latitude": 34.56291667,
+          "longitude": 135.48238889,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q48751867"
+        },
+        {
+          "id": "asset-009",
+          "title": "菰山塚古墳",
+          "latitude": 34.5669,
+          "longitude": 135.4843,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q66124358"
+        },
+        {
+          "id": "asset-010",
+          "title": "丸保山古墳",
+          "latitude": 34.56719444,
+          "longitude": 135.4855,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11368031"
+        },
+        {
+          "id": "asset-011",
+          "title": "長塚古墳",
+          "latitude": 34.55766667,
+          "longitude": 135.4875,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11651650"
+        },
+        {
+          "id": "asset-012",
+          "title": "旗塚古墳",
+          "latitude": 34.5567,
+          "longitude": 135.4828,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q66124362"
+        },
+        {
+          "id": "asset-013",
+          "title": "銭塚古墳",
+          "latitude": 34.5553,
+          "longitude": 135.4843,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q66124363"
+        },
+        {
+          "id": "asset-014",
+          "title": "寺山南山古墳",
+          "latitude": 34.55602778,
+          "longitude": 135.48006944,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q66124365"
+        },
+        {
+          "id": "asset-015",
+          "title": "七観音古墳",
+          "latitude": 34.5568,
+          "longitude": 135.4796,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q66124366"
+        },
+        {
+          "id": "asset-016",
+          "title": "いたすけ古墳",
+          "latitude": 34.55325,
+          "longitude": 135.48551111,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11259430"
+        },
+        {
+          "id": "asset-017",
+          "title": "善右ヱ門山古墳",
+          "latitude": 34.5527,
+          "longitude": 135.4868,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q66124367"
+        },
+        {
+          "id": "asset-018",
+          "title": "御廟山古墳",
+          "latitude": 34.55486667,
+          "longitude": 135.490475,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11489009"
+        },
+        {
+          "id": "asset-019",
+          "title": "ニサンザイ古墳",
+          "latitude": 34.546919,
+          "longitude": 135.498547,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11423449"
+        },
+        {
+          "id": "asset-020",
+          "title": "津堂城山古墳",
+          "latitude": 34.58201667,
+          "longitude": 135.593425,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11555978"
+        },
+        {
+          "id": "asset-021",
+          "title": "仲哀天皇陵古墳",
+          "latitude": 34.565375,
+          "longitude": 135.59405556,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11471921"
+        },
+        {
+          "id": "asset-022",
+          "title": "鉢塚古墳",
+          "latitude": 34.5679,
+          "longitude": 135.5954,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q66124371"
+        },
+        {
+          "id": "asset-023",
+          "title": "允恭天皇陵古墳",
+          "latitude": 34.5731,
+          "longitude": 135.6167,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11479972"
+        },
+        {
+          "id": "asset-024",
+          "title": "仲姫命陵古墳",
+          "latitude": 34.5699,
+          "longitude": 135.6124,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11378467"
+        },
+        {
+          "id": "asset-025",
+          "title": "鍋塚古墳",
+          "latitude": 34.57138889,
+          "longitude": 135.61461111,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11650613"
+        },
+        {
+          "id": "asset-026",
+          "title": "助太山古墳",
+          "latitude": 34.5681,
+          "longitude": 135.6131,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q66124373"
+        },
+        {
+          "id": "asset-027",
+          "title": "中山塚古墳",
+          "latitude": 34.5681,
+          "longitude": 135.6136,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q66124374"
+        },
+        {
+          "id": "asset-028",
+          "title": "八島塚古墳",
+          "latitude": 34.5681,
+          "longitude": 135.6144,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q66124375"
+        },
+        {
+          "id": "asset-029",
+          "title": "古室山古墳",
+          "latitude": 34.56827778,
+          "longitude": 135.60968611,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11411025"
+        },
+        {
+          "id": "asset-030",
+          "title": "大鳥塚古墳",
+          "latitude": 34.56657778,
+          "longitude": 135.608875,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11441985"
+        },
+        {
+          "id": "asset-031",
+          "title": "東馬塚古墳",
+          "latitude": 34.5639,
+          "longitude": 135.6122,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q66124380"
+        },
+        {
+          "id": "asset-032",
+          "title": "栗塚古墳",
+          "latitude": 34.5628,
+          "longitude": 135.6125,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q66124381"
+        },
+        {
+          "id": "asset-033",
+          "title": "東山古墳",
+          "latitude": 34.5617,
+          "longitude": 135.6058,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q66124382"
+        },
+        {
+          "id": "asset-034",
+          "title": "はざみ山古墳",
+          "latitude": 34.561667,
+          "longitude": 135.602222,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11275423"
+        },
+        {
+          "id": "asset-035",
+          "title": "墓山古墳",
+          "latitude": 34.55753333,
+          "longitude": 135.60404444,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11429120"
+        },
+        {
+          "id": "asset-036",
+          "title": "野中古墳",
+          "latitude": 34.56025,
+          "longitude": 135.60258333,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11645001"
+        },
+        {
+          "id": "asset-037",
+          "title": "西馬塚古墳",
+          "latitude": 34.5561,
+          "longitude": 135.6067,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q66124383"
+        },
+        {
+          "id": "asset-038",
+          "title": "浄元寺山古墳",
+          "latitude": 34.5569,
+          "longitude": 135.6019,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q66124384"
+        },
+        {
+          "id": "asset-039",
+          "title": "青山古墳",
+          "latitude": 34.5558,
+          "longitude": 135.6006,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q66124385"
+        },
+        {
+          "id": "asset-040",
+          "title": "峯ヶ塚古墳",
+          "latitude": 34.5522,
+          "longitude": 135.5972,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11476069"
+        },
+        {
+          "id": "asset-041",
+          "title": "白鳥陵古墳",
+          "latitude": 34.55120278,
+          "longitude": 135.60382778,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11637613"
+        },
+        {
+          "id": "asset-042",
+          "title": "仁徳天皇陵古墳、茶山古墳及び大安寺山古墳",
+          "latitude": 34.56472222222222,
+          "longitude": 135.48777777777775,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.mozu-furuichi.jp/jp/conference/council_010_dl/gidai1.pdf"
+        },
+        {
+          "id": "asset-043",
+          "title": "履中天皇陵古墳",
+          "latitude": 34.553888888888885,
+          "longitude": 135.4775,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.mozu-furuichi.jp/jp/conference/council_010_dl/gidai1.pdf"
+        },
+        {
+          "id": "asset-044",
+          "title": "応神天皇陵古墳、誉田丸山古墳及び二ツ塚古墳",
+          "latitude": 34.56222222222222,
+          "longitude": 135.60944444444445,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.mozu-furuichi.jp/jp/conference/council_010_dl/gidai1.pdf"
+        },
+        {
+          "id": "asset-045",
+          "title": "向墓山古墳",
+          "latitude": 34.55722222222222,
+          "longitude": 135.60611111111112,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.mozu-furuichi.jp/jp/conference/council_010_dl/gidai1.pdf"
+        }
+      ]
+    },
+    {
+      "id": "amami-okinawa",
+      "title": "奄美大島、徳之島、沖縄島北部及び西表島",
+      "detail": "2021年登録。複数島の登山地点。入山条件を事前に確認",
+      "groupID": "natural",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "asset-001",
+          "title": "湯湾岳山頂（奄美大島）",
+          "latitude": 28.2961111111111,
+          "longitude": 129.321111111111,
+          "radiusMeters": 300,
+          "sourceURL": "https://cyberjapandata.gsi.go.jp/3d/mountain/mountain.html"
+        },
+        {
+          "id": "asset-002",
+          "title": "井之川岳山頂（徳之島）",
+          "latitude": 27.7786111111111,
+          "longitude": 128.983055555556,
+          "radiusMeters": 300,
+          "sourceURL": "https://cyberjapandata.gsi.go.jp/3d/mountain/mountain.html"
+        },
+        {
+          "id": "asset-003",
+          "title": "与那覇岳山頂（沖縄島北部）",
+          "latitude": 26.7169444444444,
+          "longitude": 128.218611111111,
+          "radiusMeters": 300,
+          "sourceURL": "https://cyberjapandata.gsi.go.jp/3d/mountain/mountain.html"
+        },
+        {
+          "id": "asset-004",
+          "title": "古見岳山頂（西表島）",
+          "latitude": 24.3591666666667,
+          "longitude": 123.891111111111,
+          "radiusMeters": 300,
+          "sourceURL": "https://cyberjapandata.gsi.go.jp/3d/mountain/mountain.html"
+        }
+      ]
+    },
+    {
+      "id": "jomon-prehistoric-sites",
+      "title": "北海道・北東北の縄文遺跡群",
+      "detail": "2021年登録",
+      "groupID": "cultural",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "asset-001",
+          "title": "大平山元遺跡",
+          "latitude": 41.06530556,
+          "longitude": 140.55194444,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q7077228"
+        },
+        {
+          "id": "asset-002",
+          "title": "垣ノ島遺跡",
+          "latitude": 41.92886111,
+          "longitude": 140.9475,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q17226685"
+        },
+        {
+          "id": "asset-003",
+          "title": "北黄金貝塚",
+          "latitude": 42.40203392,
+          "longitude": 140.91064837,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q103810663"
+        },
+        {
+          "id": "asset-004",
+          "title": "田小屋野貝塚",
+          "latitude": 40.88777778,
+          "longitude": 140.33888889,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q48815268"
+        },
+        {
+          "id": "asset-005",
+          "title": "二ツ森貝塚",
+          "latitude": 40.74805556,
+          "longitude": 141.23,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q30593786"
+        },
+        {
+          "id": "asset-006",
+          "title": "三内丸山遺跡",
+          "latitude": 40.81138889,
+          "longitude": 140.69666667,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q911970"
+        },
+        {
+          "id": "asset-007",
+          "title": "大船遺跡",
+          "latitude": 41.95769444,
+          "longitude": 140.92544444,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q28690431"
+        },
+        {
+          "id": "asset-008",
+          "title": "御所野遺跡",
+          "latitude": 40.19783333,
+          "longitude": 141.30613889,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11489085"
+        },
+        {
+          "id": "asset-009",
+          "title": "小牧野遺跡",
+          "latitude": 40.7375,
+          "longitude": 140.72816667,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11462859"
+        },
+        {
+          "id": "asset-010",
+          "title": "入江貝塚",
+          "latitude": 42.54666667,
+          "longitude": 140.77027778,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q103813700"
+        },
+        {
+          "id": "asset-011",
+          "title": "伊勢堂岱遺跡",
+          "latitude": 40.201111,
+          "longitude": 140.348056,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11378977"
+        },
+        {
+          "id": "asset-012",
+          "title": "大湯環状列石",
+          "latitude": 40.27166667,
+          "longitude": 140.80388889,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11437550"
+        },
+        {
+          "id": "asset-013",
+          "title": "キウス周堤墓群",
+          "latitude": 42.88555556,
+          "longitude": 141.71611111,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11296586"
+        },
+        {
+          "id": "asset-014",
+          "title": "大森勝山遺跡",
+          "latitude": 40.69888889,
+          "longitude": 140.35833333,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q48733884"
+        },
+        {
+          "id": "asset-015",
+          "title": "高砂貝塚",
+          "latitude": 42.54666667,
+          "longitude": 140.77027778,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q103813700"
+        },
+        {
+          "id": "asset-016",
+          "title": "亀ヶ岡石器時代遺跡",
+          "latitude": 40.88488889,
+          "longitude": 140.33955556,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11370708"
+        },
+        {
+          "id": "asset-017",
+          "title": "是川石器時代遺跡",
+          "latitude": 40.474528,
+          "longitude": 141.49125,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11514205"
+        }
+      ]
+    },
+    {
+      "id": "sado-gold-mines",
+      "title": "佐渡島の金山",
+      "detail": "2024年登録",
+      "groupID": "cultural",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "asset-001",
+          "title": "西三川砂金山",
+          "latitude": 37.90972222222222,
+          "longitude": 138.32527777777779,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.city.sado.niigata.jp/uploaded/attachment/56075.pdf"
+        },
+        {
+          "id": "asset-002",
+          "title": "相川金銀山（相川エリア）",
+          "latitude": 38.04083333333333,
+          "longitude": 138.2577777777778,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.city.sado.niigata.jp/uploaded/attachment/56075.pdf"
+        },
+        {
+          "id": "asset-003",
+          "title": "鶴子銀山（鶴子エリア）",
+          "latitude": 38.02611111111111,
+          "longitude": 138.26583333333335,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.city.sado.niigata.jp/uploaded/attachment/56075.pdf"
+        }
+      ]
+    },
+    {
+      "id": "asuka-fujiwara",
+      "title": "飛鳥・藤原の宮都",
+      "detail": "2026年登録",
+      "groupID": "cultural",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "asset-001",
+          "title": "飛鳥宮跡",
+          "latitude": 34.473333,
+          "longitude": 135.820833,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11665955"
+        },
+        {
+          "id": "asset-002",
+          "title": "飛鳥京跡苑池",
+          "latitude": 34.47408,
+          "longitude": 135.818726,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q132233058"
+        },
+        {
+          "id": "asset-003",
+          "title": "飛鳥水落遺跡",
+          "latitude": 34.48033333,
+          "longitude": 135.81827778,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11665976"
+        },
+        {
+          "id": "asset-004",
+          "title": "酒船石遺跡",
+          "latitude": 34.47544167,
+          "longitude": 135.82322778,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11644368"
+        },
+        {
+          "id": "asset-005",
+          "title": "飛鳥寺跡",
+          "latitude": 34.478731,
+          "longitude": 135.820214,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q779755"
+        },
+        {
+          "id": "asset-006",
+          "title": "橘寺跡",
+          "latitude": 34.47,
+          "longitude": 135.818056,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11544260"
+        },
+        {
+          "id": "asset-007",
+          "title": "山田寺跡",
+          "latitude": 34.48388889,
+          "longitude": 135.83,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q3571406"
+        },
+        {
+          "id": "asset-008",
+          "title": "川原寺跡",
+          "latitude": 34.47222222,
+          "longitude": 135.81722222,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q3194342"
+        },
+        {
+          "id": "asset-009",
+          "title": "檜隈寺跡",
+          "latitude": 34.45675,
+          "longitude": 135.803111,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11544640"
+        },
+        {
+          "id": "asset-010",
+          "title": "石舞台古墳",
+          "latitude": 34.46678889,
+          "longitude": 135.82615,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q3816159"
+        },
+        {
+          "id": "asset-011",
+          "title": "菖蒲池古墳",
+          "latitude": 34.47275278,
+          "longitude": 135.80800556,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q17993516"
+        },
+        {
+          "id": "asset-012",
+          "title": "牽牛子塚古墳",
+          "latitude": 34.466306,
+          "longitude": 135.792303,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11571102"
+        },
+        {
+          "id": "asset-013",
+          "title": "大官大寺跡",
+          "latitude": 34.48833333,
+          "longitude": 135.81805556,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q127378344"
+        },
+        {
+          "id": "asset-014",
+          "title": "本薬師寺跡",
+          "latitude": 34.49277778,
+          "longitude": 135.80027778,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11520791"
+        },
+        {
+          "id": "asset-015",
+          "title": "中尾山古墳",
+          "latitude": 34.46423611,
+          "longitude": 135.80609722,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q11363940"
+        },
+        {
+          "id": "asset-016",
+          "title": "キトラ古墳",
+          "latitude": 34.45125,
+          "longitude": 135.805278,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q846393"
+        },
+        {
+          "id": "asset-017",
+          "title": "高松塚古墳",
+          "latitude": 34.46222222,
+          "longitude": 135.80647222,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.wikidata.org/wiki/Q1039675"
+        },
+        {
+          "id": "asset-018",
+          "title": "藤原宮跡",
+          "latitude": 34.5023891,
+          "longitude": 135.8069267,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.city.kashihara.nara.jp/pr/asobu/2/12523.html"
+        },
+        {
+          "id": "asset-019",
+          "title": "天武・持統天皇陵古墳",
+          "latitude": 34.468893,
+          "longitude": 135.807953,
+          "radiusMeters": 200,
+          "sourceURL": "https://www.pref.nara.lg.jp/ikasu-nara/bunkashigen/main10648.html"
+        }
+      ]
+    }
+  ],
+  "groups": [
+    {
+      "id": "cultural",
+      "title": "文化遺産"
+    },
+    {
+      "id": "natural",
+      "title": "自然遺産"
+    }
+  ],
+  "achievements": [
+    {
+      "id": "first-heritage",
+      "title": "はじめの一歩",
+      "detail": "世界遺産を1件訪れる",
+      "condition": {
+        "type": "itemCount",
+        "minimum": 1
+      }
+    },
+    {
+      "id": "ten-heritages",
+      "title": "世界遺産トラベラー",
+      "detail": "世界遺産を10件訪れる",
+      "condition": {
+        "type": "itemCount",
+        "minimum": 10
+      }
+    },
+    {
+      "id": "cultural-complete",
+      "title": "文化の旅人",
+      "detail": "文化遺産をすべて訪れる",
+      "condition": {
+        "type": "groupComplete",
+        "groupID": "cultural"
+      }
+    },
+    {
+      "id": "natural-complete",
+      "title": "自然の旅人",
+      "detail": "自然遺産をすべて訪れる",
+      "condition": {
+        "type": "groupComplete",
+        "groupID": "natural"
+      }
+    },
+    {
+      "id": "all-heritages",
+      "title": "日本の世界遺産コンプリート",
+      "detail": "日本の世界遺産27件をすべて訪れる",
+      "condition": {
+        "type": "completionRate",
+        "minimum": 1
+      }
+    }
+  ],
+  "visualizations": [
+    {
+      "type": "progressSummary"
+    },
+    {
+      "type": "groupProgress"
+    },
+    {
+      "type": "achievementCards"
+    },
+    {
+      "type": "nextAchievements",
+      "limit": 3
+    },
+    {
+      "type": "statusMap",
+      "cluster": true
+    },
+    {
+      "type": "itemList",
+      "sort": "title"
+    }
+  ]
+}
