@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1780" viewBox="0 0 1000 1780" role="img" aria-labelledby="title desc">
+  <title id="title">名城・城跡コレクションの画面モックアップ</title>
+  <desc id="desc">Life Questの城郭コレクション詳細画面。全体進捗、訪問マップ、地方別進捗、実績を表示。</desc>
+  <defs>
+    <pattern id="contours" width="140" height="100" patternUnits="userSpaceOnUse">
+      <path d="M-30 76 C10 48 37 101 78 74 S143 47 171 15 M-20 93 C20 63 48 117 89 90 S146 62 178 32 M-22 50 C10 26 37 69 72 48 S130 23 158 -3" fill="none" stroke="#667994" stroke-opacity=".22" stroke-width="1.5"/>
+    </pattern>
+    <clipPath id="screenClip"><rect x="119" y="63" width="762" height="1630" rx="58"/></clipPath>
+    <symbol id="castle-glyph" viewBox="-6 -6 12 12">
+      <path d="M-5 4h10M-4 3v-4l4-3 4 3v4M-1 3v-3h2v3M-3-1v-2M0-2v-2M3-1v-2" fill="none" stroke="#FFFDF7" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#14243A" flood-opacity=".16"/>
+    </filter>
+  </defs>
+  <rect width="1000" height="1780" fill="#D9D6CE"/>
+  <circle cx="90" cy="155" r="250" fill="#E7E3DA"/>
+  <circle cx="946" cy="1620" r="325" fill="#E5E0D6"/>
+  <rect x="100" y="44" width="800" height="1668" rx="82" fill="#101B2B" filter="url(#shadow)"/>
+  <rect x="119" y="63" width="762" height="1630" rx="58" fill="#F4F2EC"/>
+  <g clip-path="url(#screenClip)">
+    <rect x="119" y="63" width="762" height="1630" fill="#F4F2EC"/>
+    <rect x="119" y="63" width="762" height="1630" fill="url(#contours)" opacity=".15"/>
+
+    <!-- status and navigation -->
+    <text x="169" y="124" fill="#17263C" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="24" font-weight="700">9:41</text>
+    <g fill="#17263C"><path d="M757 105h10v18h-10zM772 100h10v23h-10zM787 95h10v28h-10z"/><rect x="811" y="99" width="37" height="22" rx="5" fill="none" stroke="#17263C" stroke-width="3"/><rect x="849" y="105" width="4" height="10" rx="2"/><rect x="815" y="103" width="27" height="14" rx="3"/></g>
+    <path d="M164 178l-15 15 15 15" fill="none" stroke="#17263C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="499" y="202" text-anchor="middle" fill="#17263C" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="27" font-weight="700">プラグイン詳細</text>
+    <circle cx="840" cy="192" r="25" fill="#E5E1D7"/>
+    <path d="M830 192h20M840 182v20" stroke="#485770" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- title -->
+    <g transform="translate(164 251)">
+      <circle cx="39" cy="41" r="37" fill="#17263C"/>
+      <path d="M17 53h44M22 49V37l17-13 17 13v12M31 49V39h16v10M28 35V29M39 30V24M50 35V29" fill="none" stroke="#E7D5AE" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="39" cy="41" r="36" fill="none" stroke="#BC5540" stroke-width="2" stroke-dasharray="2 5"/>
+    </g>
+    <text x="256" y="283" fill="#657284" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="17" font-weight="700" letter-spacing="2">CASTLE JOURNAL · JAPAN</text>
+    <text x="256" y="333" fill="#17263C" font-family="Hiragino Mincho ProN, Yu Mincho, serif" font-size="34" font-weight="700">名城・城跡コレクション</text>
+    <text x="164" y="369" fill="#596474" font-family="Hiragino Sans, Hiragino Kaku Gothic ProN, sans-serif" font-size="19">写真の場所から、訪れた城を記録します。</text>
+
+    <!-- progress card -->
+    <rect x="154" y="399" width="692" height="246" rx="28" fill="#17263C"/>
+    <rect x="154" y="399" width="692" height="246" rx="28" fill="url(#contours)"/>
+    <path d="M699 640V561h23v-37h22v-31h25v31h21v37h24v79M685 561h150M713 524h66" fill="none" stroke="#D6C293" stroke-opacity=".32" stroke-width="3"/>
+    <path d="M744 494l12-13 13 13" fill="none" stroke="#D6C293" stroke-opacity=".32" stroke-width="3"/>
+    <text x="191" y="445" fill="#D6C293" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="17" font-weight="700" letter-spacing="2">あなたの城めぐり</text>
+    <text x="188" y="548" fill="#F7F3E8" font-family="Hiragino Mincho ProN, Yu Mincho, serif" font-size="76" font-weight="700">8<tspan fill="#AAB4C2" font-size="34"> / 27</tspan></text>
+    <text x="192" y="581" fill="#D3D9E1" font-family="Hiragino Sans, sans-serif" font-size="18">訪問した城・城跡</text>
+    <rect x="191" y="606" width="390" height="8" rx="4" fill="#43536A"/>
+    <rect x="191" y="606" width="116" height="8" rx="4" fill="#CB654B"/>
+    <circle cx="310" cy="610" r="7" fill="#D6C293"/>
+    <text x="809" y="609" text-anchor="end" fill="#E8E0CF" font-family="SFMono-Regular, Menlo, monospace" font-size="15">30%</text>
+
+    <!-- map card -->
+    <text x="164" y="704" fill="#17263C" font-family="Hiragino Mincho ProN, Yu Mincho, serif" font-size="29" font-weight="700">訪問地点の地図</text>
+    <text x="840" y="704" text-anchor="end" fill="#707B89" font-family="Hiragino Sans, sans-serif" font-size="16">写真位置から推定</text>
+    <rect x="154" y="725" width="692" height="285" rx="24" fill="#EAE8E1" stroke="#D9D7CF" stroke-width="1.5"/>
+    <g transform="translate(0 -25)">
+    <path d="M310 762l25-16 31 10 9 18-18 16-31-1-20-12zM407 805l18-11 27 7 8 18-19 12-24-7zM386 842l35 10 47 13 47 8 27 11 47 7 34 16-18 15-42-10-37 5-33-14-42 2-37-13-43-4-28-14-22-16zM493 918l30 10 13 17-10 18-27-5-17-19zM427 953l27 5 11 11-18 10-28-8zM333 987l10 4-2 12-9-2z" fill="#D4D8D1" stroke="#9BA89D" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M485 884q20-22 46-15t43 22q21 2 40 16M420 855q14-20 36-18" fill="none" stroke="#B0B7AF" stroke-width="2" stroke-dasharray="4 8"/>
+    <path d="M477 873l21-12 26 5 15 14-10 16-27 1-21-9z" fill="#477B95" fill-opacity=".28" stroke="#477B95" stroke-width="2"/>
+    <circle cx="326" cy="779" r="23" fill="#818B93" fill-opacity=".06" stroke="#818B93" stroke-width="2"/>
+    <circle cx="410" cy="812" r="22" fill="#477B95" fill-opacity=".08" stroke="#477B95" stroke-width="2"/>
+    <circle cx="595" cy="915" r="23" fill="#C5733C" fill-opacity=".08" stroke="#C5733C" stroke-width="2"/>
+    <g stroke="#F4F2EC" stroke-width="4">
+      <circle cx="326" cy="779" r="8" fill="#818B93"/><circle cx="410" cy="812" r="8" fill="#477B95"/><circle cx="448" cy="857" r="8" fill="#C5733C"/><circle cx="501" cy="879" r="8" fill="#477B95"/><circle cx="541" cy="904" r="8" fill="#818B93"/><circle cx="595" cy="915" r="8" fill="#C5733C"/>
+    </g>
+    <g>
+      <use href="#castle-glyph" x="320" y="773" width="12" height="12"/><use href="#castle-glyph" x="404" y="806" width="12" height="12"/><use href="#castle-glyph" x="442" y="851" width="12" height="12"/><use href="#castle-glyph" x="495" y="873" width="12" height="12"/><use href="#castle-glyph" x="535" y="898" width="12" height="12"/><use href="#castle-glyph" x="589" y="909" width="12" height="12"/>
+    </g>
+    <g transform="translate(742 753)"><circle r="34" fill="#17263C"/><path d="M0-21l6 18-6-4-6 4zM0 21l-6-18 6 4 6-4z" fill="#E7D5AE"/><text x="0" y="-42" text-anchor="middle" fill="#526174" font-family="SFMono-Regular, Menlo, monospace" font-size="12">N</text></g>
+    </g>
+    <g font-family="Hiragino Sans, sans-serif" font-size="13">
+      <circle cx="182" cy="965" r="6" fill="#818B93"/><text x="196" y="970" fill="#687482">未訪問</text>
+      <circle cx="286" cy="965" r="6" fill="#477B95"/><text x="300" y="970" fill="#687482">写真位置から推定</text>
+      <circle cx="454" cy="965" r="6" fill="#C5733C"/><text x="468" y="970" fill="#687482">確認済み</text>
+      <text x="181" y="990" fill="#687482">円：半径内　■：ポリゴン範囲</text>
+      <text x="181" y="1005" fill="#687482" font-size="11">© OpenStreetMap contributors · ODbL 1.0</text>
+    </g>
+
+    <!-- regional progress -->
+    <text x="164" y="1071" fill="#17263C" font-family="Hiragino Mincho ProN, Yu Mincho, serif" font-size="29" font-weight="700">地方ごとの進み具合</text>
+    <text x="840" y="1071" text-anchor="end" fill="#707B89" font-family="Hiragino Sans, sans-serif" font-size="16">すべて見る　›</text>
+    <rect x="154" y="1092" width="692" height="102" rx="20" fill="#FBFAF6" stroke="#DDDAD1"/>
+    <circle cx="196" cy="1143" r="20" fill="#E4E8E1"/><path d="M186 1143h20M196 1133v20" stroke="#496555" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="233" y="1134" fill="#202A36" font-family="Hiragino Sans, sans-serif" font-size="20" font-weight="700">北海道・東北</text>
+    <text x="233" y="1165" fill="#707B89" font-family="Hiragino Sans, sans-serif" font-size="15">五稜郭 · 弘前城 ほか</text>
+    <text x="806" y="1148" text-anchor="end" fill="#17263C" font-family="SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700">3<tspan fill="#8A929B" font-size="17"> / 6</tspan></text>
+    <rect x="154" y="1205" width="692" height="102" rx="20" fill="#FBFAF6" stroke="#DDDAD1"/>
+    <circle cx="196" cy="1256" r="20" fill="#EEE4D8"/><path d="M185 1262h22M188 1256h16M191 1250h10M194 1244h4" stroke="#A4503D" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="233" y="1247" fill="#202A36" font-family="Hiragino Sans, sans-serif" font-size="20" font-weight="700">関東</text>
+    <text x="233" y="1278" fill="#707B89" font-family="Hiragino Sans, sans-serif" font-size="15">小田原城 · 川越城 ほか</text>
+    <text x="806" y="1261" text-anchor="end" fill="#17263C" font-family="SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700">2<tspan fill="#8A929B" font-size="17"> / 4</tspan></text>
+
+    <!-- achievement teaser -->
+    <text x="164" y="1370" fill="#17263C" font-family="Hiragino Mincho ProN, Yu Mincho, serif" font-size="29" font-weight="700">次の実績</text>
+    <rect x="154" y="1390" width="692" height="144" rx="22" fill="#E8E1D5"/>
+    <circle cx="213" cy="1462" r="37" fill="#BC5540"/>
+    <path d="M197 1461l11 11 22-25" fill="none" stroke="#FFF8EB" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="275" y="1449" fill="#17263C" font-family="Hiragino Mincho ProN, Yu Mincho, serif" font-size="23" font-weight="700">全国へ一歩</text>
+    <text x="275" y="1482" fill="#596474" font-family="Hiragino Sans, sans-serif" font-size="16">城を10か所訪れる</text>
+    <rect x="275" y="1498" width="400" height="6" rx="3" fill="#C7C2B8"/>
+    <rect x="275" y="1498" width="320" height="6" rx="3" fill="#BC5540"/>
+    <text x="806" y="1480" text-anchor="end" fill="#526174" font-family="SFMono-Regular, Menlo, monospace" font-size="15">8 / 10</text>
+
+    <!-- tab bar -->
+    <rect x="119" y="1584" width="762" height="109" fill="#FAF9F5"/>
+    <path d="M119 1584H881" stroke="#D8D5CC" stroke-width="1.5"/>
+    <g fill="#77818C" font-family="Hiragino Sans, sans-serif" font-size="13" text-anchor="middle">
+      <path d="M238 1614h25v23h-25zM233 1615l17-14 18 14" fill="none" stroke="#77818C" stroke-width="2.5" stroke-linejoin="round"/><text x="250" y="1660">ホーム</text>
+      <path d="M418 1606l17-8 17 8v27h-34zM428 1634v-18h14v18" fill="none" stroke="#BC5540" stroke-width="2.6" stroke-linejoin="round"/><text x="435" y="1660" fill="#BC5540" font-weight="700">図鑑</text>
+      <circle cx="620" cy="1618" r="17" fill="none" stroke="#77818C" stroke-width="2.5"/><path d="M620 1608v11l8 5" fill="none" stroke="#77818C" stroke-width="2.5" stroke-linecap="round"/><text x="620" y="1660">記録</text>
+      <circle cx="793" cy="1618" r="15" fill="none" stroke="#77818C" stroke-width="2.5"/><path d="M793 1609v18M784 1618h18" stroke="#77818C" stroke-width="2.2"/><text x="793" y="1660">設定</text>
+    </g>
+    <rect x="406" y="1677" width="188" height="6" rx="3" fill="#17263C"/>
+  </g>
+  <text x="500" y="1752" text-anchor="middle" fill="#526174" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="16" letter-spacing=".3">画面モックアップ（上部のみ） · 続きに実績カードと城一覧</text>
+</svg>
