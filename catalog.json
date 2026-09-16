@@ -7516,7 +7516,7 @@
   {
     "schemaVersion": 1,
     "id": "japan-world-heritage",
-    "version": 4,
+    "version": 5,
     "title": "日本の世界遺産めぐり",
     "summary": "写真の撮影位置が判定地点の半径内に入ると、世界遺産1件を自動達成します（標準200m、自然遺産の山頂9地点は300m）。地点数は達成数に加算しません。",
     "iconSystemName": "globe",
@@ -9830,11 +9830,13 @@
     "groups": [
       {
         "id": "cultural",
-        "title": "文化遺産"
+        "title": "文化遺産",
+        "mapMarkerSymbolName": "building.columns.fill"
       },
       {
         "id": "natural",
-        "title": "自然遺産"
+        "title": "自然遺産",
+        "mapMarkerSymbolName": "mountain.2.fill"
       }
     ],
     "achievements": [
@@ -9889,6 +9891,25 @@
         "type": "progressSummary"
       },
       {
+        "type": "metricCards",
+        "metrics": [
+          "visitedCount",
+          "completionRate",
+          "remainingCount",
+          "unlockedAchievements"
+        ]
+      },
+      {
+        "type": "lineChart",
+        "metric": "visitedCount",
+        "aggregation": "cumulativeCount"
+      },
+      {
+        "type": "barChart",
+        "metric": "visitedCount",
+        "aggregation": "annualVisitedItemCount"
+      },
+      {
         "type": "groupProgress"
       },
       {
@@ -9906,7 +9927,8 @@
         "type": "itemList",
         "sort": "title"
       }
-    ]
+    ],
+    "showsPeriodSelector": false
   },
   {
     "schemaVersion": 1,

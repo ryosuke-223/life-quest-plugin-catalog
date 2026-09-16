@@ -337,6 +337,11 @@ def validate_plugin(path: Path, plugin: object) -> None:
         group_ids.add(group_id)
         all_ids.add(group_id)
         require_string(path, group.get("title"), f"{group_id}.title", MAX_GROUP_TITLE_BYTES)
+        if "mapMarkerSymbolName" in group:
+            require_string(path,
+                           group["mapMarkerSymbolName"],
+                           f"{group_id}.mapMarkerSymbolName",
+                           MAX_GROUP_TITLE_BYTES)
 
     for item in items:
         group_id = item.get("groupID")

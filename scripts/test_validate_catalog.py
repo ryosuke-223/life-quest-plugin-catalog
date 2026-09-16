@@ -52,6 +52,28 @@ class ValidateCatalogTests(unittest.TestCase):
 
         validate_plugin(Path("test.json"), plugin)
 
+    def test_accepts_optional_group_map_marker_symbol_name(self):
+        plugin = manifest()
+        plugin["groups"] = [{
+            "id": "cultural",
+            "title": "文化遺産",
+            "mapMarkerSymbolName": "building.columns.fill",
+        }]
+
+        validate_plugin(Path("test.json"), plugin)
+
+    def test_rejects_invalid_group_map_marker_symbol_name(self):
+        for value in ("", "   ", 42, "x" * 201):
+            with self.subTest(value=value):
+                plugin = manifest()
+                plugin["groups"] = [{
+                    "id": "cultural",
+                    "title": "文化遺産",
+                    "mapMarkerSymbolName": value,
+                }]
+                with self.assertRaisesRegex(ValueError, "cultural.mapMarkerSymbolName"):
+                    validate_plugin(Path("test.json"), plugin)
+
     def test_rejects_invalid_map_attribution(self):
         for value in ("", "   ", 42, ["OpenStreetMap"], "x" * 301):
             with self.subTest(value=value):
@@ -308,6 +330,29 @@ class ValidateCatalogTests(unittest.TestCase):
 
 
 class WorldHeritageDataTests(unittest.TestCase):
+    def test_world_heritage_manifest_declares_all_time_dashboard_and_marker_symbols(self):
+        manifest_path = Path(__file__).resolve().parents[1] / "plugins" / "japan-world-heritage.json"
+        plugin = json.loads(manifest_path.read_text(encoding="utf-8"))
+
+        self.assertEqual(plugin["version"], 5)
+        self.assertIs(plugin["showsPeriodSelector"], False)
+        self.assertEqual(
+            {group["id"]: group["mapMarkerSymbolName"] for group in plugin["groups"]},
+            {"cultural": "building.columns.fill", "natural": "mountain.2.fill"},
+        )
+        self.assertEqual(plugin["visualizations"], [
+            {"type": "progressSummary"},
+            {"type": "metricCards", "metrics": [
+                "visitedCount", "completionRate", "remainingCount", "unlockedAchievements"]},
+            {"type": "lineChart", "metric": "visitedCount", "aggregation": "cumulativeCount"},
+            {"type": "barChart", "metric": "visitedCount", "aggregation": "annualVisitedItemCount"},
+            {"type": "groupProgress"},
+            {"type": "achievementCards"},
+            {"type": "nextAchievements", "limit": 3},
+            {"type": "statusMap", "cluster": True},
+            {"type": "itemList", "sort": "title"},
+        ])
+
     def test_remote_summit_radius_exceptions_and_okinoshima_display_rules(self):
         manifest_path = Path(__file__).resolve().parents[1] / "plugins" / "japan-world-heritage.json"
         plugin = json.loads(manifest_path.read_text(encoding="utf-8"))

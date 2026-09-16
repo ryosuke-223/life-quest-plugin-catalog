@@ -83,6 +83,17 @@ Life QuestアプリのDebug／Releaseビルドで、Build Settingsの `PLUGIN_CA
 
 `locations` の地点単位で任意の出典URLを記録できます。OSM由来の座標を使う場合は [OpenStreetMapへの帰属表示とODbL](https://www.openstreetmap.org/copyright) に従い、プラグインとソースデータ説明にライセンスを明記してください。
 
+### グループごとの地図記号
+
+グループには任意で `mapMarkerSymbolName` を指定できます。値にはアプリのOSで利用できる組み込みSF Symbol名を指定してください。省略可能ですが、指定する場合は空でない文字列とし、長さはUTF-8で200バイト以下にします。省略時はプラグインの `iconSystemName` が地図記号に使われます。
+
+```json
+"groups": [
+  { "id": "cultural", "title": "文化遺産", "mapMarkerSymbolName": "building.columns.fill" },
+  { "id": "natural", "title": "自然遺産", "mapMarkerSymbolName": "mountain.2.fill" }
+]
+```
+
 ### 日本の世界遺産めぐり
 
 [世界遺産プラグイン](plugins/japan-world-heritage.json)には、日本の世界遺産27件を親項目として登録し、文化・自然遺産あわせて251地点を設定しています。写真の位置が同じ遺産に設定した地点のどれか1つから200m以内なら、その親項目を1件達成します。自然遺産の島全体を覆う大きな円は使わず、登録区域内の登山・散策などの代表地点で判定します。参詣道などの線状資産も公式案内上の代表地点による判定で、登録区域全体を境界判定するものではありません。宗像の沖ノ島本島は立入不可のため項目説明に表示し、GPS判定と達成カウントの対象外とします。座標の根拠、除外理由、通行・立入上の注意は[座標判定の調査メモ](WORLD_HERITAGE_COORDINATE_RESEARCH.md)と[データ出典](WORLD_HERITAGE_DATA_SOURCES.md)を参照してください。
