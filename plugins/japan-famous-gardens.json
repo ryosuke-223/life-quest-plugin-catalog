@@ -20,7 +20,7 @@
           "title": "庭園・周辺の公開範囲",
           "latitude": 36.37305965,
           "longitude": 140.45621395,
-          "radiusMeters": 800
+          "radiusMeters": 520
         }
       ]
     },
@@ -38,7 +38,7 @@
           "title": "庭園・周辺の公開範囲",
           "latitude": 36.56194444,
           "longitude": 136.6625,
-          "radiusMeters": 650
+          "radiusMeters": 420
         }
       ]
     },
@@ -56,7 +56,7 @@
           "title": "庭園・周辺の公開範囲",
           "latitude": 34.66766389,
           "longitude": 133.93505556,
-          "radiusMeters": 550
+          "radiusMeters": 360
         }
       ]
     },
@@ -74,7 +74,7 @@
           "title": "庭園・周辺の公開範囲",
           "latitude": 34.32958333,
           "longitude": 134.04388889,
-          "radiusMeters": 900
+          "radiusMeters": 580
         }
       ]
     },
@@ -92,7 +92,7 @@
           "title": "庭園・周辺の公開範囲",
           "latitude": 35.733056,
           "longitude": 139.746667,
-          "radiusMeters": 450
+          "radiusMeters": 290
         }
       ]
     },
@@ -110,7 +110,7 @@
           "title": "庭園・周辺の公開範囲",
           "latitude": 35.66,
           "longitude": 139.762,
-          "radiusMeters": 600
+          "radiusMeters": 390
         }
       ]
     },
@@ -128,7 +128,7 @@
           "title": "庭園・周辺の公開範囲",
           "latitude": 35.705556,
           "longitude": 139.749167,
-          "radiusMeters": 450
+          "radiusMeters": 290
         }
       ]
     },
@@ -146,7 +146,7 @@
           "title": "庭園・周辺の公開範囲",
           "latitude": 35.01416667,
           "longitude": 135.7475,
-          "radiusMeters": 450
+          "radiusMeters": 290
         }
       ]
     },
@@ -164,7 +164,7 @@
           "title": "庭園・周辺の公開範囲",
           "latitude": 35.03444444,
           "longitude": 135.71833333,
-          "radiusMeters": 300
+          "radiusMeters": 200
         }
       ]
     },
@@ -182,7 +182,7 @@
           "title": "庭園・周辺の公開範囲",
           "latitude": 35.0395,
           "longitude": 135.7285,
-          "radiusMeters": 350
+          "radiusMeters": 230
         }
       ]
     },
@@ -200,7 +200,7 @@
           "title": "庭園・周辺の公開範囲",
           "latitude": 35.02666667,
           "longitude": 135.79833333,
-          "radiusMeters": 350
+          "radiusMeters": 230
         }
       ]
     },
@@ -218,7 +218,7 @@
           "title": "庭園・周辺の公開範囲",
           "latitude": 34.9925,
           "longitude": 135.68416667,
-          "radiusMeters": 350
+          "radiusMeters": 230
         }
       ]
     },
@@ -236,7 +236,7 @@
           "title": "庭園・周辺の公開範囲",
           "latitude": 35.01596389,
           "longitude": 135.67377222,
-          "radiusMeters": 350
+          "radiusMeters": 230
         }
       ]
     },
@@ -254,7 +254,7 @@
           "title": "庭園・周辺の公開範囲",
           "latitude": 34.9515,
           "longitude": 135.82177778,
-          "radiusMeters": 350
+          "radiusMeters": 230
         }
       ]
     },
@@ -272,7 +272,7 @@
           "title": "庭園・周辺の公開範囲",
           "latitude": 35.0432,
           "longitude": 135.7475,
-          "radiusMeters": 300
+          "radiusMeters": 200
         }
       ]
     },
@@ -290,7 +290,7 @@
           "title": "庭園・周辺の公開範囲",
           "latitude": 34.983061,
           "longitude": 135.710611,
-          "radiusMeters": 550
+          "radiusMeters": 360
         }
       ]
     },
@@ -308,7 +308,7 @@
           "title": "庭園・周辺の公開範囲",
           "latitude": 35.061,
           "longitude": 135.79,
-          "radiusMeters": 900
+          "radiusMeters": 580
         }
       ]
     },
@@ -326,7 +326,7 @@
           "title": "庭園・周辺の公開範囲",
           "latitude": 39.004,
           "longitude": 141.103,
-          "radiusMeters": 450
+          "radiusMeters": 290
         }
       ]
     },
@@ -344,7 +344,7 @@
           "title": "庭園・周辺の公開範囲",
           "latitude": 31.618,
           "longitude": 130.579,
-          "radiusMeters": 650
+          "radiusMeters": 420
         }
       ]
     },
@@ -362,7 +362,7 @@
           "title": "庭園・周辺の公開範囲",
           "latitude": 32.79,
           "longitude": 130.739,
-          "radiusMeters": 450
+          "radiusMeters": 290
         }
       ]
     },
@@ -380,7 +380,7 @@
           "title": "庭園・周辺の公開範囲",
           "latitude": 34.4006,
           "longitude": 132.4663,
-          "radiusMeters": 350
+          "radiusMeters": 230
         }
       ]
     },
@@ -398,7 +398,7 @@
           "title": "庭園・周辺の公開範囲",
           "latitude": 35.375,
           "longitude": 133.194,
-          "radiusMeters": 500
+          "radiusMeters": 320
         }
       ]
     }
@@ -520,7 +520,7 @@
       "sort": "status"
     }
   ],
-  "showsPeriodSelector": true,
+  "showsPeriodSelector": false,
   "mapStyle": {
     "markerSVG": "<svg viewBox=\"0 0 36 36\"><path d=\"M18 2c-2 5-7 7-9 12-2 5 1 10 9 20 8-10 11-15 9-20-2-5-7-7-9-12z\"/><path d=\"M18 8v18M18 16l-6-5M18 19l6-5\"/></svg>",
     "markerColors": {

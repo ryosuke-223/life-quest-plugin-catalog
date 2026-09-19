@@ -20,7 +20,7 @@
           "title": "庭園・周辺の公開範囲",
           "latitude": 36.37305965,
           "longitude": 140.45621395,
-          "radiusMeters": 800
+          "radiusMeters": 700
         }
       ]
     },
@@ -38,7 +38,7 @@
           "title": "庭園・周辺の公開範囲",
           "latitude": 36.56194444,
           "longitude": 136.6625,
-          "radiusMeters": 650
+          "radiusMeters": 700
         }
       ]
     },
@@ -56,7 +56,7 @@
           "title": "庭園・周辺の公開範囲",
           "latitude": 34.66766389,
           "longitude": 133.93505556,
-          "radiusMeters": 550
+          "radiusMeters": 700
         }
       ]
     },
@@ -74,7 +74,7 @@
           "title": "庭園・周辺の公開範囲",
           "latitude": 34.32958333,
           "longitude": 134.04388889,
-          "radiusMeters": 900
+          "radiusMeters": 700
         }
       ]
     },
@@ -92,7 +92,7 @@
           "title": "庭園・周辺の公開範囲",
           "latitude": 35.733056,
           "longitude": 139.746667,
-          "radiusMeters": 450
+          "radiusMeters": 700
         }
       ]
     },
@@ -110,7 +110,7 @@
           "title": "庭園・周辺の公開範囲",
           "latitude": 35.66,
           "longitude": 139.762,
-          "radiusMeters": 600
+          "radiusMeters": 700
         }
       ]
     },
@@ -128,7 +128,7 @@
           "title": "庭園・周辺の公開範囲",
           "latitude": 35.705556,
           "longitude": 139.749167,
-          "radiusMeters": 450
+          "radiusMeters": 700
         }
       ]
     },
@@ -146,7 +146,7 @@
           "title": "庭園・周辺の公開範囲",
           "latitude": 32.79,
           "longitude": 130.739,
-          "radiusMeters": 450
+          "radiusMeters": 700
         }
       ]
     },
@@ -164,14 +164,14 @@
           "title": "松島湾の代表展望地",
           "latitude": 38.3709,
           "longitude": 141.0617,
-          "radiusMeters": 5000
+          "radiusMeters": 3000
         },
         {
           "id": "oshima",
           "title": "雄島周辺",
           "latitude": 38.3667,
           "longitude": 141.0675,
-          "radiusMeters": 2500
+          "radiusMeters": 1500
         }
       ]
     },
@@ -189,14 +189,14 @@
           "title": "天橋立周辺",
           "latitude": 35.5667,
           "longitude": 135.1864,
-          "radiusMeters": 3500
+          "radiusMeters": 2100
         },
         {
           "id": "viewpoint",
           "title": "傘松公園周辺",
           "latitude": 35.5876,
           "longitude": 135.1977,
-          "radiusMeters": 1500
+          "radiusMeters": 900
         }
       ]
     },
@@ -214,14 +214,14 @@
           "title": "厳島神社周辺",
           "latitude": 34.296,
           "longitude": 132.3199,
-          "radiusMeters": 2200
+          "radiusMeters": 1300
         },
         {
           "id": "momijidani",
           "title": "紅葉谷公園周辺",
           "latitude": 34.2892,
           "longitude": 132.3214,
-          "radiusMeters": 1800
+          "radiusMeters": 1100
         }
       ]
     },
@@ -239,14 +239,14 @@
           "title": "座間味島の代表地点",
           "latitude": 26.2286,
           "longitude": 127.3014,
-          "radiusMeters": 4500
+          "radiusMeters": 2700
         },
         {
           "id": "tokashiki",
           "title": "渡嘉敷島の代表地点",
           "latitude": 26.1977,
           "longitude": 127.2867,
-          "radiusMeters": 4500
+          "radiusMeters": 2700
         }
       ]
     },
@@ -264,14 +264,14 @@
           "title": "富士山五合目周辺",
           "latitude": 35.3606,
           "longitude": 138.7274,
-          "radiusMeters": 5000
+          "radiusMeters": 3000
         },
         {
           "id": "lake-kawaguchi",
           "title": "河口湖畔の富士山展望域",
           "latitude": 35.5176,
           "longitude": 138.7556,
-          "radiusMeters": 3500
+          "radiusMeters": 2100
         }
       ]
     },
@@ -289,14 +289,14 @@
           "title": "河童橋周辺",
           "latitude": 36.2481,
           "longitude": 137.6358,
-          "radiusMeters": 4000
+          "radiusMeters": 2400
         },
         {
           "id": "taisho-pond",
           "title": "大正池周辺",
           "latitude": 36.2243,
           "longitude": 137.6195,
-          "radiusMeters": 3000
+          "radiusMeters": 1800
         }
       ]
     },
@@ -314,14 +314,14 @@
           "title": "旭岳ロープウェイ周辺",
           "latitude": 43.6636,
           "longitude": 142.8543,
-          "radiusMeters": 4500
+          "radiusMeters": 2700
         },
         {
           "id": "sugatami",
           "title": "姿見周辺",
           "latitude": 43.6502,
           "longitude": 142.8204,
-          "radiusMeters": 3500
+          "radiusMeters": 2100
         }
       ]
     },
@@ -339,14 +339,14 @@
           "title": "草千里ヶ浜周辺",
           "latitude": 32.884,
           "longitude": 131.095,
-          "radiusMeters": 5000
+          "radiusMeters": 3000
         },
         {
           "id": "nakadake",
           "title": "阿蘇中岳周辺",
           "latitude": 32.8848,
           "longitude": 131.1046,
-          "radiusMeters": 3500
+          "radiusMeters": 2100
         }
       ]
     },
@@ -364,14 +364,14 @@
           "title": "奥入瀬渓流",
           "latitude": 40.6098,
           "longitude": 140.9948,
-          "radiusMeters": 5000
+          "radiusMeters": 3000
         },
         {
           "id": "towada",
           "title": "十和田湖畔",
           "latitude": 40.4704,
           "longitude": 140.8858,
-          "radiusMeters": 5000
+          "radiusMeters": 3000
         }
       ]
     },
@@ -389,14 +389,14 @@
           "title": "尾瀬ヶ原",
           "latitude": 36.9365,
           "longitude": 139.35,
-          "radiusMeters": 3500
+          "radiusMeters": 2100
         },
         {
           "id": "oze-numa",
           "title": "尾瀬沼",
           "latitude": 36.9327,
           "longitude": 139.4664,
-          "radiusMeters": 3500
+          "radiusMeters": 2100
         }
       ]
     },
@@ -414,14 +414,14 @@
           "title": "欅平周辺",
           "latitude": 36.8177,
           "longitude": 137.5807,
-          "radiusMeters": 4000
+          "radiusMeters": 2400
         },
         {
           "id": "kurobe-dam",
           "title": "黒部ダム周辺",
           "latitude": 36.56,
           "longitude": 137.6628,
-          "radiusMeters": 2500
+          "radiusMeters": 1500
         }
       ]
     },
@@ -439,14 +439,14 @@
           "title": "那智の滝周辺",
           "latitude": 33.6751,
           "longitude": 135.8897,
-          "radiusMeters": 1800
+          "radiusMeters": 1100
         },
         {
           "id": "kumano-nachi",
           "title": "熊野那智大社周辺",
           "latitude": 33.6697,
           "longitude": 135.8877,
-          "radiusMeters": 1200
+          "radiusMeters": 700
         }
       ]
     },
@@ -464,7 +464,7 @@
           "title": "高千穂峡遊歩道周辺",
           "latitude": 32.7114,
           "longitude": 131.3072,
-          "radiusMeters": 2200
+          "radiusMeters": 1300
         }
       ]
     },
@@ -482,21 +482,21 @@
           "title": "縄文杉周辺",
           "latitude": 30.3609,
           "longitude": 130.5319,
-          "radiusMeters": 3500
+          "radiusMeters": 2100
         },
         {
           "id": "shiratani",
           "title": "白谷雲水峡周辺",
           "latitude": 30.3833,
           "longitude": 130.5597,
-          "radiusMeters": 3000
+          "radiusMeters": 1800
         },
         {
           "id": "miyanoura",
           "title": "宮之浦岳周辺",
           "latitude": 30.3361,
           "longitude": 130.5042,
-          "radiusMeters": 3500
+          "radiusMeters": 2100
         }
       ]
     },
@@ -514,14 +514,14 @@
           "title": "ブナ林散策道周辺",
           "latitude": 40.5216,
           "longitude": 140.1536,
-          "radiusMeters": 5000
+          "radiusMeters": 3000
         },
         {
           "id": "anmon",
           "title": "暗門周辺",
           "latitude": 40.54,
           "longitude": 140.12,
-          "radiusMeters": 4000
+          "radiusMeters": 2400
         }
       ]
     },
@@ -539,7 +539,7 @@
           "title": "鳥取砂丘周辺",
           "latitude": 35.54,
           "longitude": 134.23,
-          "radiusMeters": 3500
+          "radiusMeters": 2100
         }
       ]
     }
@@ -688,7 +688,7 @@
       "sort": "group"
     }
   ],
-  "showsPeriodSelector": true,
+  "showsPeriodSelector": false,
   "mapStyle": {
     "markerSVG": "<svg viewBox=\"0 0 36 36\"><path d=\"M2 31L13 12l6 9 5-7 10 17H2z\"/><path d=\"M22 8c-2.2 0-4 1.8-4 4c0 2.2 1.8 4 4 4c2.2 0 4-1.8 4-4c0-2.2-1.8-4-4-4z\"/></svg>",
     "markerColors": {
