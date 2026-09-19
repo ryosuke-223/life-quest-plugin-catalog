@@ -5,6 +5,7 @@ import json
 import math
 import re
 import sys
+from urllib.parse import urlsplit
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -22,6 +23,16 @@ MAX_GROUP_TITLE_BYTES = 200
 MAX_ACHIEVEMENT_TITLE_BYTES = 200
 MAX_ACHIEVEMENT_DETAIL_BYTES = 500
 MAX_VISUALIZATIONS = 12
+MAX_LOCATIONS = 2_000
+MAX_POLYGON_COORDINATES = 50_000
+MAX_SOURCE_URL_BYTES = 2_048
+MAX_MAP_ATTRIBUTION_BYTES = 300
+MAX_MAP_MARKER_SVG_BYTES = 20_000
+HEX_COLOR = re.compile(r"^#[0-9A-Fa-f]{6}(?:[0-9A-Fa-f]{2})?$")
+SVG_TAG = re.compile(r"</?(?:svg|g|path)(?:\s[^>]*)?/?>", re.IGNORECASE)
+SVG_PATH = re.compile(r"<path\b[^>]*\bd\s*=\s*([\"'])(.*?)\1[^>]*>", re.IGNORECASE | re.DOTALL)
+SVG_VIEWBOX = re.compile(r"\bviewBox\s*=\s*([\"'])\s*([-+0-9.eE]+)\s+([-+0-9.eE]+)\s+([-+0-9.eE]+)\s+([-+0-9.eE]+)\s*\1", re.IGNORECASE)
+SVG_PATH_COMMANDS = re.compile(r"^[MmLlHhVvCcQqZz0-9+\-.,eE\s]+$")
 VISUALIZATION_TYPES = {
     "progressSummary",
     "achievementCards",
@@ -71,27 +82,180 @@ def require_identifier(path: Path, value: object, field: str) -> str:
     return value
 
 
-def validate_location(path: Path, item: dict) -> None:
+def validate_svg(path: Path, value: object, field: str) -> str:
+    svg = require_string(path, value, field, MAX_MAP_MARKER_SVG_BYTES)
+    normalized = svg.strip()
+    if not normalized.lower().startswith("<svg") or not re.search(r"</svg>\s*$", normalized, re.IGNORECASE):
+        fail(path, f"{field} must be a static SVG")
+    lower = normalized.lower()
+    forbidden = ("<script", "<!doctype", "<![cdata", "href=", "xlink:", "url(", "style=", "transform=", "clip-path=", "mask=", " on", "<image", "<use", "<foreignobject", "<filter", "<lineargradient", "<radialgradient")
+    if any(value in lower for value in forbidden):
+        fail(path, f"{field} contains unsupported SVG content")
+    view_box = SVG_VIEWBOX.search(normalized)
+    if view_box is None:
+        fail(path, f"{field} needs a positive viewBox")
+    try:
+        width = float(view_box.group(4))
+        height = float(view_box.group(5))
+    except (TypeError, ValueError):
+        fail(path, f"{field} needs a positive viewBox")
+    if not math.isfinite(width) or not math.isfinite(height) or width <= 0 or height <= 0:
+        fail(path, f"{field} needs a positive viewBox")
+    if not SVG_TAG.search(normalized):
+        fail(path, f"{field} must use only svg, g, and path tags")
+    stripped = SVG_TAG.sub("", normalized)
+    if stripped.strip():
+        fail(path, f"{field} contains unsupported SVG tags or text")
+    matches = list(SVG_PATH.finditer(normalized))
+    if not matches:
+        fail(path, f"{field} needs at least one path")
+    for match in matches:
+        path_data = match.group(2)
+        if len(path_data.encode("utf-8")) > MAX_MAP_MARKER_SVG_BYTES // 2 or not SVG_PATH_COMMANDS.fullmatch(path_data) or not re.search(r"[MmLlHhVvCcQqZz]", path_data):
+            fail(path, f"{field} contains unsupported path commands")
+    return svg
+
+
+def validate_status_colors(path: Path, value: object, field: str) -> None:
+    if not isinstance(value, dict):
+        fail(path, f"{field} must be an object")
+    for status in ("unvisited", "estimated", "confirmed"):
+        if status not in value or not isinstance(value[status], str) or not HEX_COLOR.fullmatch(value[status]):
+            fail(path, f"{field}.{status} must be a hex color")
+
+
+def validate_map_style(path: Path, plugin: dict) -> None:
+    style = plugin.get("mapStyle")
+    if style is None:
+        return
+    if not isinstance(style, dict):
+        fail(path, "mapStyle must be an object")
+    if "markerSVG" in style and style["markerSVG"] is not None:
+        validate_svg(path, style["markerSVG"], "mapStyle.markerSVG")
+    for field in ("markerColors", "areaFillColors", "areaStrokeColors"):
+        if field in style and style[field] is not None:
+            validate_status_colors(path, style[field], f"mapStyle.{field}")
+
+
+def validate_coordinate(path: Path, item_id: str, location: dict, location_id: str, required: bool = True) -> None:
+    latitude = location.get("latitude")
+    longitude = location.get("longitude")
+    if ("latitude" in location and latitude is not None) != ("longitude" in location and longitude is not None):
+        fail(path, f"incomplete location for {location_id}")
+    if latitude is None or longitude is None:
+        if required:
+            fail(path, f"photoLocation needs coordinates for {item_id}")
+        return
+    if not is_number(latitude) or not is_number(longitude) or not math.isfinite(float(latitude)) or not math.isfinite(float(longitude)):
+        fail(path, f"invalid coordinates for {location_id}")
+    if not -90 <= float(latitude) <= 90 or not -180 <= float(longitude) <= 180:
+        fail(path, f"coordinates out of range for {location_id}")
+
+    radius = location.get("radiusMeters")
+    if radius is not None and (not is_number(radius) or not math.isfinite(float(radius)) or not 0 < float(radius) <= 100_000):
+        fail(path, f"invalid radiusMeters for {location_id}")
+
+
+def validate_geometry(path: Path, location: dict, location_id: str) -> int:
+    geometry = location.get("geometry")
+    if not isinstance(geometry, dict):
+        fail(path, f"geometry must be an object for {location_id}")
+
+    geometry_type = geometry.get("type")
+    if not isinstance(geometry_type, str) or geometry_type not in {"Polygon", "MultiPolygon"}:
+        fail(path, f"unsupported geometry type for {location_id}")
+    if location.get("radiusMeters") is not None:
+        fail(path, f"cannot combine polygon geometry and radiusMeters for {location_id}")
+    validate_coordinate(path, location_id, location, location_id, required=False)
+
+    coordinates = geometry.get("coordinates")
+    if not isinstance(coordinates, list) or not coordinates:
+        label = "at least one polygon" if geometry_type == "MultiPolygon" else "at least one ring"
+        fail(path, f"{geometry_type} must contain {label} for {location_id}")
+    polygons = coordinates if geometry_type == "MultiPolygon" else [coordinates]
+    coordinate_count = 0
+    for polygon in polygons:
+        if not isinstance(polygon, list) or not polygon:
+            fail(path, f"polygon must contain at least one ring for {location_id}")
+        for ring in polygon:
+            if not isinstance(ring, list) or len(ring) < 4:
+                fail(path, f"polygon ring must contain at least four positions for {location_id}")
+            coordinate_count += len(ring)
+            if coordinate_count > MAX_POLYGON_COORDINATES:
+                fail(path, f"polygon coordinate count exceeds {MAX_POLYGON_COORDINATES}")
+            if ring[0] != ring[-1]:
+                fail(path, f"polygon ring must be a closed ring for {location_id}")
+
+            normalized_ring = []
+            for position in ring:
+                if (not isinstance(position, list) or len(position) != 2
+                        or not all(is_number(value) and math.isfinite(float(value)) for value in position)):
+                    fail(path, f"polygon positions must be two-dimensional for {location_id}")
+                longitude, latitude = map(float, position)
+                if not -180 <= longitude <= 180 or not -90 <= latitude <= 90:
+                    fail(path, f"polygon coordinate out of range for {location_id}")
+                normalized_ring.append((longitude, latitude))
+            if abs(ring_area(normalized_ring)) <= 1e-12:
+                fail(path, f"polygon ring must enclose an area for {location_id}")
+
+    return coordinate_count
+
+
+def ring_area(ring: list[tuple[float, float]]) -> float:
+    origin = ring[0][0]
+    unwrapped = [
+        (origin + ((longitude - origin + 180) % 360) - 180, latitude)
+        for longitude, latitude in ring
+    ]
+    return sum(
+        x1 * y2 - x2 * y1
+        for (x1, y1), (x2, y2) in zip(unwrapped, unwrapped[1:])
+    ) / 2
+
+
+def validate_location(path: Path, item: dict) -> tuple[int, int]:
     item_id = item["id"]
+    if "locations" in item:
+        locations = item["locations"]
+        if any(key in item for key in ("latitude", "longitude", "radiusMeters")):
+            fail(path, f"cannot mix top-level coordinates and locations for {item_id}")
+        if not isinstance(locations, list) or not locations:
+            fail(path, f"locations must not be empty for {item_id}")
+
+        location_ids = set()
+        polygon_coordinate_count = 0
+        for location in locations:
+            if not isinstance(location, dict):
+                fail(path, f"location must be an object for {item_id}")
+            location_id = require_identifier(path, location.get("id"), f"{item_id}.location id")
+            if location_id in location_ids:
+                fail(path, f"duplicate location id {location_id} for {item_id}")
+            location_ids.add(location_id)
+            require_string(path, location.get("title"), f"{location_id}.title", MAX_ITEM_TITLE_BYTES)
+            if "sourceURL" in location:
+                source_url = require_string(path, location.get("sourceURL"), f"{location_id}.sourceURL", MAX_SOURCE_URL_BYTES)
+                parsed_source_url = urlsplit(source_url)
+                if parsed_source_url.scheme != "https" or not parsed_source_url.hostname or parsed_source_url.username or parsed_source_url.password:
+                    fail(path, f"invalid HTTPS sourceURL for {location_id}")
+            if location.get("geometry") is not None:
+                polygon_coordinate_count += validate_geometry(path, location, location_id)
+            else:
+                validate_coordinate(path, item_id, location, location_id)
+            if polygon_coordinate_count > MAX_POLYGON_COORDINATES:
+                fail(path, f"polygon coordinate count exceeds {MAX_POLYGON_COORDINATES}")
+        return len(locations), polygon_coordinate_count
+
     has_latitude = "latitude" in item and item["latitude"] is not None
     has_longitude = "longitude" in item and item["longitude"] is not None
     if has_latitude != has_longitude:
         fail(path, f"incomplete location for {item_id}")
-
-    radius = item.get("radiusMeters")
     if not has_latitude:
-        if radius is not None:
+        if item.get("radiusMeters") is not None:
             fail(path, f"radiusMeters without coordinates for {item_id}")
-        return
+        return 0, 0
 
-    latitude = item["latitude"]
-    longitude = item["longitude"]
-    if not is_number(latitude) or not is_number(longitude) or not math.isfinite(float(latitude)) or not math.isfinite(float(longitude)):
-        fail(path, f"invalid coordinates for {item_id}")
-    if not -90 <= float(latitude) <= 90 or not -180 <= float(longitude) <= 180:
-        fail(path, f"coordinates out of range for {item_id}")
-    if radius is not None and (not is_number(radius) or not math.isfinite(float(radius)) or not 0 < float(radius) <= 100_000):
-        fail(path, f"invalid radiusMeters for {item_id}")
+    validate_coordinate(path, item_id, item, item_id)
+    return 1, 0
 
 
 def validate_automation(path: Path, item: dict) -> None:
@@ -103,13 +267,13 @@ def validate_automation(path: Path, item: dict) -> None:
 
     automation_type = automation.get("type")
     if automation_type == "photoLocation":
-        if item.get("latitude") is None or item.get("longitude") is None:
+        if not item.get("locations") and (item.get("latitude") is None or item.get("longitude") is None):
             fail(path, f"photoLocation needs coordinates for {item['id']}")
     elif automation_type == "healthKitAnnualStepCount":
         minimum = automation.get("minimum")
         if not is_integer(minimum) or not 0 < minimum <= 1_000_000_000:
             fail(path, f"invalid HealthKit threshold for {item['id']}")
-        if any(item.get(key) is not None for key in ("latitude", "longitude", "radiusMeters")):
+        if "locations" in item or any(item.get(key) is not None for key in ("latitude", "longitude", "radiusMeters")):
             fail(path, f"HealthKit item cannot have coordinates for {item['id']}")
     else:
         fail(path, f"unknown automation type for {item['id']}")
@@ -123,7 +287,11 @@ def validate_visualizations(path: Path, plugin: dict, items: list[dict], groups:
         fail(path, "visualizations count is outside limits")
 
     seen = set()
-    has_coordinates = any(item.get("latitude") is not None and item.get("longitude") is not None for item in items)
+    has_coordinates = any(
+        (item.get("latitude") is not None and item.get("longitude") is not None)
+        or bool(item.get("locations"))
+        for item in items
+    )
     for visualization in visualizations:
         if not isinstance(visualization, dict):
             fail(path, "visualization must be an object")
@@ -179,8 +347,11 @@ def validate_plugin(path: Path, plugin: object) -> None:
     require_string(path, plugin["title"], "title", MAX_PLUGIN_TITLE_BYTES)
     require_string(path, plugin["summary"], "summary", MAX_SUMMARY_BYTES)
     require_string(path, plugin["iconSystemName"], "iconSystemName", 100)
+    if "mapAttribution" in plugin:
+        require_string(path, plugin["mapAttribution"], "mapAttribution", MAX_MAP_ATTRIBUTION_BYTES)
     if "showsPeriodSelector" in plugin and not isinstance(plugin["showsPeriodSelector"], bool):
         fail(path, "showsPeriodSelector must be a boolean")
+    validate_map_style(path, plugin)
 
     items = plugin["items"]
     groups = plugin["groups"]
@@ -194,6 +365,8 @@ def validate_plugin(path: Path, plugin: object) -> None:
 
     all_ids = set()
     item_ids = set()
+    total_locations = 0
+    total_polygon_coordinates = 0
     for item in items:
         if not isinstance(item, dict):
             fail(path, "item must be an object")
@@ -205,7 +378,13 @@ def validate_plugin(path: Path, plugin: object) -> None:
         require_string(path, item.get("title"), f"{item_id}.title", MAX_ITEM_TITLE_BYTES)
         if item.get("detail") is not None:
             require_string(path, item["detail"], f"{item_id}.detail", MAX_ITEM_DETAIL_BYTES, nonempty=False)
-        validate_location(path, item)
+        location_count, polygon_coordinate_count = validate_location(path, item)
+        total_locations += location_count
+        total_polygon_coordinates += polygon_coordinate_count
+        if total_locations > MAX_LOCATIONS:
+            fail(path, f"locations count exceeds {MAX_LOCATIONS}")
+        if total_polygon_coordinates > MAX_POLYGON_COORDINATES:
+            fail(path, f"polygon coordinate count exceeds {MAX_POLYGON_COORDINATES}")
         validate_automation(path, item)
 
     group_ids = set()
@@ -220,6 +399,13 @@ def validate_plugin(path: Path, plugin: object) -> None:
         group_ids.add(group_id)
         all_ids.add(group_id)
         require_string(path, group.get("title"), f"{group_id}.title", MAX_GROUP_TITLE_BYTES)
+        if "mapMarkerSymbolName" in group:
+            require_string(path,
+                           group["mapMarkerSymbolName"],
+                           f"{group_id}.mapMarkerSymbolName",
+                           MAX_GROUP_TITLE_BYTES)
+        if "mapMarkerSVG" in group and group["mapMarkerSVG"] is not None:
+            validate_svg(path, group["mapMarkerSVG"], f"{group_id}.mapMarkerSVG")
 
     for item in items:
         group_id = item.get("groupID")

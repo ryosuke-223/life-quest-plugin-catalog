@@ -1,0 +1,542 @@
+{
+  "schemaVersion": 1,
+  "id": "japan-famous-gardens",
+  "version": 1,
+  "title": "日本の有名庭園めぐり",
+  "summary": "特別名勝を中心に、公開性と位置判定のしやすさを確認した代表的な庭園を写真位置で記録します。",
+  "iconSystemName": "leaf.fill",
+  "items": [
+    {
+      "id": "kairakuen",
+      "title": "偕楽園",
+      "detail": "日本三名園。梅林と千波湖を含む代表地点。",
+      "groupID": "kanto",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "garden-grounds",
+          "title": "庭園・周辺の公開範囲",
+          "latitude": 36.37305965,
+          "longitude": 140.45621395,
+          "radiusMeters": 800
+        }
+      ]
+    },
+    {
+      "id": "kenrokuen",
+      "title": "兼六園",
+      "detail": "日本三名園・特別名勝。",
+      "groupID": "chubu",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "garden-grounds",
+          "title": "庭園・周辺の公開範囲",
+          "latitude": 36.56194444,
+          "longitude": 136.6625,
+          "radiusMeters": 650
+        }
+      ]
+    },
+    {
+      "id": "okayama-korakuen",
+      "title": "岡山後楽園",
+      "detail": "日本三名園・特別名勝。",
+      "groupID": "chugoku-shikoku",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "garden-grounds",
+          "title": "庭園・周辺の公開範囲",
+          "latitude": 34.66766389,
+          "longitude": 133.93505556,
+          "radiusMeters": 550
+        }
+      ]
+    },
+    {
+      "id": "ritsurin",
+      "title": "栗林公園",
+      "detail": "特別名勝。大名庭園の広い園域を含む代表地点。",
+      "groupID": "chugoku-shikoku",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "garden-grounds",
+          "title": "庭園・周辺の公開範囲",
+          "latitude": 34.32958333,
+          "longitude": 134.04388889,
+          "radiusMeters": 900
+        }
+      ]
+    },
+    {
+      "id": "rikugien",
+      "title": "六義園",
+      "detail": "特別名勝。",
+      "groupID": "kanto",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "garden-grounds",
+          "title": "庭園・周辺の公開範囲",
+          "latitude": 35.733056,
+          "longitude": 139.746667,
+          "radiusMeters": 450
+        }
+      ]
+    },
+    {
+      "id": "hamarikyu",
+      "title": "旧浜離宮庭園",
+      "detail": "特別名勝。",
+      "groupID": "kanto",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "garden-grounds",
+          "title": "庭園・周辺の公開範囲",
+          "latitude": 35.66,
+          "longitude": 139.762,
+          "radiusMeters": 600
+        }
+      ]
+    },
+    {
+      "id": "koishikawa-korakuen",
+      "title": "小石川後楽園",
+      "detail": "特別名勝・特別史跡。",
+      "groupID": "kanto",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "garden-grounds",
+          "title": "庭園・周辺の公開範囲",
+          "latitude": 35.705556,
+          "longitude": 139.749167,
+          "radiusMeters": 450
+        }
+      ]
+    },
+    {
+      "id": "nijo-ninomaru",
+      "title": "二条城二の丸庭園",
+      "detail": "特別名勝。二条城の公開区域を代表地点で判定。",
+      "groupID": "kinki",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "garden-grounds",
+          "title": "庭園・周辺の公開範囲",
+          "latitude": 35.01416667,
+          "longitude": 135.7475,
+          "radiusMeters": 450
+        }
+      ]
+    },
+    {
+      "id": "ryoanji",
+      "title": "龍安寺庭園",
+      "detail": "特別名勝。枯山水庭園。",
+      "groupID": "kinki",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "garden-grounds",
+          "title": "庭園・周辺の公開範囲",
+          "latitude": 35.03444444,
+          "longitude": 135.71833333,
+          "radiusMeters": 300
+        }
+      ]
+    },
+    {
+      "id": "kinkakuji",
+      "title": "鹿苑寺（金閣寺）庭園",
+      "detail": "特別名勝。",
+      "groupID": "kinki",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "garden-grounds",
+          "title": "庭園・周辺の公開範囲",
+          "latitude": 35.0395,
+          "longitude": 135.7285,
+          "radiusMeters": 350
+        }
+      ]
+    },
+    {
+      "id": "ginkakuji",
+      "title": "慈照寺（銀閣寺）庭園",
+      "detail": "特別名勝。",
+      "groupID": "kinki",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "garden-grounds",
+          "title": "庭園・周辺の公開範囲",
+          "latitude": 35.02666667,
+          "longitude": 135.79833333,
+          "radiusMeters": 350
+        }
+      ]
+    },
+    {
+      "id": "saihoji",
+      "title": "西芳寺庭園",
+      "detail": "特別名勝。拝観予約などの最新案内を確認。",
+      "groupID": "kinki",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "garden-grounds",
+          "title": "庭園・周辺の公開範囲",
+          "latitude": 34.9925,
+          "longitude": 135.68416667,
+          "radiusMeters": 350
+        }
+      ]
+    },
+    {
+      "id": "tenryuji",
+      "title": "天龍寺庭園",
+      "detail": "特別名勝・史跡。",
+      "groupID": "kinki",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "garden-grounds",
+          "title": "庭園・周辺の公開範囲",
+          "latitude": 35.01596389,
+          "longitude": 135.67377222,
+          "radiusMeters": 350
+        }
+      ]
+    },
+    {
+      "id": "daigoji-sanboin",
+      "title": "醍醐寺三宝院庭園",
+      "detail": "特別名勝・特別史跡。",
+      "groupID": "kinki",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "garden-grounds",
+          "title": "庭園・周辺の公開範囲",
+          "latitude": 34.9515,
+          "longitude": 135.82177778,
+          "radiusMeters": 350
+        }
+      ]
+    },
+    {
+      "id": "daitokuji-daisenin",
+      "title": "大徳寺大仙院庭園",
+      "detail": "特別名勝。公開状況を事前確認。",
+      "groupID": "kinki",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "garden-grounds",
+          "title": "庭園・周辺の公開範囲",
+          "latitude": 35.0432,
+          "longitude": 135.7475,
+          "radiusMeters": 300
+        }
+      ]
+    },
+    {
+      "id": "katsura-rikyu",
+      "title": "桂離宮庭園",
+      "detail": "特別名勝。参観方法を事前確認。",
+      "groupID": "kinki",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "garden-grounds",
+          "title": "庭園・周辺の公開範囲",
+          "latitude": 34.983061,
+          "longitude": 135.710611,
+          "radiusMeters": 550
+        }
+      ]
+    },
+    {
+      "id": "shugakuin-rikyu",
+      "title": "修学院離宮庭園",
+      "detail": "特別名勝。参観方法を事前確認。",
+      "groupID": "kinki",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "garden-grounds",
+          "title": "庭園・周辺の公開範囲",
+          "latitude": 35.061,
+          "longitude": 135.79,
+          "radiusMeters": 900
+        }
+      ]
+    },
+    {
+      "id": "motsuji",
+      "title": "毛越寺庭園",
+      "detail": "特別名勝・特別史跡。",
+      "groupID": "tohoku",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "garden-grounds",
+          "title": "庭園・周辺の公開範囲",
+          "latitude": 39.004,
+          "longitude": 141.103,
+          "radiusMeters": 450
+        }
+      ]
+    },
+    {
+      "id": "senganen",
+      "title": "仙巌園",
+      "detail": "桜島を借景とする代表的な大名庭園。",
+      "groupID": "kyushu",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "garden-grounds",
+          "title": "庭園・周辺の公開範囲",
+          "latitude": 31.618,
+          "longitude": 130.579,
+          "radiusMeters": 650
+        }
+      ]
+    },
+    {
+      "id": "suizenji",
+      "title": "水前寺成趣園",
+      "detail": "代表的な回遊式庭園。",
+      "groupID": "kyushu",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "garden-grounds",
+          "title": "庭園・周辺の公開範囲",
+          "latitude": 32.79,
+          "longitude": 130.739,
+          "radiusMeters": 450
+        }
+      ]
+    },
+    {
+      "id": "shukkeien",
+      "title": "縮景園",
+      "detail": "広島を代表する歴史庭園。",
+      "groupID": "chugoku-shikoku",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "garden-grounds",
+          "title": "庭園・周辺の公開範囲",
+          "latitude": 34.4006,
+          "longitude": 132.4663,
+          "radiusMeters": 350
+        }
+      ]
+    },
+    {
+      "id": "adachi-museum",
+      "title": "足立美術館庭園",
+      "detail": "美術館が公開する日本庭園。",
+      "groupID": "chugoku-shikoku",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "garden-grounds",
+          "title": "庭園・周辺の公開範囲",
+          "latitude": 35.375,
+          "longitude": 133.194,
+          "radiusMeters": 500
+        }
+      ]
+    }
+  ],
+  "groups": [
+    {
+      "id": "tohoku",
+      "title": "東北"
+    },
+    {
+      "id": "kanto",
+      "title": "関東"
+    },
+    {
+      "id": "chubu",
+      "title": "中部"
+    },
+    {
+      "id": "kinki",
+      "title": "近畿"
+    },
+    {
+      "id": "chugoku-shikoku",
+      "title": "中国・四国"
+    },
+    {
+      "id": "kyushu",
+      "title": "九州"
+    }
+  ],
+  "achievements": [
+    {
+      "id": "garden-first",
+      "title": "最初の一庭",
+      "detail": "庭園を1件訪問する",
+      "condition": {
+        "type": "itemCount",
+        "minimum": 1
+      }
+    },
+    {
+      "id": "garden-five",
+      "title": "庭園めぐりの入口",
+      "detail": "庭園を5件訪問する",
+      "condition": {
+        "type": "itemCount",
+        "minimum": 5
+      }
+    },
+    {
+      "id": "garden-three-great",
+      "title": "日本三名園",
+      "detail": "偕楽園・兼六園・岡山後楽園を訪問する",
+      "condition": {
+        "type": "specificItems",
+        "itemIDs": [
+          "kairakuen",
+          "kenrokuen",
+          "okayama-korakuen"
+        ]
+      }
+    },
+    {
+      "id": "garden-half",
+      "title": "名園ハンター",
+      "detail": "庭園コレクションの半分を訪問する",
+      "condition": {
+        "type": "completionRate",
+        "minimum": 0.5
+      }
+    },
+    {
+      "id": "garden-complete",
+      "title": "庭園図鑑コンプリート",
+      "detail": "すべての庭園を訪問する",
+      "condition": {
+        "type": "completionRate",
+        "minimum": 1.0
+      }
+    }
+  ],
+  "visualizations": [
+    {
+      "type": "progressSummary"
+    },
+    {
+      "type": "metricCards",
+      "metrics": [
+        "visitedCount",
+        "completionRate",
+        "remainingCount"
+      ]
+    },
+    {
+      "type": "statusMap",
+      "cluster": false
+    },
+    {
+      "type": "groupProgress"
+    },
+    {
+      "type": "lineChart",
+      "metric": "visitedCount",
+      "aggregation": "cumulativeCount"
+    },
+    {
+      "type": "pieChart",
+      "breakdown": "status"
+    },
+    {
+      "type": "achievementCards"
+    },
+    {
+      "type": "nextAchievements",
+      "limit": 3
+    },
+    {
+      "type": "itemList",
+      "sort": "status"
+    }
+  ],
+  "showsPeriodSelector": true,
+  "mapStyle": {
+    "markerSVG": "<svg viewBox=\"0 0 36 36\"><path d=\"M18 2c-2 5-7 7-9 12-2 5 1 10 9 20 8-10 11-15 9-20-2-5-7-7-9-12z\"/><path d=\"M18 8v18M18 16l-6-5M18 19l6-5\"/></svg>",
+    "markerColors": {
+      "unvisited": "#8E8E93",
+      "estimated": "#0A84FF",
+      "confirmed": "#FF9F0A"
+    },
+    "areaFillColors": {
+      "unvisited": "#D1D1D638",
+      "estimated": "#0A84FF40",
+      "confirmed": "#FF9F0A59"
+    },
+    "areaStrokeColors": {
+      "unvisited": "#8E8E93",
+      "estimated": "#0A84FF",
+      "confirmed": "#FF9F0A"
+    }
+  }
+}

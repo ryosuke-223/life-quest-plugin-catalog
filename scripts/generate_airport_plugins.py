@@ -78,6 +78,28 @@ WORLD_GROUP_TITLES = {
 }
 
 
+def default_map_style() -> dict:
+    """Return the plugin-owned map shape and visit-state palettes."""
+    return {
+        "markerSVG": '<svg viewBox="0 0 36 36"><path d="M18 3 22 15l11 5v3l-11-2 2 10-6-3-6 3 2-10-11 2v-3l11-5z"/></svg>',
+        "markerColors": {
+            "unvisited": "#8E8E93",
+            "estimated": "#007AFF",
+            "confirmed": "#FF9500",
+        },
+        "areaFillColors": {
+            "unvisited": "#D1D1D638",
+            "estimated": "#007AFF59",
+            "confirmed": "#FF950073",
+        },
+        "areaStrokeColors": {
+            "unvisited": "#8E8E93",
+            "estimated": "#007AFF",
+            "confirmed": "#FF9500",
+        },
+    }
+
+
 def load_airports(path: Path) -> dict[str, dict[str, str]]:
     with path.open(newline="", encoding="utf-8") as handle:
         rows = csv.DictReader(handle)
@@ -140,6 +162,7 @@ def make_plugin(
         "groups": groups,
         "achievements": achievements,
         "visualizations": visualizations,
+        "mapStyle": default_map_style(),
     }
 
 
@@ -168,7 +191,7 @@ def build_japan(airports: dict[str, dict[str, str]]) -> dict:
         {"type": "groupProgress"},
         {"type": "itemList", "sort": "group"},
     ]
-    plugin = make_plugin("japan-airports", "日本の拠点空港めぐり", "国土交通省の拠点空港28空港。写真位置から訪問を自動判定します。", items, groups, achievements, visualizations, version=3)
+    plugin = make_plugin("japan-airports", "日本の拠点空港めぐり", "国土交通省の拠点空港28空港。写真位置から訪問を自動判定します。", items, groups, achievements, visualizations, version=4)
     plugin["showsPeriodSelector"] = False
     return plugin
 
@@ -200,7 +223,7 @@ def build_world(airports: dict[str, dict[str, str]]) -> dict:
         {"type": "groupProgress"},
         {"type": "itemList", "sort": "group"},
     ]
-    return make_plugin("world-major-airports", "世界の主要空港めぐり", "世界の主要国際空港100空港。写真位置から訪問を自動判定します。", items, groups, achievements, visualizations, version=3)
+    return make_plugin("world-major-airports", "世界の主要空港めぐり", "世界の主要国際空港100空港。写真位置から訪問を自動判定します。", items, groups, achievements, visualizations, version=4)
 
 
 def main() -> int:

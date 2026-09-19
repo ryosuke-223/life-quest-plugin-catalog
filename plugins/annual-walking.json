@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "annual-walking",
-  "version": 1,
+  "version": 2,
   "title": "年間歩数チャレンジ",
   "summary": "HealthKitの歩数から自動で達成状況を記録します。",
   "iconSystemName": "figure.walk",
@@ -38,14 +38,64 @@
     }
   ],
   "visualizations": [
-    { "type": "progressSummary" },
-    { "type": "achievementCards" },
-    { "type": "nextAchievements", "limit": 3 },
-    { "type": "statusGrid", "columns": 2 },
-    { "type": "itemList", "sort": "status" },
-    { "type": "metricCards", "metrics": ["visitedCount", "completionRate", "remainingCount", "unlockedAchievements"] },
-    { "type": "barChart", "metric": "visitedCount", "aggregation": "annualCount" },
-    { "type": "areaChart", "metric": "completionRate", "aggregation": "cumulativeCount" },
-    { "type": "heatmap", "dimension": "yearByStatus" }
-  ]
+    {
+      "type": "progressSummary"
+    },
+    {
+      "type": "achievementCards"
+    },
+    {
+      "type": "nextAchievements",
+      "limit": 3
+    },
+    {
+      "type": "statusGrid",
+      "columns": 2
+    },
+    {
+      "type": "itemList",
+      "sort": "status"
+    },
+    {
+      "type": "metricCards",
+      "metrics": [
+        "visitedCount",
+        "completionRate",
+        "remainingCount",
+        "unlockedAchievements"
+      ]
+    },
+    {
+      "type": "barChart",
+      "metric": "visitedCount",
+      "aggregation": "annualCount"
+    },
+    {
+      "type": "areaChart",
+      "metric": "completionRate",
+      "aggregation": "cumulativeCount"
+    },
+    {
+      "type": "heatmap",
+      "dimension": "yearByStatus"
+    }
+  ],
+  "mapStyle": {
+    "markerSVG": "<svg viewBox=\"0 0 36 36\"><path d=\"M12 1h8v8h-8zM15 12l-5 8 5 3 3 10h4l-2-11 4 3 5-7-3-2-3 4-5-3z\"/></svg>",
+    "markerColors": {
+      "unvisited": "#8E8E93",
+      "estimated": "#007AFF",
+      "confirmed": "#FF9500"
+    },
+    "areaFillColors": {
+      "unvisited": "#D1D1D638",
+      "estimated": "#007AFF59",
+      "confirmed": "#FF950073"
+    },
+    "areaStrokeColors": {
+      "unvisited": "#8E8E93",
+      "estimated": "#007AFF",
+      "confirmed": "#FF9500"
+    }
+  }
 }

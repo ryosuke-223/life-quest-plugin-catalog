@@ -1,0 +1,710 @@
+{
+  "schemaVersion": 1,
+  "id": "japan-famous-scenic-spots",
+  "version": 1,
+  "title": "日本の有名景勝地めぐり",
+  "summary": "庭園も含め、日本三景・国立公園・世界自然遺産などの代表的な景観を、広域の写真位置判定で記録します。",
+  "iconSystemName": "mountain.2.fill",
+  "items": [
+    {
+      "id": "kairakuen",
+      "title": "偕楽園",
+      "detail": "庭園プラグイン未導入でも楽しめる代表庭園。",
+      "groupID": "gardens",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "garden-grounds",
+          "title": "庭園・周辺の公開範囲",
+          "latitude": 36.37305965,
+          "longitude": 140.45621395,
+          "radiusMeters": 800
+        }
+      ]
+    },
+    {
+      "id": "kenrokuen",
+      "title": "兼六園",
+      "detail": "庭園プラグイン未導入でも楽しめる代表庭園。",
+      "groupID": "gardens",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "garden-grounds",
+          "title": "庭園・周辺の公開範囲",
+          "latitude": 36.56194444,
+          "longitude": 136.6625,
+          "radiusMeters": 650
+        }
+      ]
+    },
+    {
+      "id": "okayama-korakuen",
+      "title": "岡山後楽園",
+      "detail": "庭園プラグイン未導入でも楽しめる代表庭園。",
+      "groupID": "gardens",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "garden-grounds",
+          "title": "庭園・周辺の公開範囲",
+          "latitude": 34.66766389,
+          "longitude": 133.93505556,
+          "radiusMeters": 550
+        }
+      ]
+    },
+    {
+      "id": "ritsurin",
+      "title": "栗林公園",
+      "detail": "庭園プラグイン未導入でも楽しめる代表庭園。",
+      "groupID": "gardens",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "garden-grounds",
+          "title": "庭園・周辺の公開範囲",
+          "latitude": 34.32958333,
+          "longitude": 134.04388889,
+          "radiusMeters": 900
+        }
+      ]
+    },
+    {
+      "id": "rikugien",
+      "title": "六義園",
+      "detail": "庭園プラグイン未導入でも楽しめる代表庭園。",
+      "groupID": "gardens",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "garden-grounds",
+          "title": "庭園・周辺の公開範囲",
+          "latitude": 35.733056,
+          "longitude": 139.746667,
+          "radiusMeters": 450
+        }
+      ]
+    },
+    {
+      "id": "hamarikyu",
+      "title": "旧浜離宮庭園",
+      "detail": "庭園プラグイン未導入でも楽しめる代表庭園。",
+      "groupID": "gardens",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "garden-grounds",
+          "title": "庭園・周辺の公開範囲",
+          "latitude": 35.66,
+          "longitude": 139.762,
+          "radiusMeters": 600
+        }
+      ]
+    },
+    {
+      "id": "koishikawa-korakuen",
+      "title": "小石川後楽園",
+      "detail": "庭園プラグイン未導入でも楽しめる代表庭園。",
+      "groupID": "gardens",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "garden-grounds",
+          "title": "庭園・周辺の公開範囲",
+          "latitude": 35.705556,
+          "longitude": 139.749167,
+          "radiusMeters": 450
+        }
+      ]
+    },
+    {
+      "id": "suizenji",
+      "title": "水前寺成趣園",
+      "detail": "庭園プラグイン未導入でも楽しめる代表庭園。",
+      "groupID": "gardens",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "garden-grounds",
+          "title": "庭園・周辺の公開範囲",
+          "latitude": 32.79,
+          "longitude": 130.739,
+          "radiusMeters": 450
+        }
+      ]
+    },
+    {
+      "id": "matsushima",
+      "title": "松島",
+      "detail": "日本三景。湾岸と島しょを含む広域景観。",
+      "groupID": "coast-islands",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "bay-view",
+          "title": "松島湾の代表展望地",
+          "latitude": 38.3709,
+          "longitude": 141.0617,
+          "radiusMeters": 5000
+        },
+        {
+          "id": "oshima",
+          "title": "雄島周辺",
+          "latitude": 38.3667,
+          "longitude": 141.0675,
+          "radiusMeters": 2500
+        }
+      ]
+    },
+    {
+      "id": "amanohashidate",
+      "title": "天橋立",
+      "detail": "日本三景。砂州と周辺展望地を含む。",
+      "groupID": "coast-islands",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "sandbar",
+          "title": "天橋立周辺",
+          "latitude": 35.5667,
+          "longitude": 135.1864,
+          "radiusMeters": 3500
+        },
+        {
+          "id": "viewpoint",
+          "title": "傘松公園周辺",
+          "latitude": 35.5876,
+          "longitude": 135.1977,
+          "radiusMeters": 1500
+        }
+      ]
+    },
+    {
+      "id": "miyajima",
+      "title": "宮島（厳島）",
+      "detail": "日本三景。島内の社寺・海岸・森林を含む広域景観。",
+      "groupID": "coast-islands",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "itsukushima",
+          "title": "厳島神社周辺",
+          "latitude": 34.296,
+          "longitude": 132.3199,
+          "radiusMeters": 2200
+        },
+        {
+          "id": "momijidani",
+          "title": "紅葉谷公園周辺",
+          "latitude": 34.2892,
+          "longitude": 132.3214,
+          "radiusMeters": 1800
+        }
+      ]
+    },
+    {
+      "id": "kerama",
+      "title": "慶良間諸島",
+      "detail": "国立公園の島しょ・海域景観。",
+      "groupID": "coast-islands",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "zamami",
+          "title": "座間味島の代表地点",
+          "latitude": 26.2286,
+          "longitude": 127.3014,
+          "radiusMeters": 4500
+        },
+        {
+          "id": "tokashiki",
+          "title": "渡嘉敷島の代表地点",
+          "latitude": 26.1977,
+          "longitude": 127.2867,
+          "radiusMeters": 4500
+        }
+      ]
+    },
+    {
+      "id": "fuji",
+      "title": "富士山",
+      "detail": "国立公園を代表する山岳景観。五合目周辺を含む代表地点。",
+      "groupID": "mountains-highlands",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "fifth-station",
+          "title": "富士山五合目周辺",
+          "latitude": 35.3606,
+          "longitude": 138.7274,
+          "radiusMeters": 5000
+        },
+        {
+          "id": "lake-kawaguchi",
+          "title": "河口湖畔の富士山展望域",
+          "latitude": 35.5176,
+          "longitude": 138.7556,
+          "radiusMeters": 3500
+        }
+      ]
+    },
+    {
+      "id": "kamikochi",
+      "title": "上高地",
+      "detail": "特別名勝・特別天然記念物。梓川流域を含む広域景観。",
+      "groupID": "mountains-highlands",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "kappabashi",
+          "title": "河童橋周辺",
+          "latitude": 36.2481,
+          "longitude": 137.6358,
+          "radiusMeters": 4000
+        },
+        {
+          "id": "taisho-pond",
+          "title": "大正池周辺",
+          "latitude": 36.2243,
+          "longitude": 137.6195,
+          "radiusMeters": 3000
+        }
+      ]
+    },
+    {
+      "id": "daisetsuzan",
+      "title": "大雪山",
+      "detail": "国立公園を代表する高山景観。",
+      "groupID": "mountains-highlands",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "asahidake",
+          "title": "旭岳ロープウェイ周辺",
+          "latitude": 43.6636,
+          "longitude": 142.8543,
+          "radiusMeters": 4500
+        },
+        {
+          "id": "sugatami",
+          "title": "姿見周辺",
+          "latitude": 43.6502,
+          "longitude": 142.8204,
+          "radiusMeters": 3500
+        }
+      ]
+    },
+    {
+      "id": "aso-kusasenri",
+      "title": "阿蘇・草千里ヶ浜",
+      "detail": "火山地形と草原景観。",
+      "groupID": "mountains-highlands",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "kusasenri",
+          "title": "草千里ヶ浜周辺",
+          "latitude": 32.884,
+          "longitude": 131.095,
+          "radiusMeters": 5000
+        },
+        {
+          "id": "nakadake",
+          "title": "阿蘇中岳周辺",
+          "latitude": 32.8848,
+          "longitude": 131.1046,
+          "radiusMeters": 3500
+        }
+      ]
+    },
+    {
+      "id": "oirase-towada",
+      "title": "十和田湖・奥入瀬渓流",
+      "detail": "湖沼と渓流が連続する広域景観。",
+      "groupID": "lakes-wetlands",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "oirase",
+          "title": "奥入瀬渓流",
+          "latitude": 40.6098,
+          "longitude": 140.9948,
+          "radiusMeters": 5000
+        },
+        {
+          "id": "towada",
+          "title": "十和田湖畔",
+          "latitude": 40.4704,
+          "longitude": 140.8858,
+          "radiusMeters": 5000
+        }
+      ]
+    },
+    {
+      "id": "oze",
+      "title": "尾瀬",
+      "detail": "湿原・湖沼・山岳を含む国立公園。",
+      "groupID": "lakes-wetlands",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "ozegahara",
+          "title": "尾瀬ヶ原",
+          "latitude": 36.9365,
+          "longitude": 139.35,
+          "radiusMeters": 3500
+        },
+        {
+          "id": "oze-numa",
+          "title": "尾瀬沼",
+          "latitude": 36.9327,
+          "longitude": 139.4664,
+          "radiusMeters": 3500
+        }
+      ]
+    },
+    {
+      "id": "kurobe-gorge",
+      "title": "黒部峡谷",
+      "detail": "峡谷・渓流の広域景観。",
+      "groupID": "gorges-waterfalls",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "keyakidaira",
+          "title": "欅平周辺",
+          "latitude": 36.8177,
+          "longitude": 137.5807,
+          "radiusMeters": 4000
+        },
+        {
+          "id": "kurobe-dam",
+          "title": "黒部ダム周辺",
+          "latitude": 36.56,
+          "longitude": 137.6628,
+          "radiusMeters": 2500
+        }
+      ]
+    },
+    {
+      "id": "nachi-falls",
+      "title": "那智の滝",
+      "detail": "瀑布と熊野の山岳景観。",
+      "groupID": "gorges-waterfalls",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "waterfall",
+          "title": "那智の滝周辺",
+          "latitude": 33.6751,
+          "longitude": 135.8897,
+          "radiusMeters": 1800
+        },
+        {
+          "id": "kumano-nachi",
+          "title": "熊野那智大社周辺",
+          "latitude": 33.6697,
+          "longitude": 135.8877,
+          "radiusMeters": 1200
+        }
+      ]
+    },
+    {
+      "id": "takachiho",
+      "title": "高千穂峡",
+      "detail": "柱状節理の峡谷と滝。",
+      "groupID": "gorges-waterfalls",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "gorge",
+          "title": "高千穂峡遊歩道周辺",
+          "latitude": 32.7114,
+          "longitude": 131.3072,
+          "radiusMeters": 2200
+        }
+      ]
+    },
+    {
+      "id": "yakushima",
+      "title": "屋久島",
+      "detail": "世界自然遺産・国立公園の森林と山岳景観。",
+      "groupID": "forests",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "jomon-sugi",
+          "title": "縄文杉周辺",
+          "latitude": 30.3609,
+          "longitude": 130.5319,
+          "radiusMeters": 3500
+        },
+        {
+          "id": "shiratani",
+          "title": "白谷雲水峡周辺",
+          "latitude": 30.3833,
+          "longitude": 130.5597,
+          "radiusMeters": 3000
+        },
+        {
+          "id": "miyanoura",
+          "title": "宮之浦岳周辺",
+          "latitude": 30.3361,
+          "longitude": 130.5042,
+          "radiusMeters": 3500
+        }
+      ]
+    },
+    {
+      "id": "shirakami",
+      "title": "白神山地",
+      "detail": "世界自然遺産のブナ林景観。",
+      "groupID": "forests",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "buna-trail",
+          "title": "ブナ林散策道周辺",
+          "latitude": 40.5216,
+          "longitude": 140.1536,
+          "radiusMeters": 5000
+        },
+        {
+          "id": "anmon",
+          "title": "暗門周辺",
+          "latitude": 40.54,
+          "longitude": 140.12,
+          "radiusMeters": 4000
+        }
+      ]
+    },
+    {
+      "id": "tottori-dunes",
+      "title": "鳥取砂丘",
+      "detail": "海岸砂丘の広域景観。",
+      "groupID": "landforms",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "sand-dunes",
+          "title": "鳥取砂丘周辺",
+          "latitude": 35.54,
+          "longitude": 134.23,
+          "radiusMeters": 3500
+        }
+      ]
+    }
+  ],
+  "groups": [
+    {
+      "id": "gardens",
+      "title": "庭園"
+    },
+    {
+      "id": "coast-islands",
+      "title": "海岸・島"
+    },
+    {
+      "id": "mountains-highlands",
+      "title": "山岳・高原"
+    },
+    {
+      "id": "lakes-wetlands",
+      "title": "湖沼・湿原"
+    },
+    {
+      "id": "gorges-waterfalls",
+      "title": "渓谷・滝"
+    },
+    {
+      "id": "forests",
+      "title": "森林"
+    },
+    {
+      "id": "landforms",
+      "title": "砂丘・火山地形"
+    }
+  ],
+  "achievements": [
+    {
+      "id": "scenic-first",
+      "title": "最初の絶景",
+      "detail": "景勝地を1件訪問する",
+      "condition": {
+        "type": "itemCount",
+        "minimum": 1
+      }
+    },
+    {
+      "id": "scenic-five",
+      "title": "旅のコレクター",
+      "detail": "景勝地を5件訪問する",
+      "condition": {
+        "type": "itemCount",
+        "minimum": 5
+      }
+    },
+    {
+      "id": "scenic-three-great",
+      "title": "日本三景",
+      "detail": "松島・天橋立・宮島を訪問する",
+      "condition": {
+        "type": "specificItems",
+        "itemIDs": [
+          "matsushima",
+          "amanohashidate",
+          "miyajima"
+        ]
+      }
+    },
+    {
+      "id": "scenic-garden-triad",
+      "title": "庭園も三名園",
+      "detail": "景勝地プラグイン内で日本三名園を訪問する",
+      "condition": {
+        "type": "specificItems",
+        "itemIDs": [
+          "kairakuen",
+          "kenrokuen",
+          "okayama-korakuen"
+        ]
+      }
+    },
+    {
+      "id": "scenic-twelve",
+      "title": "全国横断",
+      "detail": "景勝地を12件訪問する",
+      "condition": {
+        "type": "itemCount",
+        "minimum": 12
+      }
+    },
+    {
+      "id": "scenic-half",
+      "title": "景観ハンター",
+      "detail": "景勝地コレクションの半分を訪問する",
+      "condition": {
+        "type": "completionRate",
+        "minimum": 0.5
+      }
+    },
+    {
+      "id": "scenic-complete",
+      "title": "日本の絶景図鑑コンプリート",
+      "detail": "すべての景勝地を訪問する",
+      "condition": {
+        "type": "completionRate",
+        "minimum": 1.0
+      }
+    }
+  ],
+  "visualizations": [
+    {
+      "type": "progressSummary"
+    },
+    {
+      "type": "metricCards",
+      "metrics": [
+        "visitedCount",
+        "completionRate",
+        "remainingCount",
+        "unlockedAchievements"
+      ]
+    },
+    {
+      "type": "statusMap",
+      "cluster": true
+    },
+    {
+      "type": "groupProgress"
+    },
+    {
+      "type": "lineChart",
+      "metric": "visitedCount",
+      "aggregation": "cumulativeCount"
+    },
+    {
+      "type": "pieChart",
+      "breakdown": "group"
+    },
+    {
+      "type": "achievementCards"
+    },
+    {
+      "type": "nextAchievements",
+      "limit": 3
+    },
+    {
+      "type": "itemList",
+      "sort": "group"
+    }
+  ],
+  "showsPeriodSelector": true,
+  "mapStyle": {
+    "markerSVG": "<svg viewBox=\"0 0 36 36\"><path d=\"M2 31L13 12l6 9 5-7 10 17H2z\"/><path d=\"M22 8c-2.2 0-4 1.8-4 4c0 2.2 1.8 4 4 4c2.2 0 4-1.8 4-4c0-2.2-1.8-4-4-4z\"/></svg>",
+    "markerColors": {
+      "unvisited": "#8E8E93",
+      "estimated": "#0A84FF",
+      "confirmed": "#FF9F0A"
+    },
+    "areaFillColors": {
+      "unvisited": "#D1D1D638",
+      "estimated": "#0A84FF40",
+      "confirmed": "#FF9F0A59"
+    },
+    "areaStrokeColors": {
+      "unvisited": "#8E8E93",
+      "estimated": "#0A84FF",
+      "confirmed": "#FF9F0A"
+    }
+  }
+}

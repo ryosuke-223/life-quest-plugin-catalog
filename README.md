@@ -9,6 +9,9 @@ Life Questの公式プラグインカタログです。プラグインはSwift�
 ├── catalog.json              # アプリが取得する公開カタログ
 ├── plugins/                  # 個別プラグインの原本
 ├── AIRPORT_DATA_SOURCES.md   # 空港プラグインの対象範囲と出典
+├── CASTLE_PLUGIN_DATA_SOURCES.md # 城郭プラグインの出典と判定範囲
+├── GARDEN_PLUGIN_DATA_SOURCES.md # 庭園プラグインの選定と出典
+├── SCENIC_SPOTS_PLUGIN_DATA_SOURCES.md # 景勝地プラグインの選定と判定範囲
 ├── scripts/
 │   ├── build_catalog.py      # plugins/*.jsonからcatalog.jsonを生成
 │   └── validate_catalog.py   # PR用の形式検証
@@ -45,6 +48,76 @@ Life QuestアプリのDebug／Releaseビルドで、Build Settingsの `PLUGIN_CA
 
 - `photoLocation`: 写真の撮影位置と項目の座標を固定アダプタで照合
 - `healthKitAnnualStepCount`: 現在年のHealthKit歩数を固定アダプタで照合
+
+`photoLocation` は項目の `latitude` / `longitude` で単一の円形地点を指定できます。離れた構成資産を持つ項目には、`locations` 配列で複数の地点を指定します。各地点は従来の座標・半径のほか、GeoJSONの `Polygon` / `MultiPolygon` を判定範囲にできます。円形地点は座標から半径内、ポリゴン地点は外周の内側かつ穴の外側に撮影座標が入ると、その親項目を1件だけ訪問候補にします。地点数が増えても項目数や実績の達成数は増えません。旧形式の単一座標と円形地点も引き続き有効です。
+
+各地点には一意な `id` と表示用 `title` を指定します。円形地点では `latitude`、`longitude`、任意の `radiusMeters` を使います。範囲地点では `geometry` に `Polygon` または `MultiPolygon` を指定し、座標はGeoJSONに従って `[longitude, latitude]` の順にします。リングは4点以上で始点と終点を一致させ、最初のリングを外周、後続リングを除外する穴として記述します。外周上は範囲内、穴の境界と内側は範囲外として扱います。MultiPolygonは離れた複数のポリゴンを表します。範囲地点で表示用ピンも必要な場合は、`latitude` と `longitude` を両方指定できますが、`radiusMeters` とは併用できません。ポリゴン座標の総数はプラグインあたり50,000点までです。座標と構成資産名の出典はプラグインの説明資料またはPRに記録してください。複数地点を使う場合は、旧形式の項目直下の座標と混在させません。地図の帰属表示には任意のトップレベル文字列 `mapAttribution` を使い、指定した文字列を地図の下に表示します。
+
+```json
+{
+  "id": "historic-example",
+  "title": "複数の構成資産を持つ遺産",
+  "automation": { "type": "photoLocation" },
+  "locations": [
+    {
+      "id": "component-a",
+      "title": "構成資産A",
+      "latitude": 35.0,
+      "longitude": 139.0,
+      "radiusMeters": 200
+    },
+    {
+      "id": "castle-grounds",
+      "title": "城郭内",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [139.0, 35.0], [139.01, 35.0], [139.01, 35.01],
+          [139.0, 35.01], [139.0, 35.0]
+        ]]
+      }
+    }
+  ]
+}
+```
+
+地点の出典URLはマニフェストに含めません。座標・構成資産名などの根拠は、プラグインの説明資料（`*_DATA_SOURCES.md` など）とPR本文に記録します。OSM由来の座標を使う場合は [OpenStreetMapへの帰属表示とODbL](https://www.openstreetmap.org/copyright) に従い、プラグインとソースデータ説明にライセンスを明記してください。
+
+### 地図マーカーの表示設定
+
+地図の形状と色は、プラグインの任意の `mapStyle` で指定します。`markerSVG` は `svg`、`g`、`path` だけを使った静的なシルエットで、実行コード・外部参照・画像・CSS・変形・フィルターは使えません。`viewBox` を必須とし、パス命令は `M/m`、`L/l`、`H/h`、`V/v`、`C/c`、`Q/q`、`Z/z` に限ります。SVGは20,000バイト以下です。
+
+`markerColors` はマーカー、`areaFillColors` は円・ポリゴンの塗り、`areaStrokeColors` は円・ポリゴンの線に使われます。各オブジェクトには `unvisited`、`estimated`、`confirmed` を必ず指定し、色は `#RRGGBB` または `#RRGGBBAA` で記述します。`mapStyle` を省略した場合は標準の無地ピンとアプリの互換デフォルト色を使います。
+
+```json
+"mapStyle": {
+  "markerSVG": "<svg viewBox=\"0 0 36 36\"><path d=\"M3 32V24h30v8H3z\"/></svg>",
+  "markerColors": {
+    "unvisited": "#8E8E93",
+    "estimated": "#007AFF",
+    "confirmed": "#FF9500"
+  },
+  "areaFillColors": {
+    "unvisited": "#D1D1D638",
+    "estimated": "#007AFF59",
+    "confirmed": "#FF950073"
+  },
+  "areaStrokeColors": {
+    "unvisited": "#8E8E93",
+    "estimated": "#007AFF",
+    "confirmed": "#FF9500"
+  }
+},
+"groups": [
+  { "id": "cultural", "title": "文化遺産", "mapMarkerSVG": "<svg viewBox=\"0 0 36 36\"><path d=\"M3 30h30v3H3z\"/></svg>" }
+]
+```
+
+グループの `mapMarkerSVG` は、そのグループに属する項目だけ形状を上書きします。グループSVG、プラグインSVG、既存の `mapMarkerSymbolName`、標準の無地ピンの順にフォールバックします。`mapMarkerSymbolName` は既存プラグインとの互換用で、新しいプラグインでは `mapStyle` を使ってください。
+
+### 日本の世界遺産めぐり
+
+[世界遺産プラグイン](plugins/japan-world-heritage.json)には、日本の世界遺産27件を親項目として登録し、文化・自然遺産あわせて251地点を設定しています。写真の位置が同じ遺産に設定した地点のどれか1つから200m以内なら、その親項目を1件達成します。自然遺産の島全体を覆う大きな円は使わず、登録区域内の登山・散策などの代表地点で判定します。参詣道などの線状資産も公式案内上の代表地点による判定で、登録区域全体を境界判定するものではありません。宗像の沖ノ島本島は立入不可のため項目説明に表示し、GPS判定と達成カウントの対象外とします。座標の根拠、除外理由、通行・立入上の注意は[座標判定の調査メモ](WORLD_HERITAGE_COORDINATE_RESEARCH.md)と[データ出典](WORLD_HERITAGE_DATA_SOURCES.md)を参照してください。
 
 ## 可視化の指定
 

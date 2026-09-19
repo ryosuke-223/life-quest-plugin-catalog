@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "catalog-landmarks",
-  "version": 1,
+  "version": 2,
   "title": "地点コレクションの例",
   "summary": "写真位置から自動推定するデータ形式の例です。",
   "iconSystemName": "mappin.and.ellipse",
@@ -37,16 +37,70 @@
     }
   ],
   "visualizations": [
-    { "type": "progressSummary" },
-    { "type": "groupProgress" },
-    { "type": "achievementCards" },
-    { "type": "nextAchievements", "limit": 3 },
-    { "type": "statusGrid", "columns": 3 },
-    { "type": "itemList", "sort": "title" },
-    { "type": "metricCards", "metrics": ["visitedCount", "completionRate", "remainingCount"] },
-    { "type": "barChart", "metric": "visitedCount", "aggregation": "annualCount" },
-    { "type": "areaChart", "metric": "completionRate", "aggregation": "cumulativeCount" },
-    { "type": "pieChart", "breakdown": "group" },
-    { "type": "heatmap", "dimension": "yearByGroup" }
-  ]
+    {
+      "type": "progressSummary"
+    },
+    {
+      "type": "groupProgress"
+    },
+    {
+      "type": "achievementCards"
+    },
+    {
+      "type": "nextAchievements",
+      "limit": 3
+    },
+    {
+      "type": "statusGrid",
+      "columns": 3
+    },
+    {
+      "type": "itemList",
+      "sort": "title"
+    },
+    {
+      "type": "metricCards",
+      "metrics": [
+        "visitedCount",
+        "completionRate",
+        "remainingCount"
+      ]
+    },
+    {
+      "type": "barChart",
+      "metric": "visitedCount",
+      "aggregation": "annualCount"
+    },
+    {
+      "type": "areaChart",
+      "metric": "completionRate",
+      "aggregation": "cumulativeCount"
+    },
+    {
+      "type": "pieChart",
+      "breakdown": "group"
+    },
+    {
+      "type": "heatmap",
+      "dimension": "yearByGroup"
+    }
+  ],
+  "mapStyle": {
+    "markerSVG": "<svg viewBox=\"0 0 36 36\"><path d=\"M18 33 7 14c0-6 5-11 11-11c6 0 11 5 11 11c0 8-11 19-11 19zM18 18c-2 0-4-2-4-4c0-2 2-4 4-4c2 0 4 2 4 4c0 2-2 4-4 4z\"/></svg>",
+    "markerColors": {
+      "unvisited": "#8E8E93",
+      "estimated": "#007AFF",
+      "confirmed": "#FF9500"
+    },
+    "areaFillColors": {
+      "unvisited": "#D1D1D638",
+      "estimated": "#007AFF59",
+      "confirmed": "#FF950073"
+    },
+    "areaStrokeColors": {
+      "unvisited": "#8E8E93",
+      "estimated": "#007AFF",
+      "confirmed": "#FF9500"
+    }
+  }
 }
