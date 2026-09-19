@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "japan-famous-gardens",
-  "version": 1,
+  "version": 2,
   "title": "日本の有名庭園めぐり",
   "summary": "特別名勝を中心に、公開性と位置判定のしやすさを確認した代表的な庭園を写真位置で記録します。",
   "iconSystemName": "leaf.fill",

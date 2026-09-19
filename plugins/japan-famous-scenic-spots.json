@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "japan-famous-scenic-spots",
-  "version": 1,
+  "version": 2,
   "title": "日本の有名景勝地めぐり",
   "summary": "庭園も含め、日本三景・国立公園・世界自然遺産などの代表的な景観を、広域の写真位置判定で記録します。",
   "iconSystemName": "mountain.2.fill",
