@@ -119,6 +119,44 @@ class ValidateCatalogTests(unittest.TestCase):
                     for location in item.get("locations", []):
                         self.assertNotIn("sourceURL", location)
 
+    def test_japan_museums_art_manifest_shape(self):
+        manifest_path = Path(__file__).resolve().parents[1] / "plugins" / "japan-museums-art.json"
+        plugin = json.loads(manifest_path.read_text(encoding="utf-8"))
+
+        self.assertEqual(plugin["id"], "japan-museums-art")
+        self.assertEqual(len(plugin["items"]), 28)
+        self.assertEqual(len(plugin["groups"]), 8)
+        self.assertEqual(
+            {group["id"] for group in plugin["groups"]},
+            {"hokkaido", "tohoku", "kanto", "chubu", "kinki", "chugoku", "shikoku", "kyushu-okinawa"},
+        )
+        self.assertEqual(len({item["id"] for item in plugin["items"]}), 28)
+        self.assertTrue(all(item["automation"]["type"] == "photoLocation" for item in plugin["items"]))
+        self.assertTrue(all(len(item["locations"]) == 1 for item in plugin["items"]))
+        self.assertTrue(all("latitude" in item["locations"][0] and "longitude" in item["locations"][0] for item in plugin["items"]))
+
+        condition_types = [achievement["condition"]["type"] for achievement in plugin["achievements"]]
+        self.assertEqual(condition_types.count("itemCount"), 4)
+        self.assertEqual(condition_types.count("specificItems"), 1)
+        self.assertEqual(condition_types.count("groupComplete"), 8)
+        self.assertEqual(condition_types.count("completionRate"), 1)
+        self.assertEqual(
+            {visualization["type"] for visualization in plugin["visualizations"]},
+            {
+                "progressSummary",
+                "metricCards",
+                "statusMap",
+                "groupProgress",
+                "lineChart",
+                "barChart",
+                "pieChart",
+                "achievementCards",
+                "nextAchievements",
+                "itemList",
+            },
+        )
+        validate_plugin(manifest_path, plugin)
+
     def test_accepts_optional_group_map_marker_symbol_name(self):
         plugin = manifest()
         plugin["groups"] = [{

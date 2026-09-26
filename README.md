@@ -11,6 +11,7 @@ Life Questの公式プラグインカタログです。プラグインはSwift�
 ├── AIRPORT_DATA_SOURCES.md   # 空港プラグインの対象範囲と出典
 ├── CASTLE_PLUGIN_DATA_SOURCES.md # 城郭プラグインの出典と判定範囲
 ├── GARDEN_PLUGIN_DATA_SOURCES.md # 庭園プラグインの選定と出典
+├── MUSEUM_ART_PLUGIN_DATA_SOURCES.md # 博物館・美術館プラグインの選定と出典
 ├── SCENIC_SPOTS_PLUGIN_DATA_SOURCES.md # 景勝地プラグインの選定と判定範囲
 ├── scripts/
 │   ├── build_catalog.py      # plugins/*.jsonからcatalog.jsonを生成

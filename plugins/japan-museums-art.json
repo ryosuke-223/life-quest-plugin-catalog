@@ -1,0 +1,747 @@
+{
+  "schemaVersion": 1,
+  "id": "japan-museums-art",
+  "version": 1,
+  "title": "博物館・美術館めぐり",
+  "summary": "日本各地の代表的な博物館・美術館28館を、写真の撮影位置で記録します。地域別の進捗と実績も確認できます。",
+  "iconSystemName": "building.columns.fill",
+  "items": [
+    {
+      "id": "hokkaido-museum",
+      "title": "北海道博物館",
+      "detail": "博物館・札幌",
+      "groupID": "hokkaido",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "museum-grounds",
+          "title": "館の代表地点",
+          "latitude": 43.053,
+          "longitude": 141.496611,
+          "radiusMeters": 300
+        }
+      ]
+    },
+    {
+      "id": "hokkaido-modern-art",
+      "title": "北海道立近代美術館",
+      "detail": "美術館・札幌",
+      "groupID": "hokkaido",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "museum-grounds",
+          "title": "館の代表地点",
+          "latitude": 43.060278,
+          "longitude": 141.330389,
+          "radiusMeters": 300
+        }
+      ]
+    },
+    {
+      "id": "aomori-art",
+      "title": "青森県立美術館",
+      "detail": "美術館・青森",
+      "groupID": "tohoku",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "museum-grounds",
+          "title": "館の代表地点",
+          "latitude": 40.8073,
+          "longitude": 140.701,
+          "radiusMeters": 300
+        }
+      ]
+    },
+    {
+      "id": "iwate-art",
+      "title": "岩手県立美術館",
+      "detail": "美術館・盛岡",
+      "groupID": "tohoku",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "museum-grounds",
+          "title": "館の代表地点",
+          "latitude": 39.6935,
+          "longitude": 141.124889,
+          "radiusMeters": 300
+        }
+      ]
+    },
+    {
+      "id": "sendai-city-museum",
+      "title": "仙台市博物館",
+      "detail": "博物館・仙台",
+      "groupID": "tohoku",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "museum-grounds",
+          "title": "館の代表地点",
+          "latitude": 38.256065,
+          "longitude": 140.856685,
+          "radiusMeters": 300
+        }
+      ]
+    },
+    {
+      "id": "tokyo-national-museum",
+      "title": "東京国立博物館",
+      "detail": "博物館・上野",
+      "groupID": "kanto",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "museum-grounds",
+          "title": "館の代表地点",
+          "latitude": 35.718889,
+          "longitude": 139.776389,
+          "radiusMeters": 300
+        }
+      ]
+    },
+    {
+      "id": "national-science-museum",
+      "title": "国立科学博物館",
+      "detail": "博物館・上野",
+      "groupID": "kanto",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "museum-grounds",
+          "title": "館の代表地点",
+          "latitude": 35.716319,
+          "longitude": 139.776544,
+          "radiusMeters": 300
+        }
+      ]
+    },
+    {
+      "id": "momat",
+      "title": "東京国立近代美術館",
+      "detail": "美術館・竹橋",
+      "groupID": "kanto",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "museum-grounds",
+          "title": "館の代表地点",
+          "latitude": 35.690553,
+          "longitude": 139.754642,
+          "radiusMeters": 300
+        }
+      ]
+    },
+    {
+      "id": "national-western-art",
+      "title": "国立西洋美術館",
+      "detail": "美術館・上野",
+      "groupID": "kanto",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "museum-grounds",
+          "title": "館の代表地点",
+          "latitude": 35.715357,
+          "longitude": 139.77585,
+          "radiusMeters": 300
+        }
+      ]
+    },
+    {
+      "id": "national-art-center-tokyo",
+      "title": "国立新美術館",
+      "detail": "美術館・六本木",
+      "groupID": "kanto",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "museum-grounds",
+          "title": "館の代表地点",
+          "latitude": 35.66528,
+          "longitude": 139.72634,
+          "radiusMeters": 300
+        }
+      ]
+    },
+    {
+      "id": "yokohama-art",
+      "title": "横浜美術館",
+      "detail": "美術館・みなとみらい",
+      "groupID": "kanto",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "museum-grounds",
+          "title": "館の代表地点",
+          "latitude": 35.4571,
+          "longitude": 139.631,
+          "radiusMeters": 300
+        }
+      ]
+    },
+    {
+      "id": "kanazawa-21c",
+      "title": "金沢21世紀美術館",
+      "detail": "美術館・金沢",
+      "groupID": "chubu",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "museum-grounds",
+          "title": "館の代表地点",
+          "latitude": 36.5608,
+          "longitude": 136.658,
+          "radiusMeters": 300
+        }
+      ]
+    },
+    {
+      "id": "toyama-art",
+      "title": "富山県美術館",
+      "detail": "美術館・富山",
+      "groupID": "chubu",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "museum-grounds",
+          "title": "館の代表地点",
+          "latitude": 36.710556,
+          "longitude": 137.21,
+          "radiusMeters": 300
+        }
+      ]
+    },
+    {
+      "id": "tokugawa-art",
+      "title": "徳川美術館",
+      "detail": "美術館・名古屋",
+      "groupID": "chubu",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "museum-grounds",
+          "title": "館の代表地点",
+          "latitude": 35.183692,
+          "longitude": 136.933189,
+          "radiusMeters": 300
+        }
+      ]
+    },
+    {
+      "id": "kyoto-national-museum",
+      "title": "京都国立博物館",
+      "detail": "博物館・京都",
+      "groupID": "kinki",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "museum-grounds",
+          "title": "館の代表地点",
+          "latitude": 34.989993,
+          "longitude": 135.773121,
+          "radiusMeters": 300
+        }
+      ]
+    },
+    {
+      "id": "kyoto-kyocera-art",
+      "title": "京都市京セラ美術館",
+      "detail": "美術館・京都",
+      "groupID": "kinki",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "museum-grounds",
+          "title": "館の代表地点",
+          "latitude": 35.012836,
+          "longitude": 135.783569,
+          "radiusMeters": 300
+        }
+      ]
+    },
+    {
+      "id": "nara-national-museum",
+      "title": "奈良国立博物館",
+      "detail": "博物館・奈良",
+      "groupID": "kinki",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "museum-grounds",
+          "title": "館の代表地点",
+          "latitude": 34.6837,
+          "longitude": 135.8364,
+          "radiusMeters": 300
+        }
+      ]
+    },
+    {
+      "id": "national-art-museum-osaka",
+      "title": "国立国際美術館",
+      "detail": "美術館・中之島",
+      "groupID": "kinki",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "museum-grounds",
+          "title": "館の代表地点",
+          "latitude": 34.691786,
+          "longitude": 135.492024,
+          "radiusMeters": 300
+        }
+      ]
+    },
+    {
+      "id": "osaka-history-museum",
+      "title": "大阪歴史博物館",
+      "detail": "博物館・大阪城公園",
+      "groupID": "kinki",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "museum-grounds",
+          "title": "館の代表地点",
+          "latitude": 34.682722,
+          "longitude": 135.520806,
+          "radiusMeters": 300
+        }
+      ]
+    },
+    {
+      "id": "ohara-art",
+      "title": "大原美術館",
+      "detail": "美術館・倉敷",
+      "groupID": "chugoku",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "museum-grounds",
+          "title": "館の代表地点",
+          "latitude": 34.59615,
+          "longitude": 133.77067,
+          "radiusMeters": 300
+        }
+      ]
+    },
+    {
+      "id": "hiroshima-pref-art",
+      "title": "広島県立美術館",
+      "detail": "美術館・広島",
+      "groupID": "chugoku",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "museum-grounds",
+          "title": "館の代表地点",
+          "latitude": 34.399908,
+          "longitude": 132.466275,
+          "radiusMeters": 300
+        }
+      ]
+    },
+    {
+      "id": "adachi-art",
+      "title": "足立美術館",
+      "detail": "美術館・安来",
+      "groupID": "chugoku",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "museum-grounds",
+          "title": "館の代表地点",
+          "latitude": 35.38001,
+          "longitude": 133.19417,
+          "radiusMeters": 300
+        }
+      ]
+    },
+    {
+      "id": "chichu-art",
+      "title": "地中美術館",
+      "detail": "美術館・直島",
+      "groupID": "shikoku",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "museum-grounds",
+          "title": "館の代表地点",
+          "latitude": 34.449758,
+          "longitude": 133.985803,
+          "radiusMeters": 300
+        }
+      ]
+    },
+    {
+      "id": "benesse-house",
+      "title": "ベネッセハウス ミュージアム",
+      "detail": "美術館・直島",
+      "groupID": "shikoku",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "museum-grounds",
+          "title": "館の代表地点",
+          "latitude": 34.445254,
+          "longitude": 133.990815,
+          "radiusMeters": 300
+        }
+      ]
+    },
+    {
+      "id": "kyushu-national-museum",
+      "title": "九州国立博物館",
+      "detail": "博物館・太宰府",
+      "groupID": "kyushu-okinawa",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "museum-grounds",
+          "title": "館の代表地点",
+          "latitude": 33.518356,
+          "longitude": 130.538297,
+          "radiusMeters": 300
+        }
+      ]
+    },
+    {
+      "id": "fukuoka-asian-art",
+      "title": "福岡アジア美術館",
+      "detail": "美術館・福岡",
+      "groupID": "kyushu-okinawa",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "museum-grounds",
+          "title": "館の代表地点",
+          "latitude": 33.595028,
+          "longitude": 130.405917,
+          "radiusMeters": 300
+        }
+      ]
+    },
+    {
+      "id": "nagasaki-art",
+      "title": "長崎県美術館",
+      "detail": "美術館・長崎",
+      "groupID": "kyushu-okinawa",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "museum-grounds",
+          "title": "館の代表地点",
+          "latitude": 32.741679,
+          "longitude": 129.871057,
+          "radiusMeters": 300
+        }
+      ]
+    },
+    {
+      "id": "okinawa-pref-museum-art",
+      "title": "沖縄県立博物館・美術館",
+      "detail": "博物館・美術館・那覇",
+      "groupID": "kyushu-okinawa",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "locations": [
+        {
+          "id": "museum-grounds",
+          "title": "館の代表地点",
+          "latitude": 26.226593,
+          "longitude": 127.694103,
+          "radiusMeters": 300
+        }
+      ]
+    }
+  ],
+  "groups": [
+    {
+      "id": "hokkaido",
+      "title": "北海道"
+    },
+    {
+      "id": "tohoku",
+      "title": "東北"
+    },
+    {
+      "id": "kanto",
+      "title": "関東"
+    },
+    {
+      "id": "chubu",
+      "title": "中部"
+    },
+    {
+      "id": "kinki",
+      "title": "近畿"
+    },
+    {
+      "id": "chugoku",
+      "title": "中国"
+    },
+    {
+      "id": "shikoku",
+      "title": "四国"
+    },
+    {
+      "id": "kyushu-okinawa",
+      "title": "九州・沖縄"
+    }
+  ],
+  "achievements": [
+    {
+      "id": "museum-first",
+      "title": "最初の一館",
+      "detail": "博物館・美術館を1館訪問する",
+      "condition": {
+        "type": "itemCount",
+        "minimum": 1
+      }
+    },
+    {
+      "id": "museum-five",
+      "title": "ミュージアムめぐりの入口",
+      "detail": "博物館・美術館を5館訪問する",
+      "condition": {
+        "type": "itemCount",
+        "minimum": 5
+      }
+    },
+    {
+      "id": "museum-ten",
+      "title": "十館コレクター",
+      "detail": "博物館・美術館を10館訪問する",
+      "condition": {
+        "type": "itemCount",
+        "minimum": 10
+      }
+    },
+    {
+      "id": "museum-twenty",
+      "title": "全国ミュージアムハンター",
+      "detail": "博物館・美術館を20館訪問する",
+      "condition": {
+        "type": "itemCount",
+        "minimum": 20
+      }
+    },
+    {
+      "id": "national-art-circuit",
+      "title": "国立館アート回廊",
+      "detail": "東京国立博物館・国立西洋美術館・国立新美術館・京都国立博物館・国立国際美術館を訪問する",
+      "condition": {
+        "type": "specificItems",
+        "itemIDs": [
+          "tokyo-national-museum",
+          "national-western-art",
+          "national-art-center-tokyo",
+          "kyoto-national-museum",
+          "national-art-museum-osaka"
+        ]
+      }
+    },
+    {
+      "id": "hokkaido-complete",
+      "title": "北海道ミュージアムめぐり",
+      "detail": "北海道の対象館をすべて訪問する",
+      "condition": {
+        "type": "groupComplete",
+        "groupID": "hokkaido"
+      }
+    },
+    {
+      "id": "tohoku-complete",
+      "title": "東北ミュージアムめぐり",
+      "detail": "東北の対象館をすべて訪問する",
+      "condition": {
+        "type": "groupComplete",
+        "groupID": "tohoku"
+      }
+    },
+    {
+      "id": "kanto-complete",
+      "title": "関東ミュージアムめぐり",
+      "detail": "関東の対象館をすべて訪問する",
+      "condition": {
+        "type": "groupComplete",
+        "groupID": "kanto"
+      }
+    },
+    {
+      "id": "chubu-complete",
+      "title": "中部ミュージアムめぐり",
+      "detail": "中部の対象館をすべて訪問する",
+      "condition": {
+        "type": "groupComplete",
+        "groupID": "chubu"
+      }
+    },
+    {
+      "id": "kinki-complete",
+      "title": "近畿ミュージアムめぐり",
+      "detail": "近畿の対象館をすべて訪問する",
+      "condition": {
+        "type": "groupComplete",
+        "groupID": "kinki"
+      }
+    },
+    {
+      "id": "chugoku-complete",
+      "title": "中国ミュージアムめぐり",
+      "detail": "中国の対象館をすべて訪問する",
+      "condition": {
+        "type": "groupComplete",
+        "groupID": "chugoku"
+      }
+    },
+    {
+      "id": "shikoku-complete",
+      "title": "四国ミュージアムめぐり",
+      "detail": "四国の対象館をすべて訪問する",
+      "condition": {
+        "type": "groupComplete",
+        "groupID": "shikoku"
+      }
+    },
+    {
+      "id": "kyushu-okinawa-complete",
+      "title": "九州・沖縄ミュージアムめぐり",
+      "detail": "九州・沖縄の対象館をすべて訪問する",
+      "condition": {
+        "type": "groupComplete",
+        "groupID": "kyushu-okinawa"
+      }
+    },
+    {
+      "id": "museum-complete",
+      "title": "全国ミュージアム図鑑コンプリート",
+      "detail": "掲載された28館をすべて訪問する",
+      "condition": {
+        "type": "completionRate",
+        "minimum": 1
+      }
+    }
+  ],
+  "visualizations": [
+    {
+      "type": "progressSummary"
+    },
+    {
+      "type": "metricCards",
+      "metrics": [
+        "visitedCount",
+        "completionRate",
+        "remainingCount",
+        "unlockedAchievements"
+      ]
+    },
+    {
+      "type": "statusMap",
+      "cluster": true
+    },
+    {
+      "type": "groupProgress"
+    },
+    {
+      "type": "lineChart",
+      "metric": "visitedCount",
+      "aggregation": "cumulativeCount"
+    },
+    {
+      "type": "barChart",
+      "metric": "visitedCount",
+      "aggregation": "annualVisitedItemCount"
+    },
+    {
+      "type": "pieChart",
+      "breakdown": "status"
+    },
+    {
+      "type": "achievementCards"
+    },
+    {
+      "type": "nextAchievements",
+      "limit": 3
+    },
+    {
+      "type": "itemList",
+      "sort": "group"
+    }
+  ],
+  "showsPeriodSelector": false,
+  "mapStyle": {
+    "markerSVG": "<svg viewBox=\"0 0 36 36\"><path d=\"M3 31h30v2H3z\"/><path d=\"M5 28h26v3H5z\"/><path d=\"M7 12h22v16H7z\"/><path d=\"M4 12h28L18 4 4 12z\"/><path d=\"M10 15h3v10h-3zM16.5 15h3v10h-3zM23 15h3v10h-3z\"/></svg>",
+    "markerColors": {
+      "unvisited": "#8E8E93",
+      "estimated": "#AF52DE",
+      "confirmed": "#FF9F0A"
+    },
+    "areaFillColors": {
+      "unvisited": "#D1D1D638",
+      "estimated": "#AF52DE40",
+      "confirmed": "#FF9F0A59"
+    },
+    "areaStrokeColors": {
+      "unvisited": "#8E8E93",
+      "estimated": "#AF52DE",
+      "confirmed": "#FF9F0A"
+    }
+  }
+}
