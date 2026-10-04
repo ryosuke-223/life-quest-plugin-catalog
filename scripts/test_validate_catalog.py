@@ -6,7 +6,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from generate_airport_plugins import JAPAN_AIRPORTS, WORLD_AIRPORTS, build_japan, build_world
-from validate_catalog import validate_plugin
+from validate_catalog import validate_catalog, validate_plugin
 
 
 def manifest(aggregation="annualVisitedItemCount", shows_period_selector=False):
@@ -63,7 +63,63 @@ def airport_rows():
     }
 
 
+def collection_parent():
+    plugin = manifest()
+    plugin.update({
+        "schemaVersion": 2,
+        "kind": "collection",
+        "id": "local-railways",
+        "items": [{"id": "route-a", "title": "路線A", "groupID": "operator-a"}],
+        "groups": [{"id": "operator-a", "title": "会社A"}],
+        "collection": {
+            "children": [{"pluginID": "railway-a", "title": "会社A"}],
+            "routeLinks": [{"routeID": "route-a", "childPluginID": "railway-a", "childGroupID": "line-a"}],
+        },
+        "visualizations": [{"type": "progressSummary"}],
+    })
+    return plugin
+
+
+def collection_child():
+    plugin = manifest()
+    plugin.update({
+        "schemaVersion": 2,
+        "id": "railway-a",
+        "parentPluginID": "local-railways",
+        "items": [{
+            "id": "station-a",
+            "title": "駅A",
+            "groupID": "line-a",
+            "latitude": 35.0,
+            "longitude": 139.0,
+            "radiusMeters": 100,
+            "automation": {"type": "photoLocation"},
+        }],
+        "groups": [{"id": "line-a", "title": "路線A"}],
+        "visualizations": [{"type": "statusMap", "cluster": False}],
+    })
+    return plugin
+
+
 class ValidateCatalogTests(unittest.TestCase):
+    def test_accepts_collection_parent_and_child_manifests(self):
+        validate_plugin(Path("parent.json"), collection_parent())
+        validate_plugin(Path("child.json"), collection_child())
+        validate_catalog([collection_parent(), collection_child()])
+
+    def test_rejects_collection_route_link_to_unknown_route(self):
+        plugin = collection_parent()
+        plugin["collection"]["routeLinks"][0]["routeID"] = "missing-route"
+        with self.assertRaisesRegex(ValueError, "invalid route link"):
+            validate_plugin(Path("parent.json"), plugin)
+
+    def test_rejects_cross_manifest_route_link_to_unknown_child_group(self):
+        parent = collection_parent()
+        child = collection_child()
+        parent["collection"]["routeLinks"][0]["childGroupID"] = "missing-line"
+        with self.assertRaisesRegex(ValueError, "child group"):
+            validate_catalog([parent, child])
+
     def test_accepts_annual_visited_item_count_and_hidden_period_selector(self):
         validate_plugin(Path("test.json"), manifest())
 

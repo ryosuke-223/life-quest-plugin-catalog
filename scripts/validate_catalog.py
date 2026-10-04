@@ -28,6 +28,7 @@ MAX_POLYGON_COORDINATES = 50_000
 MAX_SOURCE_URL_BYTES = 2_048
 MAX_MAP_ATTRIBUTION_BYTES = 300
 MAX_MAP_MARKER_SVG_BYTES = 20_000
+SUPPORTED_SCHEMA_VERSIONS = {1, 2}
 HEX_COLOR = re.compile(r"^#[0-9A-Fa-f]{6}(?:[0-9A-Fa-f]{2})?$")
 SVG_TAG = re.compile(r"</?(?:svg|g|path)(?:\s[^>]*)?/?>", re.IGNORECASE)
 SVG_PATH = re.compile(r"<path\b[^>]*\bd\s*=\s*([\"'])(.*?)\1[^>]*>", re.IGNORECASE | re.DOTALL)
@@ -332,6 +333,93 @@ def validate_visualizations(path: Path, plugin: dict, items: list[dict], groups:
             fail(path, "heatmap.dimension is invalid")
 
 
+def validate_collection(path: Path, plugin: dict, item_ids: set[str], group_ids: set[str]) -> None:
+    kind = plugin.get("kind", "standard")
+    if kind not in {"standard", "collection"}:
+        fail(path, "invalid plugin kind")
+
+    collection = plugin.get("collection")
+    parent_plugin_id = plugin.get("parentPluginID")
+    if kind == "collection":
+        if plugin["schemaVersion"] < 2 or not isinstance(collection, dict) or parent_plugin_id is not None:
+            fail(path, "invalid collection definition")
+        children = collection.get("children")
+        route_links = collection.get("routeLinks")
+        if not isinstance(children, list) or not isinstance(route_links, list):
+            fail(path, "invalid collection definition")
+        child_ids = set()
+        for child in children:
+            if not isinstance(child, dict):
+                fail(path, "invalid collection child")
+            child_id = require_identifier(path, child.get("pluginID"), "collection child pluginID")
+            require_string(path, child.get("title"), f"collection child {child_id}.title", MAX_GROUP_TITLE_BYTES)
+            if child_id == plugin["id"] or child_id in child_ids:
+                fail(path, "duplicate collection child")
+            child_ids.add(child_id)
+
+        linked_route_ids = set()
+        for link in route_links:
+            if not isinstance(link, dict):
+                fail(path, "invalid route link")
+            route_id = require_identifier(path, link.get("routeID"), "route link routeID")
+            child_id = require_identifier(path, link.get("childPluginID"), "route link childPluginID")
+            child_group_id = require_identifier(path, link.get("childGroupID"), "route link childGroupID")
+            if route_id not in item_ids or child_id not in child_ids or route_id in linked_route_ids:
+                fail(path, f"invalid route link {route_id}")
+            linked_route_ids.add(route_id)
+
+        for item in plugin["items"]:
+            if item.get("locations") or any(item.get(key) is not None for key in ("latitude", "longitude", "radiusMeters", "automation")):
+                fail(path, f"collection route item cannot have location or automation for {item['id']}")
+    else:
+        if collection is not None:
+            fail(path, "standard plugin cannot define collection")
+        if parent_plugin_id is not None:
+            if plugin["schemaVersion"] < 2:
+                fail(path, "invalid parentPluginID")
+            require_identifier(path, parent_plugin_id, "parentPluginID")
+
+
+def validate_catalog(plugins: list[dict]) -> None:
+    if not isinstance(plugins, list) or not plugins:
+        raise ValueError("catalog must contain at least one plugin")
+    ids = set()
+    for index, plugin in enumerate(plugins):
+        path = Path(f"<catalog:{index}>")
+        validate_plugin(path, plugin)
+        plugin_id = plugin["id"]
+        if plugin_id in ids:
+            fail(path, f"duplicate plugin id {plugin_id}")
+        ids.add(plugin_id)
+
+    by_id = {plugin["id"]: plugin for plugin in plugins}
+    for plugin in plugins:
+        path = Path(f"<catalog:{plugin['id']}>")
+        if plugin.get("kind", "standard") == "collection":
+            children = plugin["collection"]["children"]
+            child_ids = {child["pluginID"] for child in children}
+            for child_id in child_ids:
+                child = by_id.get(child_id)
+                if child is None:
+                    fail(path, f"missing child plugin {child_id}")
+                if child.get("kind", "standard") != "standard" or child.get("parentPluginID") != plugin["id"]:
+                    fail(path, f"invalid parent relationship for child plugin {child_id}")
+            for link in plugin["collection"]["routeLinks"]:
+                child = by_id.get(link["childPluginID"])
+                if child is None:
+                    fail(path, f"missing child plugin {link['childPluginID']}")
+                child_group_ids = {group["id"] for group in child["groups"]}
+                if link["childGroupID"] not in child_group_ids:
+                    fail(path, f"missing child group {link['childGroupID']}")
+        elif plugin.get("parentPluginID") is not None:
+            parent = by_id.get(plugin["parentPluginID"])
+            if parent is None or parent.get("kind", "standard") != "collection":
+                fail(path, f"missing parent plugin {plugin['parentPluginID']}")
+            child_ids = {child["pluginID"] for child in parent["collection"]["children"]}
+            if plugin["id"] not in child_ids:
+                fail(path, f"parent plugin does not list child {plugin['id']}")
+
+
 def validate_plugin(path: Path, plugin: object) -> None:
     if not isinstance(plugin, dict):
         fail(path, "plugin must be an object")
@@ -341,7 +429,7 @@ def validate_plugin(path: Path, plugin: object) -> None:
         if key not in plugin:
             fail(path, f"missing {key}")
 
-    if plugin["schemaVersion"] != 1 or not is_integer(plugin["version"]) or plugin["version"] <= 0:
+    if plugin["schemaVersion"] not in SUPPORTED_SCHEMA_VERSIONS or not is_integer(plugin["version"]) or plugin["version"] <= 0:
         fail(path, "invalid schemaVersion or version")
     plugin_id = require_identifier(path, plugin["id"], "plugin id")
     require_string(path, plugin["title"], "title", MAX_PLUGIN_TITLE_BYTES)
@@ -407,6 +495,8 @@ def validate_plugin(path: Path, plugin: object) -> None:
         if "mapMarkerSVG" in group and group["mapMarkerSVG"] is not None:
             validate_svg(path, group["mapMarkerSVG"], f"{group_id}.mapMarkerSVG")
 
+    validate_collection(path, plugin, item_ids, group_ids)
+
     for item in items:
         group_id = item.get("groupID")
         if group_id is not None and (not isinstance(group_id, str) or group_id not in group_ids):
@@ -466,6 +556,7 @@ def main() -> int:
     if not paths:
         raise ValueError("no plugin manifests found")
     ids = set()
+    plugins = []
     for path in paths:
         with path.open(encoding="utf-8") as handle:
             plugin = json.load(handle)
@@ -474,6 +565,8 @@ def main() -> int:
         if plugin_id in ids:
             fail(path, f"duplicate plugin id {plugin_id}")
         ids.add(plugin_id)
+        plugins.append(plugin)
+    validate_catalog(plugins)
     print(f"validated {len(paths)} plugin manifests")
     return 0
 

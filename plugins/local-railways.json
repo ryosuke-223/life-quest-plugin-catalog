@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 2,
+  "kind": "collection",
+  "id": "local-railways",
+  "version": 1,
+  "title": "ローカル線の旅",
+  "summary": "経営会社ごとの駅プラグインを選んで、ローカル線の訪問路線数を記録します。駅プラグインなしでも路線名を手動で訪問済みにできます。",
+  "iconSystemName": "tram.fill",
+  "items": [
+    {
+      "id": "sanriku-rias-line",
+      "title": "リアス線",
+      "detail": "三陸鉄道が運行する盛駅〜久慈駅の全線",
+      "groupID": "sanriku-railway"
+    },
+    {
+      "id": "aizu-line",
+      "title": "会津線",
+      "detail": "会津鉄道 会津線",
+      "groupID": "aizu-railway"
+    },
+    {
+      "id": "watarase-keikoku-line",
+      "title": "わたらせ渓谷線",
+      "detail": "わたらせ渓谷鐵道の路線",
+      "groupID": "watarase-railway"
+    },
+    {
+      "id": "choshi-electric-line",
+      "title": "銚子電鉄線",
+      "detail": "銚子電気鉄道の路線",
+      "groupID": "choshi-railway"
+    }
+  ],
+  "groups": [
+    {
+      "id": "sanriku-railway",
+      "title": "三陸鉄道"
+    },
+    {
+      "id": "aizu-railway",
+      "title": "会津鉄道"
+    },
+    {
+      "id": "watarase-railway",
+      "title": "わたらせ渓谷鐵道"
+    },
+    {
+      "id": "choshi-railway",
+      "title": "銚子電気鉄道"
+    }
+  ],
+  "achievements": [
+    {
+      "id": "one-local-line",
+      "title": "ローカル線の旅を始める",
+      "detail": "1路線を訪問済みにする",
+      "condition": {
+        "type": "itemCount",
+        "minimum": 1
+      }
+    },
+    {
+      "id": "three-local-lines",
+      "title": "線路をつなぐ",
+      "detail": "3路線を訪問済みにする",
+      "condition": {
+        "type": "itemCount",
+        "minimum": 3
+      }
+    },
+    {
+      "id": "all-listed-local-lines",
+      "title": "ローカル線コレクター",
+      "detail": "掲載された4路線をすべて訪問済みにする",
+      "condition": {
+        "type": "completionRate",
+        "minimum": 1
+      }
+    }
+  ],
+  "collection": {
+    "children": [
+      {
+        "pluginID": "railway-sanriku",
+        "title": "三陸鉄道"
+      }
+    ],
+    "routeLinks": [
+      {
+        "routeID": "sanriku-rias-line",
+        "childPluginID": "railway-sanriku",
+        "childGroupID": "rias-line"
+      }
+    ]
+  },
+  "visualizations": [
+    {
+      "type": "progressSummary"
+    },
+    {
+      "type": "groupProgress"
+    },
+    {
+      "type": "achievementCards"
+    },
+    {
+      "type": "itemList",
+      "sort": "group"
+    }
+  ],
+  "showsPeriodSelector": false,
+  "mapAttribution": "© OpenStreetMap contributors · ODbL 1.0",
+  "mapStyle": {
+    "markerSVG": "<svg viewBox=\"0 0 36 36\"><path d=\"M7 5h22v18H7z\"/><path d=\"M4 29h28v3H4z\"/><path d=\"M11 23 7 29h5l3-6zM25 23l4 6h-5l-3-6z\"/><path d=\"M11 9h5v5h-5zM20 9h5v5h-5z\"/></svg>",
+    "markerColors": {
+      "unvisited": "#8E8E93",
+      "estimated": "#007AFF",
+      "confirmed": "#FF9500"
+    },
+    "areaFillColors": {
+      "unvisited": "#D1D1D638",
+      "estimated": "#007AFF59",
+      "confirmed": "#FF950073"
+    },
+    "areaStrokeColors": {
+      "unvisited": "#8E8E93",
+      "estimated": "#007AFF",
+      "confirmed": "#FF9500"
+    }
+  }
+}

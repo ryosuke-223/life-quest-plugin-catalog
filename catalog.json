@@ -11562,6 +11562,666 @@
     }
   },
   {
+    "schemaVersion": 2,
+    "kind": "collection",
+    "id": "local-railways",
+    "version": 1,
+    "title": "ローカル線の旅",
+    "summary": "経営会社ごとの駅プラグインを選んで、ローカル線の訪問路線数を記録します。駅プラグインなしでも路線名を手動で訪問済みにできます。",
+    "iconSystemName": "tram.fill",
+    "items": [
+      {
+        "id": "sanriku-rias-line",
+        "title": "リアス線",
+        "detail": "三陸鉄道が運行する盛駅〜久慈駅の全線",
+        "groupID": "sanriku-railway"
+      },
+      {
+        "id": "aizu-line",
+        "title": "会津線",
+        "detail": "会津鉄道 会津線",
+        "groupID": "aizu-railway"
+      },
+      {
+        "id": "watarase-keikoku-line",
+        "title": "わたらせ渓谷線",
+        "detail": "わたらせ渓谷鐵道の路線",
+        "groupID": "watarase-railway"
+      },
+      {
+        "id": "choshi-electric-line",
+        "title": "銚子電鉄線",
+        "detail": "銚子電気鉄道の路線",
+        "groupID": "choshi-railway"
+      }
+    ],
+    "groups": [
+      {
+        "id": "sanriku-railway",
+        "title": "三陸鉄道"
+      },
+      {
+        "id": "aizu-railway",
+        "title": "会津鉄道"
+      },
+      {
+        "id": "watarase-railway",
+        "title": "わたらせ渓谷鐵道"
+      },
+      {
+        "id": "choshi-railway",
+        "title": "銚子電気鉄道"
+      }
+    ],
+    "achievements": [
+      {
+        "id": "one-local-line",
+        "title": "ローカル線の旅を始める",
+        "detail": "1路線を訪問済みにする",
+        "condition": {
+          "type": "itemCount",
+          "minimum": 1
+        }
+      },
+      {
+        "id": "three-local-lines",
+        "title": "線路をつなぐ",
+        "detail": "3路線を訪問済みにする",
+        "condition": {
+          "type": "itemCount",
+          "minimum": 3
+        }
+      },
+      {
+        "id": "all-listed-local-lines",
+        "title": "ローカル線コレクター",
+        "detail": "掲載された4路線をすべて訪問済みにする",
+        "condition": {
+          "type": "completionRate",
+          "minimum": 1
+        }
+      }
+    ],
+    "collection": {
+      "children": [
+        {
+          "pluginID": "railway-sanriku",
+          "title": "三陸鉄道"
+        }
+      ],
+      "routeLinks": [
+        {
+          "routeID": "sanriku-rias-line",
+          "childPluginID": "railway-sanriku",
+          "childGroupID": "rias-line"
+        }
+      ]
+    },
+    "visualizations": [
+      {
+        "type": "progressSummary"
+      },
+      {
+        "type": "groupProgress"
+      },
+      {
+        "type": "achievementCards"
+      },
+      {
+        "type": "itemList",
+        "sort": "group"
+      }
+    ],
+    "showsPeriodSelector": false,
+    "mapAttribution": "© OpenStreetMap contributors · ODbL 1.0",
+    "mapStyle": {
+      "markerSVG": "<svg viewBox=\"0 0 36 36\"><path d=\"M7 5h22v18H7z\"/><path d=\"M4 29h28v3H4z\"/><path d=\"M11 23 7 29h5l3-6zM25 23l4 6h-5l-3-6z\"/><path d=\"M11 9h5v5h-5zM20 9h5v5h-5z\"/></svg>",
+      "markerColors": {
+        "unvisited": "#8E8E93",
+        "estimated": "#007AFF",
+        "confirmed": "#FF9500"
+      },
+      "areaFillColors": {
+        "unvisited": "#D1D1D638",
+        "estimated": "#007AFF59",
+        "confirmed": "#FF950073"
+      },
+      "areaStrokeColors": {
+        "unvisited": "#8E8E93",
+        "estimated": "#007AFF",
+        "confirmed": "#FF9500"
+      }
+    }
+  },
+  {
+    "schemaVersion": 2,
+    "kind": "standard",
+    "id": "railway-sanriku",
+    "version": 1,
+    "title": "三陸鉄道 リアス線の駅",
+    "summary": "三陸鉄道リアス線の全41駅を、駅中心から半径100mの写真位置で記録します。",
+    "iconSystemName": "tram.fill",
+    "parentPluginID": "local-railways",
+    "items": [
+      {
+        "id": "kuji",
+        "title": "久慈",
+        "groupID": "rias-line",
+        "automation": {
+          "type": "photoLocation"
+        },
+        "latitude": 40.190278,
+        "longitude": 141.770722,
+        "radiusMeters": 100
+      },
+      {
+        "id": "rikuchu-ube",
+        "title": "陸中宇部",
+        "groupID": "rias-line",
+        "automation": {
+          "type": "photoLocation"
+        },
+        "latitude": 40.132436,
+        "longitude": 141.785919,
+        "radiusMeters": 100
+      },
+      {
+        "id": "rikuchu-noda",
+        "title": "陸中野田",
+        "groupID": "rias-line",
+        "automation": {
+          "type": "photoLocation"
+        },
+        "latitude": 40.115972,
+        "longitude": 141.818889,
+        "radiusMeters": 100
+      },
+      {
+        "id": "tofugaura-kaigan",
+        "title": "十府ヶ浦海岸",
+        "groupID": "rias-line",
+        "automation": {
+          "type": "photoLocation"
+        },
+        "latitude": 40.09661,
+        "longitude": 141.82419,
+        "radiusMeters": 100
+      },
+      {
+        "id": "noda-tamagawa",
+        "title": "野田玉川",
+        "groupID": "rias-line",
+        "automation": {
+          "type": "photoLocation"
+        },
+        "latitude": 40.082814,
+        "longitude": 141.828869,
+        "radiusMeters": 100
+      },
+      {
+        "id": "horinai",
+        "title": "堀内",
+        "groupID": "rias-line",
+        "automation": {
+          "type": "photoLocation"
+        },
+        "latitude": 40.051953,
+        "longitude": 141.85925,
+        "radiusMeters": 100
+      },
+      {
+        "id": "shirai-kaigan",
+        "title": "白井海岸",
+        "groupID": "rias-line",
+        "automation": {
+          "type": "photoLocation"
+        },
+        "latitude": 40.032736,
+        "longitude": 141.883039,
+        "radiusMeters": 100
+      },
+      {
+        "id": "fudai",
+        "title": "普代",
+        "groupID": "rias-line",
+        "automation": {
+          "type": "photoLocation"
+        },
+        "latitude": 40.0028,
+        "longitude": 141.88635,
+        "radiusMeters": 100
+      },
+      {
+        "id": "tanohata",
+        "title": "田野畑",
+        "groupID": "rias-line",
+        "automation": {
+          "type": "photoLocation"
+        },
+        "latitude": 39.934011,
+        "longitude": 141.934036,
+        "radiusMeters": 100
+      },
+      {
+        "id": "shimanokoshi",
+        "title": "島越",
+        "groupID": "rias-line",
+        "automation": {
+          "type": "photoLocation"
+        },
+        "latitude": 39.915972,
+        "longitude": 141.939639,
+        "radiusMeters": 100
+      },
+      {
+        "id": "iwaizumi-omoto",
+        "title": "岩泉小本",
+        "groupID": "rias-line",
+        "automation": {
+          "type": "photoLocation"
+        },
+        "latitude": 39.842611,
+        "longitude": 141.958472,
+        "radiusMeters": 100
+      },
+      {
+        "id": "settai",
+        "title": "摂待",
+        "groupID": "rias-line",
+        "automation": {
+          "type": "photoLocation"
+        },
+        "latitude": 39.809308,
+        "longitude": 141.96215,
+        "radiusMeters": 100
+      },
+      {
+        "id": "shin-taro",
+        "title": "新田老",
+        "groupID": "rias-line",
+        "automation": {
+          "type": "photoLocation"
+        },
+        "latitude": 39.7356,
+        "longitude": 141.9673,
+        "radiusMeters": 100
+      },
+      {
+        "id": "taro",
+        "title": "田老",
+        "groupID": "rias-line",
+        "automation": {
+          "type": "photoLocation"
+        },
+        "latitude": 39.731797,
+        "longitude": 141.96465,
+        "radiusMeters": 100
+      },
+      {
+        "id": "sabane",
+        "title": "佐羽根",
+        "groupID": "rias-line",
+        "automation": {
+          "type": "photoLocation"
+        },
+        "latitude": 39.711178,
+        "longitude": 141.935822,
+        "radiusMeters": 100
+      },
+      {
+        "id": "ichinowatari",
+        "title": "一の渡",
+        "groupID": "rias-line",
+        "automation": {
+          "type": "photoLocation"
+        },
+        "latitude": 39.686903,
+        "longitude": 141.942647,
+        "radiusMeters": 100
+      },
+      {
+        "id": "yamaguchi-danchi",
+        "title": "山口団地",
+        "groupID": "rias-line",
+        "automation": {
+          "type": "photoLocation"
+        },
+        "latitude": 39.646331,
+        "longitude": 141.933222,
+        "radiusMeters": 100
+      },
+      {
+        "id": "miyako",
+        "title": "宮古",
+        "groupID": "rias-line",
+        "automation": {
+          "type": "photoLocation"
+        },
+        "latitude": 39.640408,
+        "longitude": 141.946061,
+        "radiusMeters": 100
+      },
+      {
+        "id": "sokei",
+        "title": "磯鶏",
+        "groupID": "rias-line",
+        "automation": {
+          "type": "photoLocation"
+        },
+        "latitude": 39.629944,
+        "longitude": 141.960889,
+        "radiusMeters": 100
+      },
+      {
+        "id": "yagisawa-miyakotandai",
+        "title": "八木沢・宮古短大",
+        "groupID": "rias-line",
+        "automation": {
+          "type": "photoLocation"
+        },
+        "latitude": 39.620389,
+        "longitude": 141.948083,
+        "radiusMeters": 100
+      },
+      {
+        "id": "tsugaruishi",
+        "title": "津軽石",
+        "groupID": "rias-line",
+        "automation": {
+          "type": "photoLocation"
+        },
+        "latitude": 39.581444,
+        "longitude": 141.937694,
+        "radiusMeters": 100
+      },
+      {
+        "id": "haraigawa",
+        "title": "払川",
+        "groupID": "rias-line",
+        "automation": {
+          "type": "photoLocation"
+        },
+        "latitude": 39.561083,
+        "longitude": 141.935917,
+        "radiusMeters": 100
+      },
+      {
+        "id": "toyomane",
+        "title": "豊間根",
+        "groupID": "rias-line",
+        "automation": {
+          "type": "photoLocation"
+        },
+        "latitude": 39.534361,
+        "longitude": 141.924722,
+        "radiusMeters": 100
+      },
+      {
+        "id": "rikuchu-yamada",
+        "title": "陸中山田",
+        "groupID": "rias-line",
+        "automation": {
+          "type": "photoLocation"
+        },
+        "latitude": 39.463872,
+        "longitude": 141.950828,
+        "radiusMeters": 100
+      },
+      {
+        "id": "orikasa",
+        "title": "織笠",
+        "groupID": "rias-line",
+        "automation": {
+          "type": "photoLocation"
+        },
+        "latitude": 39.447208,
+        "longitude": 141.959764,
+        "radiusMeters": 100
+      },
+      {
+        "id": "iwate-funakoshi",
+        "title": "岩手船越",
+        "groupID": "rias-line",
+        "automation": {
+          "type": "photoLocation"
+        },
+        "latitude": 39.431189,
+        "longitude": 141.973958,
+        "radiusMeters": 100
+      },
+      {
+        "id": "namiita-kaigan",
+        "title": "浪板海岸",
+        "groupID": "rias-line",
+        "automation": {
+          "type": "photoLocation"
+        },
+        "latitude": 39.38365,
+        "longitude": 141.935114,
+        "radiusMeters": 100
+      },
+      {
+        "id": "kirikiri",
+        "title": "吉里吉里",
+        "groupID": "rias-line",
+        "automation": {
+          "type": "photoLocation"
+        },
+        "latitude": 39.369861,
+        "longitude": 141.938889,
+        "radiusMeters": 100
+      },
+      {
+        "id": "otsuchi",
+        "title": "大槌",
+        "groupID": "rias-line",
+        "automation": {
+          "type": "photoLocation"
+        },
+        "latitude": 39.356739,
+        "longitude": 141.902817,
+        "radiusMeters": 100
+      },
+      {
+        "id": "unosumai",
+        "title": "鵜住居",
+        "groupID": "rias-line",
+        "automation": {
+          "type": "photoLocation"
+        },
+        "latitude": 39.327008,
+        "longitude": 141.887939,
+        "radiusMeters": 100
+      },
+      {
+        "id": "ryoishi",
+        "title": "両石",
+        "groupID": "rias-line",
+        "automation": {
+          "type": "photoLocation"
+        },
+        "latitude": 39.308253,
+        "longitude": 141.888992,
+        "radiusMeters": 100
+      },
+      {
+        "id": "kamaishi",
+        "title": "釜石",
+        "groupID": "rias-line",
+        "automation": {
+          "type": "photoLocation"
+        },
+        "latitude": 39.27275,
+        "longitude": 141.873056,
+        "radiusMeters": 100
+      },
+      {
+        "id": "heita",
+        "title": "平田",
+        "groupID": "rias-line",
+        "automation": {
+          "type": "photoLocation"
+        },
+        "latitude": 39.245656,
+        "longitude": 141.885931,
+        "radiusMeters": 100
+      },
+      {
+        "id": "toni",
+        "title": "唐丹",
+        "groupID": "rias-line",
+        "automation": {
+          "type": "photoLocation"
+        },
+        "latitude": 39.201981,
+        "longitude": 141.8613,
+        "radiusMeters": 100
+      },
+      {
+        "id": "yoshihama",
+        "title": "吉浜",
+        "groupID": "rias-line",
+        "automation": {
+          "type": "photoLocation"
+        },
+        "latitude": 39.151111,
+        "longitude": 141.836361,
+        "radiusMeters": 100
+      },
+      {
+        "id": "sanriku",
+        "title": "三陸",
+        "groupID": "rias-line",
+        "automation": {
+          "type": "photoLocation"
+        },
+        "latitude": 39.117247,
+        "longitude": 141.81,
+        "radiusMeters": 100
+      },
+      {
+        "id": "horei",
+        "title": "甫嶺",
+        "groupID": "rias-line",
+        "automation": {
+          "type": "photoLocation"
+        },
+        "latitude": 39.093417,
+        "longitude": 141.806528,
+        "radiusMeters": 100
+      },
+      {
+        "id": "koishihama",
+        "title": "恋し浜",
+        "groupID": "rias-line",
+        "automation": {
+          "type": "photoLocation"
+        },
+        "latitude": 39.074561,
+        "longitude": 141.816372,
+        "radiusMeters": 100
+      },
+      {
+        "id": "ryori",
+        "title": "綾里",
+        "groupID": "rias-line",
+        "automation": {
+          "type": "photoLocation"
+        },
+        "latitude": 39.054056,
+        "longitude": 141.799056,
+        "radiusMeters": 100
+      },
+      {
+        "id": "rikuzen-akasaki",
+        "title": "陸前赤崎",
+        "groupID": "rias-line",
+        "automation": {
+          "type": "photoLocation"
+        },
+        "latitude": 39.068556,
+        "longitude": 141.741028,
+        "radiusMeters": 100
+      },
+      {
+        "id": "sakari",
+        "title": "盛",
+        "groupID": "rias-line",
+        "automation": {
+          "type": "photoLocation"
+        },
+        "latitude": 39.085833,
+        "longitude": 141.710833,
+        "radiusMeters": 100
+      }
+    ],
+    "groups": [
+      {
+        "id": "rias-line",
+        "title": "リアス線（盛〜久慈）"
+      }
+    ],
+    "achievements": [
+      {
+        "id": "ten-sanriku-stations",
+        "title": "三陸の駅をめぐる",
+        "detail": "三陸鉄道の駅を10駅訪問する",
+        "condition": {
+          "type": "itemCount",
+          "minimum": 10
+        }
+      },
+      {
+        "id": "rias-line-complete",
+        "title": "リアス線全線制覇",
+        "detail": "リアス線の41駅をすべて訪問する",
+        "condition": {
+          "type": "groupComplete",
+          "groupID": "rias-line"
+        }
+      }
+    ],
+    "visualizations": [
+      {
+        "type": "progressSummary"
+      },
+      {
+        "type": "statusMap",
+        "cluster": true
+      },
+      {
+        "type": "groupProgress"
+      },
+      {
+        "type": "achievementCards"
+      },
+      {
+        "type": "itemList",
+        "sort": "title"
+      }
+    ],
+    "showsPeriodSelector": false,
+    "mapAttribution": "駅名・路線：三陸鉄道公式／座標：OpenStreetMap contributors · ODbL 1.0",
+    "mapStyle": {
+      "markerSVG": "<svg viewBox=\"0 0 36 36\"><path d=\"M7 5h22v18H7z\"/><path d=\"M4 29h28v3H4z\"/><path d=\"M11 23 7 29h5l3-6zM25 23l4 6h-5l-3-6z\"/><path d=\"M11 9h5v5h-5zM20 9h5v5h-5z\"/></svg>",
+      "markerColors": {
+        "unvisited": "#8E8E93",
+        "estimated": "#007AFF",
+        "confirmed": "#FF9500"
+      },
+      "areaFillColors": {
+        "unvisited": "#D1D1D638",
+        "estimated": "#007AFF59",
+        "confirmed": "#FF950073"
+      },
+      "areaStrokeColors": {
+        "unvisited": "#8E8E93",
+        "estimated": "#007AFF",
+        "confirmed": "#FF9500"
+      }
+    }
+  },
+  {
     "schemaVersion": 1,
     "id": "world-major-airports",
     "version": 4,

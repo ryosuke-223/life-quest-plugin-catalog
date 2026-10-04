@@ -13,6 +13,7 @@ Life Questの公式プラグインカタログです。プラグインはSwift�
 ├── GARDEN_PLUGIN_DATA_SOURCES.md # 庭園プラグインの選定と出典
 ├── MUSEUM_ART_PLUGIN_DATA_SOURCES.md # 博物館・美術館プラグインの選定と出典
 ├── SCENIC_SPOTS_PLUGIN_DATA_SOURCES.md # 景勝地プラグインの選定と判定範囲
+├── RAILWAY_PLUGIN_DATA_SOURCES.md # ローカル線プラグインの出典と判定範囲
 ├── scripts/
 │   ├── build_catalog.py      # plugins/*.jsonからcatalog.jsonを生成
 │   └── validate_catalog.py   # PR用の形式検証
@@ -140,6 +141,12 @@ Life QuestアプリのDebug／Releaseビルドで、Build Settingsの `PLUGIN_CA
 - グループ進捗は初期状態で折りたたみ、展開したときだけ所属項目を表示します。
 - `itemList` は詳細画面に全件を並べず、件数と「一覧を見る」導線から専用一覧画面を開きます。長い共通説明は一覧項目ごとに繰り返さず、必要な場合は一覧画面の `?` ヘルプにまとめます。
 - `item.detail` は所在地など項目固有の補足に使います。写真位置による自動判定や判定半径は `automation` と `radiusMeters` から共通ヘルプで説明するため、項目詳細に重複して記述しません。
+
+### 親プラグインと子プラグイン
+
+`schemaVersion: 2` の `kind: "collection"` は、路線名などの軽量な親カタログを表します。親の `collection.children` に任意に追加できる子プラグインを列挙し、`routeLinks` で親の路線項目と子の駅グループを結びます。子プラグインは `parentPluginID` で親を参照します。アプリの利用可能一覧には親だけを表示し、子は親の詳細画面から追加します。
+
+子を追加していない場合も親の路線項目は表示され、手動で訪問済みにできます。子を追加すると駅の自動判定から路線実績を集計します。親の `routeLinks` にない路線は、駅データを持たない手動カタログ項目として登録できます。親子のID、所属会社、グループ参照は `scripts/validate_catalog.py` が検証します。
 
 ### 対応タイプとパラメータ
 
