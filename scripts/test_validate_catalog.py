@@ -119,6 +119,36 @@ class ValidateCatalogTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "child group"):
             validate_catalog([parent, child])
 
+    def test_rejects_child_group_without_parent_route_link(self):
+        parent = collection_parent()
+        child = collection_child()
+        parent["items"].append({"id": "route-b", "title": "路線B", "groupID": "operator-a"})
+        child["items"].append(copy.deepcopy(child["items"][0]))
+        child["items"][1]["id"] = "station-b"
+        child["items"][1]["groupID"] = "line-b"
+        child["groups"].append({"id": "line-b", "title": "路線B"})
+
+        with self.assertRaisesRegex(ValueError, "missing parent route link"):
+            validate_catalog([parent, child])
+
+    def test_rejects_child_routes_linked_to_different_parent_company_groups(self):
+        parent = collection_parent()
+        child = collection_child()
+        parent["groups"].append({"id": "operator-b", "title": "会社B"})
+        parent["items"].append({"id": "route-b", "title": "路線B", "groupID": "operator-b"})
+        child["items"].append(copy.deepcopy(child["items"][0]))
+        child["items"][1]["id"] = "station-b"
+        child["items"][1]["groupID"] = "line-b"
+        child["groups"].append({"id": "line-b", "title": "路線B"})
+        parent["collection"]["routeLinks"].append({
+            "routeID": "route-b",
+            "childPluginID": "railway-a",
+            "childGroupID": "line-b",
+        })
+
+        with self.assertRaisesRegex(ValueError, "inconsistent parent group"):
+            validate_catalog([parent, child])
+
     def test_accepts_annual_visited_item_count_without_period_selector(self):
         validate_plugin(Path("test.json"), manifest())
 

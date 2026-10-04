@@ -398,12 +398,15 @@ def validate_catalog(plugins: list[dict]) -> None:
         if plugin.get("kind", "standard") == "collection":
             children = plugin["collection"]["children"]
             child_ids = {child["pluginID"] for child in children}
+            parent_group_ids = {group["id"] for group in plugin["groups"]}
             for child_id in child_ids:
                 child = by_id.get(child_id)
                 if child is None:
                     fail(path, f"missing child plugin {child_id}")
                 if child.get("kind", "standard") != "standard" or child.get("parentPluginID") != plugin["id"]:
                     fail(path, f"invalid parent relationship for child plugin {child_id}")
+
+            links_by_child = {child_id: [] for child_id in child_ids}
             for link in plugin["collection"]["routeLinks"]:
                 child = by_id.get(link["childPluginID"])
                 if child is None:
@@ -411,6 +414,23 @@ def validate_catalog(plugins: list[dict]) -> None:
                 child_group_ids = {group["id"] for group in child["groups"]}
                 if link["childGroupID"] not in child_group_ids:
                     fail(path, f"missing child group {link['childGroupID']}")
+                route_item = next(item for item in plugin["items"] if item["id"] == link["routeID"])
+                parent_group_id = route_item.get("groupID")
+                if parent_group_id not in parent_group_ids:
+                    fail(path, f"route link {link['routeID']} has invalid parent group")
+                links_by_child[link["childPluginID"]].append((link["childGroupID"], parent_group_id))
+
+            for child_id, links in links_by_child.items():
+                child = by_id[child_id]
+                child_group_ids = {group["id"] for group in child["groups"]}
+                linked_group_ids = {child_group_id for child_group_id, _ in links}
+                if linked_group_ids != child_group_ids or len(linked_group_ids) != len(links):
+                    missing = sorted(child_group_ids - linked_group_ids)
+                    extra = sorted(linked_group_ids - child_group_ids)
+                    fail(path, f"missing parent route link for {child_id}: missing={missing} extra={extra}")
+                parent_groups_for_child = {parent_group_id for _, parent_group_id in links}
+                if len(parent_groups_for_child) > 1:
+                    fail(path, f"inconsistent parent group for {child_id}")
         elif plugin.get("parentPluginID") is not None:
             parent = by_id.get(plugin["parentPluginID"])
             if parent is None or parent.get("kind", "standard") != "collection":
