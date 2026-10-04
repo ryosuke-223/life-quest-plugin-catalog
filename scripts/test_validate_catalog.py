@@ -213,6 +213,50 @@ class ValidateCatalogTests(unittest.TestCase):
         )
         validate_plugin(manifest_path, plugin)
 
+    def test_tokyo_metro_child_manifest_shape(self):
+        plugin_directory = Path(__file__).resolve().parents[1] / "plugins"
+        child_path = plugin_directory / "railway-tokyo-metro.json"
+        parent_path = plugin_directory / "local-railways.json"
+        sanriku_path = plugin_directory / "railway-sanriku.json"
+        self.assertTrue(child_path.exists())
+        self.assertTrue(parent_path.exists())
+        self.assertTrue(sanriku_path.exists())
+
+        child = json.loads(child_path.read_text(encoding="utf-8"))
+        parent = json.loads(parent_path.read_text(encoding="utf-8"))
+        sanriku = json.loads(sanriku_path.read_text(encoding="utf-8"))
+
+        self.assertEqual(child["id"], "railway-tokyo-metro")
+        self.assertEqual(child["parentPluginID"], "local-railways")
+        self.assertEqual(len(child["groups"]), 9)
+        self.assertEqual(len(child["items"]), 185)
+        self.assertEqual(
+            {group["id"] for group in child["groups"]},
+            {
+                "ginza-line",
+                "marunouchi-line",
+                "hibiya-line",
+                "tozai-line",
+                "chiyoda-line",
+                "yurakucho-line",
+                "hanzomon-line",
+                "namboku-line",
+                "fukutoshin-line",
+            },
+        )
+        self.assertTrue(all(item["radiusMeters"] == 100 for item in child["items"]))
+        self.assertTrue(all(item["automation"]["type"] == "photoLocation" for item in child["items"]))
+        self.assertIn(
+            {"pluginID": "railway-tokyo-metro", "title": "東京メトロ"},
+            parent["collection"]["children"],
+        )
+        self.assertEqual(
+            {link["childPluginID"] for link in parent["collection"]["routeLinks"]},
+            {"railway-sanriku", "railway-tokyo-metro"},
+        )
+        validate_catalog([parent, sanriku, child])
+        validate_plugin(child_path, child)
+
     def test_accepts_optional_group_map_marker_symbol_name(self):
         plugin = manifest()
         plugin["groups"] = [{

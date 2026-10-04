@@ -1,0 +1,2153 @@
+{
+  "schemaVersion": 2,
+  "kind": "standard",
+  "id": "railway-tokyo-metro",
+  "version": 1,
+  "title": "東京メトロの駅",
+  "summary": "東京メトロ9路線の路線別185駅項目を、駅中心から半径100mの写真位置で記録します。",
+  "iconSystemName": "tram.fill",
+  "parentPluginID": "local-railways",
+  "items": [
+    {
+      "id": "ginza-line-g01",
+      "title": "渋谷（G01）",
+      "groupID": "ginza-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.659095,
+      "longitude": 139.702674,
+      "radiusMeters": 100
+    },
+    {
+      "id": "ginza-line-g02",
+      "title": "表参道（G02）",
+      "groupID": "ginza-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.665145,
+      "longitude": 139.71238,
+      "radiusMeters": 100
+    },
+    {
+      "id": "ginza-line-g03",
+      "title": "外苑前（G03）",
+      "groupID": "ginza-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.670375,
+      "longitude": 139.717825,
+      "radiusMeters": 100
+    },
+    {
+      "id": "ginza-line-g04",
+      "title": "青山一丁目（G04）",
+      "groupID": "ginza-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.672955,
+      "longitude": 139.724075,
+      "radiusMeters": 100
+    },
+    {
+      "id": "ginza-line-g05",
+      "title": "赤坂見附（G05）",
+      "groupID": "ginza-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.676865,
+      "longitude": 139.737385,
+      "radiusMeters": 100
+    },
+    {
+      "id": "ginza-line-g06",
+      "title": "溜池山王（G06）",
+      "groupID": "ginza-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.67309,
+      "longitude": 139.741295,
+      "radiusMeters": 100
+    },
+    {
+      "id": "ginza-line-g07",
+      "title": "虎ノ門（G07）",
+      "groupID": "ginza-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.67016,
+      "longitude": 139.75012,
+      "radiusMeters": 100
+    },
+    {
+      "id": "ginza-line-g08",
+      "title": "新橋（G08）",
+      "groupID": "ginza-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.667375,
+      "longitude": 139.75851,
+      "radiusMeters": 100
+    },
+    {
+      "id": "ginza-line-g09",
+      "title": "銀座（G09）",
+      "groupID": "ginza-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.673235,
+      "longitude": 139.76383,
+      "radiusMeters": 100
+    },
+    {
+      "id": "ginza-line-g10",
+      "title": "京橋（G10）",
+      "groupID": "ginza-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.6767,
+      "longitude": 139.770115,
+      "radiusMeters": 100
+    },
+    {
+      "id": "ginza-line-g11",
+      "title": "日本橋（G11）",
+      "groupID": "ginza-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.68188,
+      "longitude": 139.773335,
+      "radiusMeters": 100
+    },
+    {
+      "id": "ginza-line-g12",
+      "title": "三越前（G12）",
+      "groupID": "ginza-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.68493,
+      "longitude": 139.77308,
+      "radiusMeters": 100
+    },
+    {
+      "id": "ginza-line-g13",
+      "title": "神田（G13）",
+      "groupID": "ginza-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.69177,
+      "longitude": 139.770875,
+      "radiusMeters": 100
+    },
+    {
+      "id": "ginza-line-g14",
+      "title": "末広町（G14）",
+      "groupID": "ginza-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.70278,
+      "longitude": 139.771765,
+      "radiusMeters": 100
+    },
+    {
+      "id": "ginza-line-g15",
+      "title": "上野広小路（G15）",
+      "groupID": "ginza-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.70777,
+      "longitude": 139.773,
+      "radiusMeters": 100
+    },
+    {
+      "id": "ginza-line-g16",
+      "title": "上野（G16）",
+      "groupID": "ginza-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.711835,
+      "longitude": 139.775625,
+      "radiusMeters": 100
+    },
+    {
+      "id": "ginza-line-g17",
+      "title": "稲荷町（G17）",
+      "groupID": "ginza-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.711385,
+      "longitude": 139.78221,
+      "radiusMeters": 100
+    },
+    {
+      "id": "ginza-line-g18",
+      "title": "田原町（G18）",
+      "groupID": "ginza-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.70991,
+      "longitude": 139.790305,
+      "radiusMeters": 100
+    },
+    {
+      "id": "ginza-line-g19",
+      "title": "浅草（G19）",
+      "groupID": "ginza-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.70899,
+      "longitude": 139.796595,
+      "radiusMeters": 100
+    },
+    {
+      "id": "marunouchi-line-m01",
+      "title": "荻窪（M01）",
+      "groupID": "marunouchi-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.70443,
+      "longitude": 139.620245,
+      "radiusMeters": 100
+    },
+    {
+      "id": "marunouchi-line-m02",
+      "title": "南阿佐ケ谷（M02）",
+      "groupID": "marunouchi-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.699455,
+      "longitude": 139.635575,
+      "radiusMeters": 100
+    },
+    {
+      "id": "marunouchi-line-m03",
+      "title": "新高円寺（M03）",
+      "groupID": "marunouchi-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.69786,
+      "longitude": 139.64851,
+      "radiusMeters": 100
+    },
+    {
+      "id": "marunouchi-line-m04",
+      "title": "東高円寺（M04）",
+      "groupID": "marunouchi-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.697965,
+      "longitude": 139.658295,
+      "radiusMeters": 100
+    },
+    {
+      "id": "marunouchi-line-m05",
+      "title": "新中野（M05）",
+      "groupID": "marunouchi-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.697475,
+      "longitude": 139.66951,
+      "radiusMeters": 100
+    },
+    {
+      "id": "marunouchi-line-branch-m03",
+      "title": "方南町（m03）",
+      "groupID": "marunouchi-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.683515,
+      "longitude": 139.657935,
+      "radiusMeters": 100
+    },
+    {
+      "id": "marunouchi-line-branch-m04",
+      "title": "中野富士見町（m04）",
+      "groupID": "marunouchi-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.69082,
+      "longitude": 139.668155,
+      "radiusMeters": 100
+    },
+    {
+      "id": "marunouchi-line-branch-m05",
+      "title": "中野新橋（m05）",
+      "groupID": "marunouchi-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.691715,
+      "longitude": 139.67398,
+      "radiusMeters": 100
+    },
+    {
+      "id": "marunouchi-line-m06",
+      "title": "中野坂上（M06）",
+      "groupID": "marunouchi-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.697085,
+      "longitude": 139.682205,
+      "radiusMeters": 100
+    },
+    {
+      "id": "marunouchi-line-m07",
+      "title": "西新宿（M07）",
+      "groupID": "marunouchi-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.694515,
+      "longitude": 139.69256,
+      "radiusMeters": 100
+    },
+    {
+      "id": "marunouchi-line-m08",
+      "title": "新宿（M08）",
+      "groupID": "marunouchi-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.68921,
+      "longitude": 139.70122,
+      "radiusMeters": 100
+    },
+    {
+      "id": "marunouchi-line-m09",
+      "title": "新宿三丁目（M09）",
+      "groupID": "marunouchi-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.69084,
+      "longitude": 139.706535,
+      "radiusMeters": 100
+    },
+    {
+      "id": "marunouchi-line-m10",
+      "title": "新宿御苑前（M10）",
+      "groupID": "marunouchi-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.688525,
+      "longitude": 139.710915,
+      "radiusMeters": 100
+    },
+    {
+      "id": "marunouchi-line-m11",
+      "title": "四谷三丁目（M11）",
+      "groupID": "marunouchi-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.687835,
+      "longitude": 139.719325,
+      "radiusMeters": 100
+    },
+    {
+      "id": "marunouchi-line-m12",
+      "title": "四ツ谷（M12）",
+      "groupID": "marunouchi-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.68565,
+      "longitude": 139.73054,
+      "radiusMeters": 100
+    },
+    {
+      "id": "marunouchi-line-m13",
+      "title": "赤坂見附（M13）",
+      "groupID": "marunouchi-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.676865,
+      "longitude": 139.737385,
+      "radiusMeters": 100
+    },
+    {
+      "id": "marunouchi-line-m14",
+      "title": "国会議事堂前（M14）",
+      "groupID": "marunouchi-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.675005,
+      "longitude": 139.74541,
+      "radiusMeters": 100
+    },
+    {
+      "id": "marunouchi-line-m15",
+      "title": "霞ケ関（M15）",
+      "groupID": "marunouchi-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.674235,
+      "longitude": 139.75268,
+      "radiusMeters": 100
+    },
+    {
+      "id": "marunouchi-line-m16",
+      "title": "銀座（M16）",
+      "groupID": "marunouchi-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.673235,
+      "longitude": 139.76383,
+      "radiusMeters": 100
+    },
+    {
+      "id": "marunouchi-line-m17",
+      "title": "東京（M17）",
+      "groupID": "marunouchi-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.681195,
+      "longitude": 139.76744,
+      "radiusMeters": 100
+    },
+    {
+      "id": "marunouchi-line-m18",
+      "title": "大手町（M18）",
+      "groupID": "marunouchi-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.684695,
+      "longitude": 139.76603,
+      "radiusMeters": 100
+    },
+    {
+      "id": "marunouchi-line-m19",
+      "title": "淡路町（M19）",
+      "groupID": "marunouchi-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.69487,
+      "longitude": 139.767455,
+      "radiusMeters": 100
+    },
+    {
+      "id": "marunouchi-line-m20",
+      "title": "御茶ノ水（M20）",
+      "groupID": "marunouchi-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.699605,
+      "longitude": 139.76503,
+      "radiusMeters": 100
+    },
+    {
+      "id": "marunouchi-line-m21",
+      "title": "本郷三丁目（M21）",
+      "groupID": "marunouchi-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.706705,
+      "longitude": 139.760135,
+      "radiusMeters": 100
+    },
+    {
+      "id": "marunouchi-line-m22",
+      "title": "後楽園（M22）",
+      "groupID": "marunouchi-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.70731,
+      "longitude": 139.75086,
+      "radiusMeters": 100
+    },
+    {
+      "id": "marunouchi-line-m23",
+      "title": "茗荷谷（M23）",
+      "groupID": "marunouchi-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.7172,
+      "longitude": 139.736895,
+      "radiusMeters": 100
+    },
+    {
+      "id": "marunouchi-line-m24",
+      "title": "新大塚（M24）",
+      "groupID": "marunouchi-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.72613,
+      "longitude": 139.729355,
+      "radiusMeters": 100
+    },
+    {
+      "id": "marunouchi-line-m25",
+      "title": "池袋（M25）",
+      "groupID": "marunouchi-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.72766,
+      "longitude": 139.71083,
+      "radiusMeters": 100
+    },
+    {
+      "id": "hibiya-line-h01",
+      "title": "中目黒（H01）",
+      "groupID": "hibiya-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.644105,
+      "longitude": 139.698835,
+      "radiusMeters": 100
+    },
+    {
+      "id": "hibiya-line-h02",
+      "title": "恵比寿（H02）",
+      "groupID": "hibiya-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.64668,
+      "longitude": 139.710125,
+      "radiusMeters": 100
+    },
+    {
+      "id": "hibiya-line-h03",
+      "title": "広尾（H03）",
+      "groupID": "hibiya-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.6515,
+      "longitude": 139.72221,
+      "radiusMeters": 100
+    },
+    {
+      "id": "hibiya-line-h04",
+      "title": "六本木（H04）",
+      "groupID": "hibiya-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.664065,
+      "longitude": 139.731275,
+      "radiusMeters": 100
+    },
+    {
+      "id": "hibiya-line-h05",
+      "title": "神谷町（H05）",
+      "groupID": "hibiya-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.662625,
+      "longitude": 139.744725,
+      "radiusMeters": 100
+    },
+    {
+      "id": "hibiya-line-h06",
+      "title": "虎ノ門ヒルズ（H06）",
+      "groupID": "hibiya-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.667444,
+      "longitude": 139.747778,
+      "radiusMeters": 100
+    },
+    {
+      "id": "hibiya-line-h07",
+      "title": "霞ケ関（H07）",
+      "groupID": "hibiya-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.674235,
+      "longitude": 139.75268,
+      "radiusMeters": 100
+    },
+    {
+      "id": "hibiya-line-h08",
+      "title": "日比谷（H08）",
+      "groupID": "hibiya-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.67662,
+      "longitude": 139.760145,
+      "radiusMeters": 100
+    },
+    {
+      "id": "hibiya-line-h09",
+      "title": "銀座（H09）",
+      "groupID": "hibiya-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.673235,
+      "longitude": 139.76383,
+      "radiusMeters": 100
+    },
+    {
+      "id": "hibiya-line-h10",
+      "title": "東銀座（H10）",
+      "groupID": "hibiya-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.669655,
+      "longitude": 139.767125,
+      "radiusMeters": 100
+    },
+    {
+      "id": "hibiya-line-h11",
+      "title": "築地（H11）",
+      "groupID": "hibiya-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.667925,
+      "longitude": 139.772475,
+      "radiusMeters": 100
+    },
+    {
+      "id": "hibiya-line-h12",
+      "title": "八丁堀（H12）",
+      "groupID": "hibiya-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.675365,
+      "longitude": 139.77734,
+      "radiusMeters": 100
+    },
+    {
+      "id": "hibiya-line-h13",
+      "title": "茅場町（H13）",
+      "groupID": "hibiya-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.679075,
+      "longitude": 139.779625,
+      "radiusMeters": 100
+    },
+    {
+      "id": "hibiya-line-h14",
+      "title": "人形町（H14）",
+      "groupID": "hibiya-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.68635,
+      "longitude": 139.78217,
+      "radiusMeters": 100
+    },
+    {
+      "id": "hibiya-line-h15",
+      "title": "小伝馬町（H15）",
+      "groupID": "hibiya-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.690425,
+      "longitude": 139.77876,
+      "radiusMeters": 100
+    },
+    {
+      "id": "hibiya-line-h16",
+      "title": "秋葉原（H16）",
+      "groupID": "hibiya-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.698075,
+      "longitude": 139.77324,
+      "radiusMeters": 100
+    },
+    {
+      "id": "hibiya-line-h17",
+      "title": "仲御徒町（H17）",
+      "groupID": "hibiya-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.706655,
+      "longitude": 139.77619,
+      "radiusMeters": 100
+    },
+    {
+      "id": "hibiya-line-h18",
+      "title": "上野（H18）",
+      "groupID": "hibiya-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.711835,
+      "longitude": 139.775625,
+      "radiusMeters": 100
+    },
+    {
+      "id": "hibiya-line-h19",
+      "title": "入谷（H19）",
+      "groupID": "hibiya-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.72057,
+      "longitude": 139.78446,
+      "radiusMeters": 100
+    },
+    {
+      "id": "hibiya-line-h20",
+      "title": "三ノ輪（H20）",
+      "groupID": "hibiya-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.729285,
+      "longitude": 139.791165,
+      "radiusMeters": 100
+    },
+    {
+      "id": "hibiya-line-h21",
+      "title": "南千住（H21）",
+      "groupID": "hibiya-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.73231,
+      "longitude": 139.79878,
+      "radiusMeters": 100
+    },
+    {
+      "id": "hibiya-line-h22",
+      "title": "北千住（H22）",
+      "groupID": "hibiya-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.748845,
+      "longitude": 139.80464,
+      "radiusMeters": 100
+    },
+    {
+      "id": "tozai-line-t01",
+      "title": "中野（T01）",
+      "groupID": "tozai-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.705555,
+      "longitude": 139.666085,
+      "radiusMeters": 100
+    },
+    {
+      "id": "tozai-line-t02",
+      "title": "落合（T02）",
+      "groupID": "tozai-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.710635,
+      "longitude": 139.685965,
+      "radiusMeters": 100
+    },
+    {
+      "id": "tozai-line-t03",
+      "title": "高田馬場（T03）",
+      "groupID": "tozai-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.71328,
+      "longitude": 139.705045,
+      "radiusMeters": 100
+    },
+    {
+      "id": "tozai-line-t04",
+      "title": "早稲田（T04）",
+      "groupID": "tozai-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.70568,
+      "longitude": 139.72219,
+      "radiusMeters": 100
+    },
+    {
+      "id": "tozai-line-t05",
+      "title": "神楽坂（T05）",
+      "groupID": "tozai-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.703865,
+      "longitude": 139.73452,
+      "radiusMeters": 100
+    },
+    {
+      "id": "tozai-line-t06",
+      "title": "飯田橋（T06）",
+      "groupID": "tozai-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.70142,
+      "longitude": 139.74653,
+      "radiusMeters": 100
+    },
+    {
+      "id": "tozai-line-t07",
+      "title": "九段下（T07）",
+      "groupID": "tozai-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.69551,
+      "longitude": 139.751115,
+      "radiusMeters": 100
+    },
+    {
+      "id": "tozai-line-t08",
+      "title": "竹橋（T08）",
+      "groupID": "tozai-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.69044,
+      "longitude": 139.75767,
+      "radiusMeters": 100
+    },
+    {
+      "id": "tozai-line-t09",
+      "title": "大手町（T09）",
+      "groupID": "tozai-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.684695,
+      "longitude": 139.76603,
+      "radiusMeters": 100
+    },
+    {
+      "id": "tozai-line-t10",
+      "title": "日本橋（T10）",
+      "groupID": "tozai-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.68188,
+      "longitude": 139.773335,
+      "radiusMeters": 100
+    },
+    {
+      "id": "tozai-line-t11",
+      "title": "茅場町（T11）",
+      "groupID": "tozai-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.679075,
+      "longitude": 139.779625,
+      "radiusMeters": 100
+    },
+    {
+      "id": "tozai-line-t12",
+      "title": "門前仲町（T12）",
+      "groupID": "tozai-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.67277,
+      "longitude": 139.795105,
+      "radiusMeters": 100
+    },
+    {
+      "id": "tozai-line-t13",
+      "title": "木場（T13）",
+      "groupID": "tozai-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.66935,
+      "longitude": 139.807115,
+      "radiusMeters": 100
+    },
+    {
+      "id": "tozai-line-t14",
+      "title": "東陽町（T14）",
+      "groupID": "tozai-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.66959,
+      "longitude": 139.81768,
+      "radiusMeters": 100
+    },
+    {
+      "id": "tozai-line-t15",
+      "title": "南砂町（T15）",
+      "groupID": "tozai-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.668415,
+      "longitude": 139.831695,
+      "radiusMeters": 100
+    },
+    {
+      "id": "tozai-line-t16",
+      "title": "西葛西（T16）",
+      "groupID": "tozai-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.66456,
+      "longitude": 139.8596,
+      "radiusMeters": 100
+    },
+    {
+      "id": "tozai-line-t17",
+      "title": "葛西（T17）",
+      "groupID": "tozai-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.66362,
+      "longitude": 139.87253,
+      "radiusMeters": 100
+    },
+    {
+      "id": "tozai-line-t18",
+      "title": "浦安（T18）",
+      "groupID": "tozai-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.665905,
+      "longitude": 139.893235,
+      "radiusMeters": 100
+    },
+    {
+      "id": "tozai-line-t19",
+      "title": "南行徳（T19）",
+      "groupID": "tozai-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.67273,
+      "longitude": 139.902275,
+      "radiusMeters": 100
+    },
+    {
+      "id": "tozai-line-t20",
+      "title": "行徳（T20）",
+      "groupID": "tozai-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.68262,
+      "longitude": 139.914185,
+      "radiusMeters": 100
+    },
+    {
+      "id": "tozai-line-t21",
+      "title": "妙典（T21）",
+      "groupID": "tozai-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.69101,
+      "longitude": 139.92429,
+      "radiusMeters": 100
+    },
+    {
+      "id": "tozai-line-t22",
+      "title": "原木中山（T22）",
+      "groupID": "tozai-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.7033,
+      "longitude": 139.941915,
+      "radiusMeters": 100
+    },
+    {
+      "id": "tozai-line-t23",
+      "title": "西船橋（T23）",
+      "groupID": "tozai-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.70718,
+      "longitude": 139.95877,
+      "radiusMeters": 100
+    },
+    {
+      "id": "chiyoda-line-c01",
+      "title": "代々木上原（C01）",
+      "groupID": "chiyoda-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.669015,
+      "longitude": 139.679885,
+      "radiusMeters": 100
+    },
+    {
+      "id": "chiyoda-line-c02",
+      "title": "代々木公園（C02）",
+      "groupID": "chiyoda-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.6691,
+      "longitude": 139.68979,
+      "radiusMeters": 100
+    },
+    {
+      "id": "chiyoda-line-c03",
+      "title": "明治神宮前〈原宿〉（C03）",
+      "groupID": "chiyoda-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.668205,
+      "longitude": 139.70524,
+      "radiusMeters": 100
+    },
+    {
+      "id": "chiyoda-line-c04",
+      "title": "表参道（C04）",
+      "groupID": "chiyoda-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.665145,
+      "longitude": 139.71238,
+      "radiusMeters": 100
+    },
+    {
+      "id": "chiyoda-line-c05",
+      "title": "乃木坂（C05）",
+      "groupID": "chiyoda-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.666615,
+      "longitude": 139.72621,
+      "radiusMeters": 100
+    },
+    {
+      "id": "chiyoda-line-c06",
+      "title": "赤坂（C06）",
+      "groupID": "chiyoda-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.67208,
+      "longitude": 139.736435,
+      "radiusMeters": 100
+    },
+    {
+      "id": "chiyoda-line-c07",
+      "title": "国会議事堂前（c07）",
+      "groupID": "chiyoda-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.675005,
+      "longitude": 139.74541,
+      "radiusMeters": 100
+    },
+    {
+      "id": "chiyoda-line-c08",
+      "title": "霞ケ関（C08）",
+      "groupID": "chiyoda-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.674235,
+      "longitude": 139.75268,
+      "radiusMeters": 100
+    },
+    {
+      "id": "chiyoda-line-c09",
+      "title": "日比谷（C09）",
+      "groupID": "chiyoda-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.67662,
+      "longitude": 139.760145,
+      "radiusMeters": 100
+    },
+    {
+      "id": "chiyoda-line-c10",
+      "title": "二重橋前〈丸の内〉（C10）",
+      "groupID": "chiyoda-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.680505,
+      "longitude": 139.76178,
+      "radiusMeters": 100
+    },
+    {
+      "id": "chiyoda-line-c11",
+      "title": "大手町（C11）",
+      "groupID": "chiyoda-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.684695,
+      "longitude": 139.76603,
+      "radiusMeters": 100
+    },
+    {
+      "id": "chiyoda-line-c12",
+      "title": "新御茶ノ水（C12）",
+      "groupID": "chiyoda-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.696925,
+      "longitude": 139.76545,
+      "radiusMeters": 100
+    },
+    {
+      "id": "chiyoda-line-c13",
+      "title": "湯島（C13）",
+      "groupID": "chiyoda-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.706805,
+      "longitude": 139.76998,
+      "radiusMeters": 100
+    },
+    {
+      "id": "chiyoda-line-c14",
+      "title": "根津（C14）",
+      "groupID": "chiyoda-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.717325,
+      "longitude": 139.76575,
+      "radiusMeters": 100
+    },
+    {
+      "id": "chiyoda-line-c15",
+      "title": "千駄木（C15）",
+      "groupID": "chiyoda-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.725745,
+      "longitude": 139.763305,
+      "radiusMeters": 100
+    },
+    {
+      "id": "chiyoda-line-c16",
+      "title": "西日暮里（C16）",
+      "groupID": "chiyoda-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.73208,
+      "longitude": 139.766775,
+      "radiusMeters": 100
+    },
+    {
+      "id": "chiyoda-line-c17",
+      "title": "町屋（C17）",
+      "groupID": "chiyoda-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.74207,
+      "longitude": 139.780045,
+      "radiusMeters": 100
+    },
+    {
+      "id": "chiyoda-line-c18",
+      "title": "北千住（C18）",
+      "groupID": "chiyoda-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.748845,
+      "longitude": 139.80464,
+      "radiusMeters": 100
+    },
+    {
+      "id": "chiyoda-line-c19",
+      "title": "綾瀬（C19）",
+      "groupID": "chiyoda-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.762165,
+      "longitude": 139.824935,
+      "radiusMeters": 100
+    },
+    {
+      "id": "chiyoda-line-c20",
+      "title": "北綾瀬（C20）",
+      "groupID": "chiyoda-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.77689,
+      "longitude": 139.832095,
+      "radiusMeters": 100
+    },
+    {
+      "id": "yurakucho-line-y01",
+      "title": "和光市（Y01）",
+      "groupID": "yurakucho-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.78835,
+      "longitude": 139.612865,
+      "radiusMeters": 100
+    },
+    {
+      "id": "yurakucho-line-y02",
+      "title": "地下鉄成増（Y02）",
+      "groupID": "yurakucho-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.77674,
+      "longitude": 139.63117,
+      "radiusMeters": 100
+    },
+    {
+      "id": "yurakucho-line-y03",
+      "title": "地下鉄赤塚（Y03）",
+      "groupID": "yurakucho-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.76998,
+      "longitude": 139.644,
+      "radiusMeters": 100
+    },
+    {
+      "id": "yurakucho-line-y04",
+      "title": "平和台（Y04）",
+      "groupID": "yurakucho-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.757555,
+      "longitude": 139.6543,
+      "radiusMeters": 100
+    },
+    {
+      "id": "yurakucho-line-y05",
+      "title": "氷川台（Y05）",
+      "groupID": "yurakucho-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.74962,
+      "longitude": 139.66547,
+      "radiusMeters": 100
+    },
+    {
+      "id": "yurakucho-line-y06",
+      "title": "小竹向原（Y06）",
+      "groupID": "yurakucho-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.743395,
+      "longitude": 139.67952,
+      "radiusMeters": 100
+    },
+    {
+      "id": "yurakucho-line-y07",
+      "title": "千川（Y07）",
+      "groupID": "yurakucho-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.738175,
+      "longitude": 139.6894,
+      "radiusMeters": 100
+    },
+    {
+      "id": "yurakucho-line-y08",
+      "title": "要町（Y08）",
+      "groupID": "yurakucho-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.733215,
+      "longitude": 139.69848,
+      "radiusMeters": 100
+    },
+    {
+      "id": "yurakucho-line-y09",
+      "title": "池袋（Y09）",
+      "groupID": "yurakucho-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.72766,
+      "longitude": 139.71083,
+      "radiusMeters": 100
+    },
+    {
+      "id": "yurakucho-line-y10",
+      "title": "東池袋（Y10）",
+      "groupID": "yurakucho-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.72595,
+      "longitude": 139.718865,
+      "radiusMeters": 100
+    },
+    {
+      "id": "yurakucho-line-y11",
+      "title": "護国寺（Y11）",
+      "groupID": "yurakucho-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.71918,
+      "longitude": 139.72745,
+      "radiusMeters": 100
+    },
+    {
+      "id": "yurakucho-line-y12",
+      "title": "江戸川橋（Y12）",
+      "groupID": "yurakucho-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.709295,
+      "longitude": 139.73413,
+      "radiusMeters": 100
+    },
+    {
+      "id": "yurakucho-line-y13",
+      "title": "飯田橋（Y13）",
+      "groupID": "yurakucho-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.70142,
+      "longitude": 139.74653,
+      "radiusMeters": 100
+    },
+    {
+      "id": "yurakucho-line-y14",
+      "title": "市ケ谷（Y14）",
+      "groupID": "yurakucho-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.691455,
+      "longitude": 139.737385,
+      "radiusMeters": 100
+    },
+    {
+      "id": "yurakucho-line-y15",
+      "title": "麴町（Y15）",
+      "groupID": "yurakucho-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.684785,
+      "longitude": 139.73735,
+      "radiusMeters": 100
+    },
+    {
+      "id": "yurakucho-line-y16",
+      "title": "永田町（Y16）",
+      "groupID": "yurakucho-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.67801,
+      "longitude": 139.741815,
+      "radiusMeters": 100
+    },
+    {
+      "id": "yurakucho-line-y17",
+      "title": "桜田門（Y17）",
+      "groupID": "yurakucho-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.677465,
+      "longitude": 139.751885,
+      "radiusMeters": 100
+    },
+    {
+      "id": "yurakucho-line-y18",
+      "title": "有楽町（Y18）",
+      "groupID": "yurakucho-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.67504,
+      "longitude": 139.76326,
+      "radiusMeters": 100
+    },
+    {
+      "id": "yurakucho-line-y19",
+      "title": "銀座一丁目（Y19）",
+      "groupID": "yurakucho-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.67451,
+      "longitude": 139.76678,
+      "radiusMeters": 100
+    },
+    {
+      "id": "yurakucho-line-y20",
+      "title": "新富町（Y20）",
+      "groupID": "yurakucho-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.67053,
+      "longitude": 139.773595,
+      "radiusMeters": 100
+    },
+    {
+      "id": "yurakucho-line-y21",
+      "title": "月島（Y21）",
+      "groupID": "yurakucho-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.66471,
+      "longitude": 139.784405,
+      "radiusMeters": 100
+    },
+    {
+      "id": "yurakucho-line-y22",
+      "title": "豊洲（Y22）",
+      "groupID": "yurakucho-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.655155,
+      "longitude": 139.795995,
+      "radiusMeters": 100
+    },
+    {
+      "id": "yurakucho-line-y23",
+      "title": "辰巳（Y23）",
+      "groupID": "yurakucho-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.645775,
+      "longitude": 139.81033,
+      "radiusMeters": 100
+    },
+    {
+      "id": "yurakucho-line-y24",
+      "title": "新木場（Y24）",
+      "groupID": "yurakucho-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.64583,
+      "longitude": 139.8266,
+      "radiusMeters": 100
+    },
+    {
+      "id": "hanzomon-line-z01",
+      "title": "渋谷（Z01）",
+      "groupID": "hanzomon-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.659095,
+      "longitude": 139.702674,
+      "radiusMeters": 100
+    },
+    {
+      "id": "hanzomon-line-z02",
+      "title": "表参道（Z02）",
+      "groupID": "hanzomon-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.665145,
+      "longitude": 139.71238,
+      "radiusMeters": 100
+    },
+    {
+      "id": "hanzomon-line-z03",
+      "title": "青山一丁目（Z03）",
+      "groupID": "hanzomon-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.672955,
+      "longitude": 139.724075,
+      "radiusMeters": 100
+    },
+    {
+      "id": "hanzomon-line-z04",
+      "title": "永田町（Z04）",
+      "groupID": "hanzomon-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.67801,
+      "longitude": 139.741815,
+      "radiusMeters": 100
+    },
+    {
+      "id": "hanzomon-line-z05",
+      "title": "半蔵門（Z05）",
+      "groupID": "hanzomon-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.68538,
+      "longitude": 139.741695,
+      "radiusMeters": 100
+    },
+    {
+      "id": "hanzomon-line-z06",
+      "title": "九段下（Z06）",
+      "groupID": "hanzomon-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.69551,
+      "longitude": 139.751115,
+      "radiusMeters": 100
+    },
+    {
+      "id": "hanzomon-line-z07",
+      "title": "神保町（Z07）",
+      "groupID": "hanzomon-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.69493,
+      "longitude": 139.75843,
+      "radiusMeters": 100
+    },
+    {
+      "id": "hanzomon-line-z08",
+      "title": "大手町（Z08）",
+      "groupID": "hanzomon-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.684695,
+      "longitude": 139.76603,
+      "radiusMeters": 100
+    },
+    {
+      "id": "hanzomon-line-z09",
+      "title": "三越前（Z09）",
+      "groupID": "hanzomon-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.68493,
+      "longitude": 139.77308,
+      "radiusMeters": 100
+    },
+    {
+      "id": "hanzomon-line-z10",
+      "title": "水天宮前（Z10）",
+      "groupID": "hanzomon-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.682995,
+      "longitude": 139.785165,
+      "radiusMeters": 100
+    },
+    {
+      "id": "hanzomon-line-z11",
+      "title": "清澄白河（Z11）",
+      "groupID": "hanzomon-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.682945,
+      "longitude": 139.798665,
+      "radiusMeters": 100
+    },
+    {
+      "id": "hanzomon-line-z12",
+      "title": "住吉（Z12）",
+      "groupID": "hanzomon-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.688705,
+      "longitude": 139.81567,
+      "radiusMeters": 100
+    },
+    {
+      "id": "hanzomon-line-z13",
+      "title": "錦糸町（Z13）",
+      "groupID": "hanzomon-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.69672,
+      "longitude": 139.81432,
+      "radiusMeters": 100
+    },
+    {
+      "id": "hanzomon-line-z14",
+      "title": "押上〈スカイツリー前〉（Z14）",
+      "groupID": "hanzomon-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.70847,
+      "longitude": 139.81375,
+      "radiusMeters": 100
+    },
+    {
+      "id": "namboku-line-n01",
+      "title": "目黒（N01）",
+      "groupID": "namboku-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.63294,
+      "longitude": 139.7159,
+      "radiusMeters": 100
+    },
+    {
+      "id": "namboku-line-n02",
+      "title": "白金台（N02）",
+      "groupID": "namboku-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.63777,
+      "longitude": 139.72586,
+      "radiusMeters": 100
+    },
+    {
+      "id": "namboku-line-n03",
+      "title": "白金高輪（N03）",
+      "groupID": "namboku-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.643145,
+      "longitude": 139.734285,
+      "radiusMeters": 100
+    },
+    {
+      "id": "namboku-line-n04",
+      "title": "麻布十番（N04）",
+      "groupID": "namboku-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.65649,
+      "longitude": 139.736105,
+      "radiusMeters": 100
+    },
+    {
+      "id": "namboku-line-n05",
+      "title": "六本木一丁目（N05）",
+      "groupID": "namboku-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.665075,
+      "longitude": 139.7389,
+      "radiusMeters": 100
+    },
+    {
+      "id": "namboku-line-n06",
+      "title": "溜池山王（N06）",
+      "groupID": "namboku-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.67309,
+      "longitude": 139.741295,
+      "radiusMeters": 100
+    },
+    {
+      "id": "namboku-line-n07",
+      "title": "永田町（N07）",
+      "groupID": "namboku-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.67801,
+      "longitude": 139.741815,
+      "radiusMeters": 100
+    },
+    {
+      "id": "namboku-line-n08",
+      "title": "四ツ谷（N08）",
+      "groupID": "namboku-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.68565,
+      "longitude": 139.73054,
+      "radiusMeters": 100
+    },
+    {
+      "id": "namboku-line-n09",
+      "title": "市ケ谷（N09）",
+      "groupID": "namboku-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.691455,
+      "longitude": 139.737385,
+      "radiusMeters": 100
+    },
+    {
+      "id": "namboku-line-n10",
+      "title": "飯田橋（N10）",
+      "groupID": "namboku-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.70142,
+      "longitude": 139.74653,
+      "radiusMeters": 100
+    },
+    {
+      "id": "namboku-line-n11",
+      "title": "後楽園（N11）",
+      "groupID": "namboku-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.70731,
+      "longitude": 139.75086,
+      "radiusMeters": 100
+    },
+    {
+      "id": "namboku-line-n12",
+      "title": "東大前（N12）",
+      "groupID": "namboku-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.717985,
+      "longitude": 139.75782,
+      "radiusMeters": 100
+    },
+    {
+      "id": "namboku-line-n13",
+      "title": "本駒込（N13）",
+      "groupID": "namboku-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.724365,
+      "longitude": 139.753815,
+      "radiusMeters": 100
+    },
+    {
+      "id": "namboku-line-n14",
+      "title": "駒込（N14）",
+      "groupID": "namboku-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.73686,
+      "longitude": 139.748055,
+      "radiusMeters": 100
+    },
+    {
+      "id": "namboku-line-n15",
+      "title": "西ケ原（N15）",
+      "groupID": "namboku-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.745945,
+      "longitude": 139.74226,
+      "radiusMeters": 100
+    },
+    {
+      "id": "namboku-line-n16",
+      "title": "王子（N16）",
+      "groupID": "namboku-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.752325,
+      "longitude": 139.73821,
+      "radiusMeters": 100
+    },
+    {
+      "id": "namboku-line-n17",
+      "title": "王子神谷（N17）",
+      "groupID": "namboku-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.765295,
+      "longitude": 139.73565,
+      "radiusMeters": 100
+    },
+    {
+      "id": "namboku-line-n18",
+      "title": "志茂（N18）",
+      "groupID": "namboku-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.778025,
+      "longitude": 139.7325,
+      "radiusMeters": 100
+    },
+    {
+      "id": "namboku-line-n19",
+      "title": "赤羽岩淵（N19）",
+      "groupID": "namboku-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.783355,
+      "longitude": 139.72211,
+      "radiusMeters": 100
+    },
+    {
+      "id": "fukutoshin-line-f01",
+      "title": "和光市（F01）",
+      "groupID": "fukutoshin-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.78835,
+      "longitude": 139.612865,
+      "radiusMeters": 100
+    },
+    {
+      "id": "fukutoshin-line-f02",
+      "title": "地下鉄成増（F02）",
+      "groupID": "fukutoshin-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.77674,
+      "longitude": 139.63117,
+      "radiusMeters": 100
+    },
+    {
+      "id": "fukutoshin-line-f03",
+      "title": "地下鉄赤塚（F03）",
+      "groupID": "fukutoshin-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.76998,
+      "longitude": 139.644,
+      "radiusMeters": 100
+    },
+    {
+      "id": "fukutoshin-line-f04",
+      "title": "平和台（F04）",
+      "groupID": "fukutoshin-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.757555,
+      "longitude": 139.6543,
+      "radiusMeters": 100
+    },
+    {
+      "id": "fukutoshin-line-f05",
+      "title": "氷川台（F05）",
+      "groupID": "fukutoshin-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.74962,
+      "longitude": 139.66547,
+      "radiusMeters": 100
+    },
+    {
+      "id": "fukutoshin-line-f06",
+      "title": "小竹向原（F06）",
+      "groupID": "fukutoshin-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.743395,
+      "longitude": 139.67952,
+      "radiusMeters": 100
+    },
+    {
+      "id": "fukutoshin-line-f07",
+      "title": "千川（F07）",
+      "groupID": "fukutoshin-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.738175,
+      "longitude": 139.6894,
+      "radiusMeters": 100
+    },
+    {
+      "id": "fukutoshin-line-f08",
+      "title": "要町（F08）",
+      "groupID": "fukutoshin-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.733215,
+      "longitude": 139.69848,
+      "radiusMeters": 100
+    },
+    {
+      "id": "fukutoshin-line-f09",
+      "title": "池袋（F09）",
+      "groupID": "fukutoshin-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.72766,
+      "longitude": 139.71083,
+      "radiusMeters": 100
+    },
+    {
+      "id": "fukutoshin-line-f10",
+      "title": "雑司が谷（F10）",
+      "groupID": "fukutoshin-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.7202,
+      "longitude": 139.714715,
+      "radiusMeters": 100
+    },
+    {
+      "id": "fukutoshin-line-f11",
+      "title": "西早稲田（F11）",
+      "groupID": "fukutoshin-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.7078,
+      "longitude": 139.70915,
+      "radiusMeters": 100
+    },
+    {
+      "id": "fukutoshin-line-f12",
+      "title": "東新宿（F12）",
+      "groupID": "fukutoshin-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.697895,
+      "longitude": 139.70769,
+      "radiusMeters": 100
+    },
+    {
+      "id": "fukutoshin-line-f13",
+      "title": "新宿三丁目（F13）",
+      "groupID": "fukutoshin-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.69084,
+      "longitude": 139.706535,
+      "radiusMeters": 100
+    },
+    {
+      "id": "fukutoshin-line-f14",
+      "title": "北参道（F14）",
+      "groupID": "fukutoshin-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.678485,
+      "longitude": 139.705435,
+      "radiusMeters": 100
+    },
+    {
+      "id": "fukutoshin-line-f15",
+      "title": "明治神宮前〈原宿〉（F15）",
+      "groupID": "fukutoshin-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.668205,
+      "longitude": 139.70524,
+      "radiusMeters": 100
+    },
+    {
+      "id": "fukutoshin-line-f16",
+      "title": "渋谷（F16）",
+      "groupID": "fukutoshin-line",
+      "automation": {
+        "type": "photoLocation"
+      },
+      "latitude": 35.659095,
+      "longitude": 139.702674,
+      "radiusMeters": 100
+    }
+  ],
+  "groups": [
+    {
+      "id": "ginza-line",
+      "title": "銀座線"
+    },
+    {
+      "id": "marunouchi-line",
+      "title": "丸ノ内線"
+    },
+    {
+      "id": "hibiya-line",
+      "title": "日比谷線"
+    },
+    {
+      "id": "tozai-line",
+      "title": "東西線"
+    },
+    {
+      "id": "chiyoda-line",
+      "title": "千代田線"
+    },
+    {
+      "id": "yurakucho-line",
+      "title": "有楽町線"
+    },
+    {
+      "id": "hanzomon-line",
+      "title": "半蔵門線"
+    },
+    {
+      "id": "namboku-line",
+      "title": "南北線"
+    },
+    {
+      "id": "fukutoshin-line",
+      "title": "副都心線"
+    }
+  ],
+  "achievements": [
+    {
+      "id": "ten-tokyo-metro-stations",
+      "title": "メトロの駅をめぐる",
+      "detail": "東京メトロの駅を10駅訪問する",
+      "condition": {
+        "type": "itemCount",
+        "minimum": 10
+      }
+    },
+    {
+      "id": "five-tokyo-metro-lines",
+      "title": "メトロを深くめぐる",
+      "detail": "東京メトロの駅を50駅訪問する",
+      "condition": {
+        "type": "itemCount",
+        "minimum": 50
+      }
+    },
+    {
+      "id": "tokyo-metro-complete",
+      "title": "東京メトロ全線制覇",
+      "detail": "東京メトロ9路線の駅をすべて訪問する",
+      "condition": {
+        "type": "completionRate",
+        "minimum": 1
+      }
+    }
+  ],
+  "visualizations": [
+    {
+      "type": "progressSummary"
+    },
+    {
+      "type": "statusMap",
+      "cluster": true
+    },
+    {
+      "type": "groupProgress"
+    },
+    {
+      "type": "achievementCards"
+    },
+    {
+      "type": "itemList",
+      "sort": "title"
+    }
+  ],
+  "showsPeriodSelector": false,
+  "mapAttribution": "駅名・路線：東京メトロ公式／座標：select766/tokyo-train-time-map（MIT License）",
+  "mapStyle": {
+    "markerSVG": "<svg viewBox=\"0 0 36 36\"><path d=\"M7 5h22v18H7z\"/><path d=\"M4 29h28v3H4z\"/><path d=\"M11 23 7 29h5l3-6zM25 23l4 6h-5l-3-6z\"/><path d=\"M11 9h5v5h-5zM20 9h5v5h-5z\"/></svg>",
+    "markerColors": {
+      "unvisited": "#8E8E93",
+      "estimated": "#007AFF",
+      "confirmed": "#FF9500"
+    },
+    "areaFillColors": {
+      "unvisited": "#D1D1D638",
+      "estimated": "#007AFF59",
+      "confirmed": "#FF950073"
+    },
+    "areaStrokeColors": {
+      "unvisited": "#8E8E93",
+      "estimated": "#007AFF",
+      "confirmed": "#FF9500"
+    }
+  }
+}

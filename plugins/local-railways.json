@@ -2,7 +2,7 @@
   "schemaVersion": 2,
   "kind": "collection",
   "id": "local-railways",
-  "version": 1,
+  "version": 2,
   "title": "ローカル線の旅",
   "summary": "経営会社ごとの駅プラグインを選んで、ローカル線の訪問路線数を記録します。駅プラグインなしでも路線名を手動で訪問済みにできます。",
   "iconSystemName": "tram.fill",
@@ -30,6 +30,60 @@
       "title": "銚子電鉄線",
       "detail": "銚子電気鉄道の路線",
       "groupID": "choshi-railway"
+    },
+    {
+      "id": "tokyo-metro-ginza-line",
+      "title": "東京メトロ 銀座線",
+      "detail": "東京メトロ銀座線（19駅）",
+      "groupID": "tokyo-metro"
+    },
+    {
+      "id": "tokyo-metro-marunouchi-line",
+      "title": "東京メトロ 丸ノ内線",
+      "detail": "東京メトロ丸ノ内線（本線・方南町支線、28駅）",
+      "groupID": "tokyo-metro"
+    },
+    {
+      "id": "tokyo-metro-hibiya-line",
+      "title": "東京メトロ 日比谷線",
+      "detail": "東京メトロ日比谷線（22駅）",
+      "groupID": "tokyo-metro"
+    },
+    {
+      "id": "tokyo-metro-tozai-line",
+      "title": "東京メトロ 東西線",
+      "detail": "東京メトロ東西線（23駅）",
+      "groupID": "tokyo-metro"
+    },
+    {
+      "id": "tokyo-metro-chiyoda-line",
+      "title": "東京メトロ 千代田線",
+      "detail": "東京メトロ千代田線（20駅）",
+      "groupID": "tokyo-metro"
+    },
+    {
+      "id": "tokyo-metro-yurakucho-line",
+      "title": "東京メトロ 有楽町線",
+      "detail": "東京メトロ有楽町線（24駅）",
+      "groupID": "tokyo-metro"
+    },
+    {
+      "id": "tokyo-metro-hanzomon-line",
+      "title": "東京メトロ 半蔵門線",
+      "detail": "東京メトロ半蔵門線（14駅）",
+      "groupID": "tokyo-metro"
+    },
+    {
+      "id": "tokyo-metro-namboku-line",
+      "title": "東京メトロ 南北線",
+      "detail": "東京メトロ南北線（19駅）",
+      "groupID": "tokyo-metro"
+    },
+    {
+      "id": "tokyo-metro-fukutoshin-line",
+      "title": "東京メトロ 副都心線",
+      "detail": "東京メトロ副都心線（16駅）",
+      "groupID": "tokyo-metro"
     }
   ],
   "groups": [
@@ -48,6 +102,10 @@
     {
       "id": "choshi-railway",
       "title": "銚子電気鉄道"
+    },
+    {
+      "id": "tokyo-metro",
+      "title": "東京メトロ"
     }
   ],
   "achievements": [
@@ -72,7 +130,7 @@
     {
       "id": "all-listed-local-lines",
       "title": "ローカル線コレクター",
-      "detail": "掲載された4路線をすべて訪問済みにする",
+      "detail": "掲載された13路線をすべて訪問済みにする",
       "condition": {
         "type": "completionRate",
         "minimum": 1
@@ -84,6 +142,10 @@
       {
         "pluginID": "railway-sanriku",
         "title": "三陸鉄道"
+      },
+      {
+        "pluginID": "railway-tokyo-metro",
+        "title": "東京メトロ"
       }
     ],
     "routeLinks": [
@@ -91,6 +153,51 @@
         "routeID": "sanriku-rias-line",
         "childPluginID": "railway-sanriku",
         "childGroupID": "rias-line"
+      },
+      {
+        "routeID": "tokyo-metro-ginza-line",
+        "childPluginID": "railway-tokyo-metro",
+        "childGroupID": "ginza-line"
+      },
+      {
+        "routeID": "tokyo-metro-marunouchi-line",
+        "childPluginID": "railway-tokyo-metro",
+        "childGroupID": "marunouchi-line"
+      },
+      {
+        "routeID": "tokyo-metro-hibiya-line",
+        "childPluginID": "railway-tokyo-metro",
+        "childGroupID": "hibiya-line"
+      },
+      {
+        "routeID": "tokyo-metro-tozai-line",
+        "childPluginID": "railway-tokyo-metro",
+        "childGroupID": "tozai-line"
+      },
+      {
+        "routeID": "tokyo-metro-chiyoda-line",
+        "childPluginID": "railway-tokyo-metro",
+        "childGroupID": "chiyoda-line"
+      },
+      {
+        "routeID": "tokyo-metro-yurakucho-line",
+        "childPluginID": "railway-tokyo-metro",
+        "childGroupID": "yurakucho-line"
+      },
+      {
+        "routeID": "tokyo-metro-hanzomon-line",
+        "childPluginID": "railway-tokyo-metro",
+        "childGroupID": "hanzomon-line"
+      },
+      {
+        "routeID": "tokyo-metro-namboku-line",
+        "childPluginID": "railway-tokyo-metro",
+        "childGroupID": "namboku-line"
+      },
+      {
+        "routeID": "tokyo-metro-fukutoshin-line",
+        "childPluginID": "railway-tokyo-metro",
+        "childGroupID": "fukutoshin-line"
       }
     ]
   },

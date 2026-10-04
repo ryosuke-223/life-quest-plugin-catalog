@@ -21,3 +21,22 @@
 - 八木沢・宮古短大駅の座標・開業情報の補助照合: https://www.wikidata.org/wiki/Q55525757
 
 座標データの地図表示には OpenStreetMap の帰属表示を付けています。座標の再利用条件は [OpenStreetMap Copyright](https://www.openstreetmap.org/copyright) と ODbL 1.0 に従います。公開ページの更新や駅位置の変更があった場合は、公式駅一覧を再確認してプラグインのバージョンを上げます。
+
+## 東京メトロ
+
+`plugins/railway-tokyo-metro.json` は、東京メトロ9路線を路線別の駅グループとして登録しています。
+
+- 公式路線・駅一覧: https://www.tokyometro.jp/station/index.html
+- 公式路線別駅一覧（駅数・駅順の照合）: https://www.tokyometro.jp/tcn/route_station/index.html
+- 公式営業状況（全体の駅数180駅、9路線の営業区間）: https://www.tokyometro.jp/corporate/enterprise/passenger_rail/transportation/lines/index.html
+- 公式サイトの取得確認日: 2026-10-04
+
+公式路線別一覧の駅数は、銀座線19、丸ノ内線28、日比谷線22、東西線23、千代田線20、有楽町線24、半蔵門線14、南北線19、副都心線16です。乗換駅は路線ごとの実績を正しく集計するため、同じ物理駅でも路線別の項目として登録し、合計185項目にしています。東京メトロが会社情報で示す180駅は、乗換駅を駅施設として重複計上しない数え方です。
+
+駅中心の座標は、MIT Licenseで公開されている `select766/tokyo-train-time-map` の `data/station_locations.csv`（取得確認日: 2026-10-04）を使用しました。
+
+- データリポジトリ: https://github.com/select766/tokyo-train-time-map
+- 座標CSV: https://raw.githubusercontent.com/select766/tokyo-train-time-map/master/data/station_locations.csv
+- ライセンス: MIT License（リポジトリのLICENSEに記載）
+
+すべての駅項目に `photoLocation` と `radiusMeters: 100` を設定しています。地下駅では地上出入口や駅中心の位置と写真のGPSがずれる可能性があるため、誤判定がある場合は手動訪問状態で補正できます。駅名・路線構成の更新や新駅開業があった場合は、公式一覧と座標データを再確認してプラグインのバージョンを上げます。
