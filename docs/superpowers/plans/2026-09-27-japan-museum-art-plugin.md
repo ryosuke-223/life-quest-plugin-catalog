@@ -48,7 +48,7 @@ Do not add the manifest until the expected missing-file failure is observed.
 
 **Interfaces:**
 - Consumes: Existing manifest contract and the item list documented in `MUSEUM_ART_PLUGIN_DATA_SOURCES.md`.
-- Produces: A valid plugin with 28 items, eight regional groups, 14 achievements, 10 fixed visualization blocks, `showsPeriodSelector: false`, and a museum-shaped static marker.
+- Produces: A valid plugin with 28 items, eight regional groups, 14 achievements, 10 fixed visualization blocks, and a museum-shaped static marker.
 
 - [x] **Step 1: Add the 28 items**
 

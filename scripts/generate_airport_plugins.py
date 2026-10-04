@@ -192,7 +192,6 @@ def build_japan(airports: dict[str, dict[str, str]]) -> dict:
         {"type": "itemList", "sort": "group"},
     ]
     plugin = make_plugin("japan-airports", "日本の拠点空港めぐり", "国土交通省の拠点空港28空港。写真位置から訪問を自動判定します。", items, groups, achievements, visualizations, version=4)
-    plugin["showsPeriodSelector"] = False
     return plugin
 
 

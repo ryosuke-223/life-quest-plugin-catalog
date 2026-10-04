@@ -513,7 +513,6 @@
         "sort": "group"
       }
     ],
-    "showsPeriodSelector": false,
     "mapStyle": {
       "markerSVG": "<svg viewBox=\"0 0 36 36\"><path d=\"M18 3 22 15l11 5v3l-11-2 2 10-6-3-6 3 2-10-11 2v-3l11-5z\"/></svg>",
       "markerColors": {
@@ -7340,6 +7339,16 @@
         "type": "progressSummary"
       },
       {
+        "type": "lineChart",
+        "metric": "visitedCount",
+        "aggregation": "cumulativeCount"
+      },
+      {
+        "type": "barChart",
+        "metric": "visitedCount",
+        "aggregation": "annualVisitedItemCount"
+      },
+      {
         "type": "statusMap"
       },
       {
@@ -7357,7 +7366,6 @@
         "sort": "group"
       }
     ],
-    "showsPeriodSelector": false,
     "mapAttribution": "© OpenStreetMap contributors · ODbL 1.0",
     "mapStyle": {
       "markerSVG": "<svg viewBox=\"0 0 36 36\"><path d=\"M3 32V24h30v8H3z\"/><path d=\"M4 23v-7h4v3h3v-3h4v7zM21 23v-7h4v3h3v-3h4v7z\"/><path d=\"M13 22v-7h3v-3h4v3h3v7h-3v-4h-4v4z\"/><path d=\"M11 13 18 7l7 6h-3v4h-8v-4z\"/><path d=\"M14 8 18 4l4 4h-2v3h-4V8z\"/><path d=\"M17 3h2v3h-2z\"/></svg>",
@@ -7900,7 +7908,6 @@
         "sort": "status"
       }
     ],
-    "showsPeriodSelector": false,
     "mapStyle": {
       "markerSVG": "<svg viewBox=\"0 0 36 36\"><path d=\"M18 2c-2 5-7 7-9 12-2 5 1 10 9 20 8-10 11-15 9-20-2-5-7-7-9-12z\"/><path d=\"M18 8v18M18 16l-6-5M18 19l6-5\"/></svg>",
       "markerColors": {
@@ -8610,7 +8617,6 @@
         "sort": "group"
       }
     ],
-    "showsPeriodSelector": false,
     "mapStyle": {
       "markerSVG": "<svg viewBox=\"0 0 36 36\"><path d=\"M2 31L13 12l6 9 5-7 10 17H2z\"/><path d=\"M22 8c-2.2 0-4 1.8-4 4c0 2.2 1.8 4 4 4c2.2 0 4-1.8 4-4c0-2.2-1.8-4-4-4z\"/></svg>",
       "markerColors": {
@@ -9357,7 +9363,6 @@
         "sort": "group"
       }
     ],
-    "showsPeriodSelector": false,
     "mapStyle": {
       "markerSVG": "<svg viewBox=\"0 0 36 36\"><path d=\"M3 31h30v2H3z\"/><path d=\"M5 28h26v3H5z\"/><path d=\"M7 12h22v16H7z\"/><path d=\"M4 12h28L18 4 4 12z\"/><path d=\"M10 15h3v10h-3zM16.5 15h3v10h-3zM23 15h3v10h-3z\"/></svg>",
       "markerColors": {
@@ -11541,7 +11546,6 @@
         "sort": "title"
       }
     ],
-    "showsPeriodSelector": false,
     "mapStyle": {
       "markerSVG": "<svg viewBox=\"0 0 36 36\"><path d=\"M18 3c-8 0-15 7-15 15c0 8 7 15 15 15c8 0 15-7 15-15c0-8-7-15-15-15zM3 18h30M18 3c-4 4-6 9-6 15c0 6 2 11 6 15c4-4 6-9 6-15c0-6-2-11-6-15z\"/></svg>",
       "markerColors": {
@@ -11769,6 +11773,16 @@
         "type": "progressSummary"
       },
       {
+        "type": "lineChart",
+        "metric": "visitedCount",
+        "aggregation": "cumulativeCount"
+      },
+      {
+        "type": "barChart",
+        "metric": "visitedCount",
+        "aggregation": "annualVisitedItemCount"
+      },
+      {
         "type": "groupProgress"
       },
       {
@@ -11779,7 +11793,6 @@
         "sort": "group"
       }
     ],
-    "showsPeriodSelector": false,
     "mapAttribution": "© OpenStreetMap contributors · ODbL 1.0",
     "mapStyle": {
       "markerSVG": "<svg viewBox=\"0 0 36 36\"><path d=\"M7 5h22v18H7z\"/><path d=\"M4 29h28v3H4z\"/><path d=\"M11 23 7 29h5l3-6zM25 23l4 6h-5l-3-6z\"/><path d=\"M11 9h5v5h-5zM20 9h5v5h-5z\"/></svg>",
@@ -12293,6 +12306,16 @@
         "type": "progressSummary"
       },
       {
+        "type": "lineChart",
+        "metric": "visitedCount",
+        "aggregation": "cumulativeCount"
+      },
+      {
+        "type": "barChart",
+        "metric": "visitedCount",
+        "aggregation": "annualVisitedItemCount"
+      },
+      {
         "type": "statusMap",
         "cluster": true
       },
@@ -12307,7 +12330,6 @@
         "sort": "title"
       }
     ],
-    "showsPeriodSelector": false,
     "mapAttribution": "駅名・路線：三陸鉄道公式／座標：OpenStreetMap contributors · ODbL 1.0",
     "mapStyle": {
       "markerSVG": "<svg viewBox=\"0 0 36 36\"><path d=\"M7 5h22v18H7z\"/><path d=\"M4 29h28v3H4z\"/><path d=\"M11 23 7 29h5l3-6zM25 23l4 6h-5l-3-6z\"/><path d=\"M11 9h5v5h-5zM20 9h5v5h-5z\"/></svg>",
@@ -14446,6 +14468,16 @@
         "type": "progressSummary"
       },
       {
+        "type": "lineChart",
+        "metric": "visitedCount",
+        "aggregation": "cumulativeCount"
+      },
+      {
+        "type": "barChart",
+        "metric": "visitedCount",
+        "aggregation": "annualVisitedItemCount"
+      },
+      {
         "type": "statusMap",
         "cluster": true
       },
@@ -14460,7 +14492,6 @@
         "sort": "title"
       }
     ],
-    "showsPeriodSelector": false,
     "mapAttribution": "駅名・路線：東京メトロ公式／座標：select766/tokyo-train-time-map（MIT License）",
     "mapStyle": {
       "markerSVG": "<svg viewBox=\"0 0 36 36\"><path d=\"M7 5h22v18H7z\"/><path d=\"M4 29h28v3H4z\"/><path d=\"M11 23 7 29h5l3-6zM25 23l4 6h-5l-3-6z\"/><path d=\"M11 9h5v5h-5zM20 9h5v5h-5z\"/></svg>",

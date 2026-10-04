@@ -437,8 +437,8 @@ def validate_plugin(path: Path, plugin: object) -> None:
     require_string(path, plugin["iconSystemName"], "iconSystemName", 100)
     if "mapAttribution" in plugin:
         require_string(path, plugin["mapAttribution"], "mapAttribution", MAX_MAP_ATTRIBUTION_BYTES)
-    if "showsPeriodSelector" in plugin and not isinstance(plugin["showsPeriodSelector"], bool):
-        fail(path, "showsPeriodSelector must be a boolean")
+    if "showsPeriodSelector" in plugin:
+        fail(path, "showsPeriodSelector is no longer supported")
     validate_map_style(path, plugin)
 
     items = plugin["items"]

@@ -520,7 +520,6 @@
       "sort": "status"
     }
   ],
-  "showsPeriodSelector": false,
   "mapStyle": {
     "markerSVG": "<svg viewBox=\"0 0 36 36\"><path d=\"M18 2c-2 5-7 7-9 12-2 5 1 10 9 20 8-10 11-15 9-20-2-5-7-7-9-12z\"/><path d=\"M18 8v18M18 16l-6-5M18 19l6-5\"/></svg>",
     "markerColors": {

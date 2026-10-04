@@ -9,7 +9,7 @@ from generate_airport_plugins import JAPAN_AIRPORTS, WORLD_AIRPORTS, build_japan
 from validate_catalog import validate_catalog, validate_plugin
 
 
-def manifest(aggregation="annualVisitedItemCount", shows_period_selector=False):
+def manifest(aggregation="annualVisitedItemCount"):
     return {
         "schemaVersion": 1,
         "id": "test-plugin",
@@ -20,7 +20,6 @@ def manifest(aggregation="annualVisitedItemCount", shows_period_selector=False):
         "items": [{"id": "a", "title": "項目A"}],
         "groups": [],
         "achievements": [],
-        "showsPeriodSelector": shows_period_selector,
         "visualizations": [
             {"type": "barChart", "metric": "visitedCount", "aggregation": aggregation}
         ],
@@ -120,8 +119,14 @@ class ValidateCatalogTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "child group"):
             validate_catalog([parent, child])
 
-    def test_accepts_annual_visited_item_count_and_hidden_period_selector(self):
+    def test_accepts_annual_visited_item_count_without_period_selector(self):
         validate_plugin(Path("test.json"), manifest())
+
+    def test_rejects_removed_period_selector_field(self):
+        plugin = manifest()
+        plugin["showsPeriodSelector"] = False
+        with self.assertRaisesRegex(ValueError, "showsPeriodSelector is no longer supported"):
+            validate_plugin(Path("test.json"), plugin)
 
     def test_accepts_optional_map_attribution(self):
         plugin = manifest()
@@ -169,11 +174,21 @@ class ValidateCatalogTests(unittest.TestCase):
         for manifest_path in sorted(plugin_directory.glob("*.json")):
             with self.subTest(manifest=manifest_path.name):
                 plugin = json.loads(manifest_path.read_text(encoding="utf-8"))
+                self.assertNotIn("showsPeriodSelector", plugin)
                 self.assertEqual(set(plugin["mapStyle"]), expected_fields)
                 validate_plugin(manifest_path, plugin)
                 for item in plugin["items"]:
                     for location in item.get("locations", []):
                         self.assertNotIn("sourceURL", location)
+
+    def test_shipped_manifests_offer_year_axis_visualization(self):
+        plugin_directory = Path(__file__).resolve().parents[1] / "plugins"
+        year_chart_types = {"lineChart", "barChart", "areaChart", "heatmap"}
+        for manifest_path in sorted(plugin_directory.glob("*.json")):
+            with self.subTest(manifest=manifest_path.name):
+                plugin = json.loads(manifest_path.read_text(encoding="utf-8"))
+                visualization_types = {visualization["type"] for visualization in plugin["visualizations"]}
+                self.assertTrue(visualization_types & year_chart_types)
 
     def test_japan_museums_art_manifest_shape(self):
         manifest_path = Path(__file__).resolve().parents[1] / "plugins" / "japan-museums-art.json"
@@ -287,9 +302,11 @@ class ValidateCatalogTests(unittest.TestCase):
                 with self.assertRaisesRegex(ValueError, "mapAttribution"):
                     validate_plugin(Path("test.json"), plugin)
 
-    def test_rejects_non_boolean_period_selector(self):
-        with self.assertRaisesRegex(ValueError, "showsPeriodSelector must be a boolean"):
-            validate_plugin(Path("test.json"), manifest(shows_period_selector="false"))
+    def test_rejects_removed_period_selector_field_regardless_of_value(self):
+        plugin = manifest()
+        plugin["showsPeriodSelector"] = "false"
+        with self.assertRaisesRegex(ValueError, "showsPeriodSelector is no longer supported"):
+            validate_plugin(Path("test.json"), plugin)
 
     def test_rejects_unknown_chart_aggregation(self):
         invalid = copy.deepcopy(manifest(aggregation="unknown"))
@@ -523,7 +540,7 @@ class ValidateCatalogTests(unittest.TestCase):
         japan = build_japan(rows)
         world = build_world(rows)
 
-        self.assertIs(japan["showsPeriodSelector"], False)
+        self.assertNotIn("showsPeriodSelector", japan)
         self.assertIn({"type": "lineChart", "metric": "visitedCount", "aggregation": "cumulativeCount"}, japan["visualizations"])
         self.assertIn({"type": "barChart", "metric": "visitedCount", "aggregation": "annualVisitedItemCount"}, japan["visualizations"])
         self.assertNotIn("pieChart", {visualization["type"] for visualization in japan["visualizations"]})
@@ -544,7 +561,7 @@ class WorldHeritageDataTests(unittest.TestCase):
         plugin = json.loads(manifest_path.read_text(encoding="utf-8"))
 
         self.assertEqual(plugin["version"], 6)
-        self.assertIs(plugin["showsPeriodSelector"], False)
+        self.assertNotIn("showsPeriodSelector", plugin)
         self.assertEqual(
             {group["id"]: "mapMarkerSVG" in group for group in plugin["groups"]},
             {"cultural": True, "natural": True},

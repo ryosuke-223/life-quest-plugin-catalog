@@ -688,7 +688,6 @@
       "sort": "group"
     }
   ],
-  "showsPeriodSelector": false,
   "mapStyle": {
     "markerSVG": "<svg viewBox=\"0 0 36 36\"><path d=\"M2 31L13 12l6 9 5-7 10 17H2z\"/><path d=\"M22 8c-2.2 0-4 1.8-4 4c0 2.2 1.8 4 4 4c2.2 0 4-1.8 4-4c0-2.2-1.8-4-4-4z\"/></svg>",
     "markerColors": {

@@ -2116,6 +2116,16 @@
       "type": "progressSummary"
     },
     {
+      "type": "lineChart",
+      "metric": "visitedCount",
+      "aggregation": "cumulativeCount"
+    },
+    {
+      "type": "barChart",
+      "metric": "visitedCount",
+      "aggregation": "annualVisitedItemCount"
+    },
+    {
       "type": "statusMap",
       "cluster": true
     },
@@ -2130,7 +2140,6 @@
       "sort": "title"
     }
   ],
-  "showsPeriodSelector": false,
   "mapAttribution": "駅名・路線：東京メトロ公式／座標：select766/tokyo-train-time-map（MIT License）",
   "mapStyle": {
     "markerSVG": "<svg viewBox=\"0 0 36 36\"><path d=\"M7 5h22v18H7z\"/><path d=\"M4 29h28v3H4z\"/><path d=\"M11 23 7 29h5l3-6zM25 23l4 6h-5l-3-6z\"/><path d=\"M11 9h5v5h-5zM20 9h5v5h-5z\"/></svg>",

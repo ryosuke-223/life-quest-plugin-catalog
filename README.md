@@ -130,10 +130,10 @@ Life QuestアプリのDebug／Releaseビルドで、Build Settingsの `PLUGIN_CA
 - `visualizations` は省略可能です。省略時はアプリの後方互換デフォルトを使います。
 - 同じ `type` は1プラグイン内で1回だけ指定します。
 - 可視化の宣言順が詳細画面での表示順になります。
-- `showsPeriodSelector` は任意の真偽値です。省略時は `true`（期間選択を表示）として扱います。期間選択を使わないプラグインだけ `false` を指定できます。
 - `annualCount` と `cumulativeCount` は項目の `firstVisitYear` を使った初訪問集計です。
 - `annualVisitedItemCount` は項目ごとの訪問年履歴を使い、同じ「項目ID × 暦年」を1回として、その年に訪問記録がある項目数を集計します。
-- 期間の「すべて」は現在の全状態、「2025年まで」は2025年末時点の累積状態です。
+- サマリー・地図・状態内訳は常に現在の全状態を表示します。期間別の推移を見たい場合は、年を横軸にした年次チャートまたはヒートマップを指定します。
+- 公開カタログの各プラグインは、少なくとも1つの年次チャートまたはヒートマップを持ちます。
 - 年次チャートの `annualCount` は、その年に初訪問した項目数です。
 - `cumulativeCount` は、その年までに初訪問した項目数です。
 - 年の途中に記録がない年も年軸から省かず、年別値は0、累積値は直前年の値を維持します。記録のない末尾年や現在年は追加しません。
@@ -172,10 +172,10 @@ Life QuestアプリのDebug／Releaseビルドで、Build Settingsの `PLUGIN_CA
 
 | metric | 意味 |
 | --- | --- |
-| `visitedCount` | 期間内に訪問済みの項目数 |
-| `completionRate` | 期間内の達成率。0〜1を画面でパーセント表示 |
+| `visitedCount` | 現在までに訪問済みの項目数 |
+| `completionRate` | 現在の達成率。0〜1を画面でパーセント表示 |
 | `remainingCount` | 全項目数から訪問済み項目数を引いた数 |
-| `unlockedAchievements` | 期間時点で解除済みの実績数 |
+| `unlockedAchievements` | 現在までに解除済みの実績数 |
 | `totalAchievements` | プラグインに定義された実績数 |
 
 `aggregation` は次の4種類です。
@@ -209,10 +209,9 @@ Life QuestアプリのDebug／Releaseビルドで、Build Settingsの `PLUGIN_CA
   },
   { "type": "groupProgress" },
   { "type": "itemList", "sort": "group" }
-],
-"showsPeriodSelector": false
+]
 ```
 
-不明なタイプ・値、重複タイプ、範囲外の列数や件数は、アプリと `scripts/validate_catalog.py` の両方で拒否されます。実行コード、任意のクエリ、任意のSwiftUIを受け付けません。
+不明なタイプ・値、重複タイプ、範囲外の列数や件数、廃止された `showsPeriodSelector` フィールドは、アプリと `scripts/validate_catalog.py` の両方で拒否されます。実行コード、任意のクエリ、任意のSwiftUIを受け付けません。
 
 プラグインから任意のSwiftコード、JavaScript、外部クエリを実行することはできません。
